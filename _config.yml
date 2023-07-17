@@ -15,19 +15,19 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "Welcome to ORDLIKE"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "|"
+subtitle                 : "Today is better than yesterday"
 name                     : "Chaehwan Park"
-description              : "4th year, Hanyang tech B.s. "
+description              : "Welcome to ordlike world!"
 url                      : "https://ordlike.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : # "/assets/images/logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -106,9 +106,9 @@ analytics:
 author:
   name             : "Chaehwan Park"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg" 
-  bio              : "4th year, **Hanyang** tech B.s. "
-  location         : "Somewhere"
-  email            :
+  bio              : "4th year, **Hanyang tech B.s.** "
+  location         : "South korea"
+  email            : "3418star@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -290,3 +290,5 @@ defaults:
       comments: # true
       share: true
       related: true
+      show_date: true
+date_format: "%Y-%m-%d"
