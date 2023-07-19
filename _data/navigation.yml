@@ -1,12 +1,13 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "About"
+    url: /categories/
+    #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Projects"
+    url: https://www.naver.com
+  - title: "Research"
+    url: /year-archive/
+  - title: "Contact"
+    url: https://www.hanyang.ac.kr
   # - title: "Sitemap"
   #   url: /sitemap/
