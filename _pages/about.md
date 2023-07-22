@@ -10,12 +10,7 @@ sidebar_main: true
 
 안녕하세요! 저는 박채환입니다.
 
-<img src="./../images/about/KakaoTalk_20230722_154718509_01.jpg" alt="KakaoTalk_20230722_154718509_01" style="zoom: 25%;" />
+<img src="./../images/about/Maple_230721_165107.jpg" alt="Maple_230721_165107" style="zoom: 50%;" />
 
+천하 무적 스카니아의 아델, <HYU아델> 
 
-
-
-
-이용현 님, 반갑습니다.!!
-
-![KakaoTalk_20230722_154754325](./../images/about/KakaoTalk_20230722_154754325.jpg)
