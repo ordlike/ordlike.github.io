@@ -1,12 +1,12 @@
 # main links
 main:
   - title: "About"
-    url: /categories/
+    url: /about/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Projects"
     url: https://www.naver.com
   - title: "Research"
-    url: /year-archive/
+    url: /categories/
   - title: "Contact"
     url: https://www.hanyang.ac.kr
   - title: "Tag"
