@@ -4,7 +4,7 @@ main:
     url: /about/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Projects"
-    url: https://www.naver.com
+    url: /main/
   - title: "Research"
     url: /categories/
   - title: "Contact"
