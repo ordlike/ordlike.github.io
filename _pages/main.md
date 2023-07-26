@@ -8,12 +8,13 @@ header:
   overlay_filter: "0.3"
   overlay_image: /assets/new_images/mainprofile_HYU.jpg
   actions:
-    - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+    - label: "Download CV"
+      url: "https://github.com/ordlike/ordlike.github.io/Files/C.V_Chaehwan Park.pdf"  
+  caption: #"Photo credit: [****](https://unsplash.com)"
 excerpt: "Hello! I'm Chaehwan Park. <br> ORDLIKE Website is My personal homepage. "
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. '
+  - excerpt: 'Dept. of *Mechanical Engineering* & *Electronic Engineering* at Hanyang University, Seoul. 
+  If you have any questions, please feel free to contact me. ' 
 feature_row:
   - image_path: /assets/new_images/car.jpg
     alt: "Projects"
