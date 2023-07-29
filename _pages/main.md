@@ -45,8 +45,8 @@ feature_row:
 feature_row2:
   - image_path: /assets/new_images/news1.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+    title: "2023 Mechanical Engineering Design Project Awarded!"
+    excerpt: "At the Mechanical Engineering Design Project presentation held on Monday, May 22, 2023, in the lobby of HIT 6th floor and the conference room 612, our team won the award under the theme of 'Wearable Smart Key Using Gesture Recognition'"
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
