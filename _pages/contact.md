@@ -7,7 +7,6 @@ sidebar_main: true
 
 > # ***Direct E-mail System***
 
-<!DOCTYPE html>
 <html>
 <head>
     <title>Contact Form</title>
@@ -33,7 +32,7 @@ sidebar_main: true
                     window.alert('Please fill in all fields.');
                     return;
                 }
-
+    
                 // these IDs from the previous steps
                 emailjs.sendForm('service_ybo0xbb', 'template_fz0bb1f', this)
                     .then(function(response) {
