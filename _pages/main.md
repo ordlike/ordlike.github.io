@@ -30,7 +30,7 @@ feature_row:
   - image_path: /assets/new_images/Team_final.jpg 
     title: <center>Team</center>
     excerpt: "Introducing the **Team members** who worked with me."
-    url: "#test-link"
+    url: "/team/"
     btn_label: "Read More"
     btn_class: "btn--primary"
     #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
