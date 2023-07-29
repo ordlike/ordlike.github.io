@@ -4,6 +4,31 @@ permalink: /about/
 author_profile: true
 sidebar_main: true
 ---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chae Hwan Park</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="float: left; margin-right: 20px;">
+        <img src="./../images/about/profile.jpg" alt="profile" style="zoom: 35%;">
+    </div>
+    <h1>Hello! I am Chaehwan Park</h1>
+    <hr>
+    <h2>Portfolio</h2>
+    <hr>
+    <h3>Research Field <a href="https://sites.google.com/site/seunghwalab/">[Go Into LAB]</a></h3>
+    <ul>
+        <li>Design of Materials and Structures</li>
+        <li>Mechanical Reliability Test of Composites</li>
+        <li>Multiscale and Modeling of Material Properties</li>
+    </ul>
+    <img class="contain" src="images/SKANG.gif" alt="Research Field Image">
+</body>
+</html>
+
+
 
 > # Chae Hwan Park
 >
