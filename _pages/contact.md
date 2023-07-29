@@ -4,9 +4,7 @@ permalink: /contact/
 author_profile: true
 sidebar_main: true
 ---
-
 # ***| Direct Message System***
-
 <html>
 <head>
     <title>Contact Form</title>
