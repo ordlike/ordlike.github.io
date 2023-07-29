@@ -44,7 +44,7 @@ feature_row:
     btn_class: "btn--primary"
     
 feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/new_images/news1.jpg
     alt: "placeholder image 2"
     title: "Placeholder Image Left Aligned"
     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
