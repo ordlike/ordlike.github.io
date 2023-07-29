@@ -19,8 +19,9 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Jeong-hoon Lee</h2>
-                <p><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr</p>
-                <strong>B.S.</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr
+                <br><strong>Research Areas</strong> Translational Soft Devices
             </div>
         </div>
         <div class="member">
@@ -29,8 +30,9 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Jeong-woo Woo</h2>
-                <p><strong>E-mail</strong> korwoo1@hanyang.ac.kr</p>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> korwoo1@hanyang.ac.kr
+                <br><strong>Research Areas</strong> Translational Soft Devices
             </div>
         </div>
     </div>
@@ -42,13 +44,15 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seung-ju Cha</h2>
-                <p><strong>E-mail</strong> </p>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> 
+                <br><strong>Research Areas</strong> Machine learning
             </div>
         </div>
     </div>
 </body>
 </html>
+
 ---
 # | Team. 1공의 독수리
 <html>
@@ -64,8 +68,9 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seoung-Hyeon Yuk</h2>
-                <p><strong>E-mail</strong> tjdgusdbr213@naver.com</p>
-                <strong>B.S.</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> tjdgusdbr213@naver.com
+                <br><strong>Research Areas</strong> Semiconductor packaging
             </div>
         </div>
         <div class="member">
@@ -74,8 +79,12 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Jeong-woo Woo</h2>
-                <p><strong>E-mail</strong> korwoo1@hanyang.ac.kr</p>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> korwoo1@hanyang.ac.kr
+                <br><strong>Research Areas</strong> Translational Soft Devices
             </div>
         </div>
     </div>
+
+
+
