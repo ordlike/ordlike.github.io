@@ -2,10 +2,10 @@
 layout: single
 permalink: /team/
 author_profile: true
-sidebar_main: true
+sidebar_main: false
 ---
 
-# | Team. 1공의 독수리
+# | Team. Kim's 1 Team
 
 <div style="float: left;">
   <img src="./../assets/new_images/team/jeonghoon.jpg" alt="profile" style="zoom:10%;">
@@ -18,12 +18,11 @@ sidebar_main: true
 
 
 
-
 <br><br>
 
-​         [**Jeong-hoon Lee**](http://mcdm.hanyang.ac.kr/sub1_1.jsp?no=4)
+​         [**Jeong-hoon Lee**](https://sites.google.com/hanyang.ac.kr/tsdlab/members)
 
-E-mail tjdgusdbr213@naver.com
+E-mail chjklmpwy@hanyang.ac.kr
 
 <br>
 
