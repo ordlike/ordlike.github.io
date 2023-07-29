@@ -27,13 +27,13 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/new_images/team_final.jpg
-    #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+  - image_path: /assets/new_images/Team_final.jpg
     title: <center>Team</center>
     excerpt: "Introducing the **Team members** who worked with me."
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
+    #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
 
   - image_path: /assets/new_images/main_car.jpg
     title: <center>Projects</center>
@@ -72,7 +72,9 @@ feature_row2:
 
 {% include feature_row %}
 
-Latest NEWS
+# :: HOT News ::
+
+
 {% include feature_row id="feature_row2" type="left" %}
 
 <!-- {% include feature_row id="feature_row3" type="right" %}
