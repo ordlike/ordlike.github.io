@@ -7,9 +7,13 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.3"
   overlay_image: /assets/new_images/mainprofile_HYU.jpg
+  
   actions:
-    - label: "Download CV"
-      url: "https://raw.githubusercontent.com/ordlike/ordlike.github.io/master/Files/C.V_Chaehwan%20Park.pdf"
+  - label: "Download CV"
+    url: "https://raw.githubusercontent.com/ordlike/ordlike.github.io/master/Files/C.V_Chaehwan%20Park.pdf" 
+  - label: "Direct Contact"
+    url: "/contact/"
+
   caption: #"Photo credit: [****](https://unsplash.com)"
 excerpt: "Hello! I'm Chaehwan Park. <br> ORDLIKE Website is My personal homepage. "
 intro: 
