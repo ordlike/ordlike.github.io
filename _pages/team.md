@@ -5,10 +5,10 @@ author_profile: true
 sidebar_main: true
 ---
 
-# | Chae Hwan Park
+# | Team. 1공의 독수리
 
 <div style="float: left;">
-  <img src="./../images/about/profile.jpg" alt="profile" style="zoom:40%;">
+  <img src="./../assets/new_images/team/jeonghoon.jpg" alt="profile" style="zoom:10%;">
 </div>
 
 
@@ -19,57 +19,19 @@ sidebar_main: true
 
 
 
-ddddddddddddddddddd
+<br><br>
 
-d
+​         [**Jeong-hoon Lee**](http://mcdm.hanyang.ac.kr/sub1_1.jsp?no=4)
 
+E-mail tjdgusdbr213@naver.com
 
+<br>
 
-d
+# | Team. 1공의 독수리
 
-d
-
-d
-
-
-
-
-
-
-
-d
-
-d
-
-
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-d
-
-dd
-
-d
+<div style="float: left;">
+  <img src="./../assets/new_images/team/seonghyeon.jpg" alt="profile" style="zoom:100%;">
+</div>
 
 
 
@@ -77,13 +39,11 @@ d
 
 
 
+<br><br><br><br><br>
+
+[**Seoung-Hyeon Yuk**](http://mcdm.hanyang.ac.kr/sub1_1.jsp?no=4)
+
+E-mail tjdgusdbr213@naver.com
 
 
-
-
-
-
-
-
-천하 무적 스카니아의 아델, <HYU아델> 
 

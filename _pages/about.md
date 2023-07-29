@@ -9,7 +9,7 @@ sidebar_main: true
 >
 
 <div style="float: left;">
-  <img src="./../images/about/profile.jpg" alt="profile" style="zoom:40%;">
+  <img src="./../images/about/profile.jpg" alt="profile" style="zoom:35%;">
 </div> <br><br><br><br><br><br><br><br><br>
 
 
