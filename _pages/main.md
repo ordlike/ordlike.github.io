@@ -2,7 +2,7 @@
 title: "Welcome to ORDLIKE!"
 layout: splash
 permalink: /main/
-date: 2016-03-23T11:48:41-04:00
+date: 2016-03-23T11:48:41-04:00        
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -15,22 +15,31 @@ excerpt: "Hello! I'm Chaehwan Park. <br> ORDLIKE Website is My personal homepage
 intro: 
   - excerpt: 'Dept. of *Mechanical Engineering* & *Electronic Engineering* at Hanyang University, Seoul. 
   If you have any questions, please feel free to contact me. ' 
+
+
+
 feature_row:
-  - image_path: /assets/new_images/car.jpg
-    alt: "Projects"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+  - image_path: /assets/new_images/aboutme_final.jpg
+    url: "#test-link"
+    alt: Projects
+    title: <center>About me</center>
+    excerpt: "If you want more information **about me**, please come in!"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+  - image_path: /assets/new_images/main_car.jpg
+    #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    title: <center>Projects</center>
+    excerpt: "Let me introduce the **projects** I've been working on!"
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/new_images/car.jpg
-    title: "Projects"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+
+  - image_path: /assets/new_images/main_car.jpg
+    title: <center>Projects</center>
+    excerpt: This is some sample content that goes here with **Markdown** formatting.
+    
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
@@ -66,3 +75,5 @@ feature_row4:
 {% include feature_row id="feature_row3" type="right" %}
 
 {% include feature_row id="feature_row4" type="center" %}
+
+\

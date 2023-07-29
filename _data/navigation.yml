@@ -7,7 +7,7 @@ main:
     url: /main/
   - title: "Research"
     url: /categories/
-  - title: "Contact"
+  - title: "Software"
     url: https://www.hanyang.ac.kr
-  - title: "Tag"
+  - title: "Contact"
     url: /tags/
