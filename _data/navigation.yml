@@ -3,11 +3,12 @@ main:
   - title: "About"
     url: /about/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Team"
+    url: /about/
+    #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Projects"
     url: /main/
-  - title: "Research"
-    url: /categories/
-  - title: "Software"
+  - title: "News"
     url: https://www.hanyang.ac.kr
   - title: "Contact"
     url: /tags/

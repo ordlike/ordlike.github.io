@@ -23,22 +23,25 @@ feature_row:
     url: "#test-link"
     alt: Projects
     title: <center>About me</center>
-    excerpt: "If you want more information **about me**, please come in!"
+    excerpt: "If you want more information **About me**, please come in!"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/new_images/main_car.jpg
+  - image_path: /assets/new_images/team_final.jpg
     #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
-    title: <center>Projects</center>
-    excerpt: "Let me introduce the **projects** I've been working on!"
+    title: <center>Team</center>
+    excerpt: "Introducing the **Team members** who worked with me."
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
   - image_path: /assets/new_images/main_car.jpg
     title: <center>Projects</center>
-    excerpt: This is some sample content that goes here with **Markdown** formatting.
+    excerpt: "Let me introduce the **Projects** I've been working on!"
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
     
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
