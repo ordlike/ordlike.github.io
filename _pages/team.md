@@ -4,74 +4,62 @@ permalink: /team/
 author_profile: true
 sidebar_main: false
 ---
-
+<br>
 # | Team. Kim's 1 Team
-<!DOCTYPE html>
 <html>
 <head>
     <title>Lab Members</title>
-    <link rel="stylesheet" href="style.css"> <!-- 별도의 CSS 파일을 링크합니다 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="member-container">
         <div class="member">
-            <img src="./../assets/new_images/team/jeonghoon.jpg" alt="Member 1">
+            <a href="https://sites.google.com/hanyang.ac.kr/tsdlab/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/jeonghoon_final.jpg" alt="Member 1">
+            </a>
             <div class="member-info">
-                <h2>Member 1</h2>
-                <p>Email: member1@example.com</p>
-                <p>School: School 1</p>
+                <h2 style="color: #5695A8;">Jeong-hoon Lee</h2>
+                <p><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr</p>
+                <strong>B.S.</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
             </div>
         </div>
         <div class="member">
-            <img src="member2.jpg" alt="Member 2">
+            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 2">
+            </a>
             <div class="member-info">
-                <h2>Member 2</h2>
-                <p>Email: member2@example.com</p>
-                <p>School: School 2</p>
+                <h2 style="color: #5695A8;">Seung-ju Cha</h2>
+                <p><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr</p>
+                <strong>UG Year 4</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
             </div>
         </div>
     </div>
-
-    <!-- 나머지 인원들을 동일한 방식으로 추가합니다 -->
-    <!-- 한 줄에 두 명씩 나오도록 3줄까지 추가하면 됩니다 -->
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lab Members</title>
-    <link rel="stylesheet" href="style.css"> <!-- 별도의 CSS 파일을 링크합니다 -->
-</head>
-<body>
-    <div class="member-container">
+    <br><br>
+      <div class="member-container">
         <div class="member">
-            <img src="./../assets/new_images/team/jeonghoon.jpg" alt="**Jeong-hoon Lee**">
+            <a href="https://sites.google.com/hanyang.ac.kr/tsdlab/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/jeonghoon_final.jpg" alt="Member 1">
+            </a>
             <div class="member-info">
-                <h2>Member 1</h2>
-                <p>Email: member1@example.com</p>
-                <p>School: School 1</p>
+                <h2 style="color: #5695A8;">Jeong-hoon Lee</h2>
+                <p><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr</p>
+                <strong>B.S.</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
             </div>
         </div>
         <div class="member">
-            <img src="./../assets/new_images/team/jeonghoon.jpg" alt="**Jeong-hoon Lee**">
+            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 2">
+            </a>
             <div class="member-info">
-                <h2>Member 2</h2>
-                <p>Email: member2@example.com</p>
-                <p>School: School 2</p>
+                <h2 style="color: #5695A8;">Seung-ju Cha</h2>
+                <p><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr</p>
+                <strong>UG Year 4</strong>&nbsp;&nbsp;&nbsp;ME, Hanyang University
             </div>
         </div>
-        <!-- 나머지 인원들을 동일한 방식으로 추가합니다 -->
-        <!-- 각 줄에 두 명씩 나오도록 3줄까지 추가하면 됩니다 -->
     </div>
-</body>
-</html>
+   
 
-<div style="float: left;">
-  <img src="./../assets/new_images/team/jeonghoon.jpg" alt="profile" style="zoom:20%;"> {: .img-width-half}
-</div>
+
 
 
 
@@ -86,7 +74,7 @@ E-mail chjklmpwy@hanyang.ac.kr
 # | Team. 1공의 독수리
 
 <div style="float: left;">
-  <img src="./../assets/new_images/team/seonghyeon.jpg" alt="profile" style="zoom:100%;">
+  <img src="./../assets/new_images/team/jeonghoon_final.jpg" alt="profile" style="zoom:100%;">
 </div>
 
 
@@ -100,39 +88,4 @@ E-mail chjklmpwy@hanyang.ac.kr
 [**Seoung-Hyeon Yuk**](http://mcdm.hanyang.ac.kr/sub1_1.jsp?no=4)
 
 E-mail tjdgusdbr213@naver.com
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lab Members</title>
-    <link rel="stylesheet" href="style.css"> <!-- 별도의 CSS 파일을 링크합니다 -->
-</head>
-<body>
-    <div class="member-container">
-        <div class="member">
-            <img src="member1.jpg" alt="Member 1">
-            <div class="member-info">
-                <h2>Member 1</h2>
-                <p>Email: member1@example.com</p>
-                <p>School: School 1</p>
-            </div>
-        </div>
-        <div class="member">
-            <img src="member2.jpg" alt="Member 2">
-            <div class="member-info">
-                <h2>Member 2</h2>
-                <p>Email: member2@example.com</p>
-                <p>School: School 2</p>
-            </div>
-        </div>
-        <!-- 나머지 인원들을 동일한 방식으로 추가합니다 -->
-        <!-- 각 줄에 두 명씩 나오도록 3줄까지 추가하면 됩니다 -->
-    </div>
-</body>
-</html>
-
-
-
 
