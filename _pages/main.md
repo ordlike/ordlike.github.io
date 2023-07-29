@@ -20,14 +20,14 @@ intro:
 
 feature_row:
   - image_path: /assets/new_images/aboutme_final.jpg
-    url: "#test-link"
+    url: "/about/"
     alt: Projects
     title: <center>About me</center>
     excerpt: "If you want more information **About me**, please come in!"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/new_images/Team_final.jpg
+  - image_path: /assets/new_images/Team_final.jpg 
     title: <center>Team</center>
     excerpt: "Introducing the **Team members** who worked with me."
     url: "#test-link"
