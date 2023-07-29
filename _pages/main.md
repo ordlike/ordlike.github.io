@@ -28,7 +28,7 @@ feature_row:
     alt: Projects
     title: <center>About me</center>
     excerpt: "If you want more information **About me**, please come in!"
-    btn_label: "Read More"
+    btn_label: "Read More" 
     btn_class: "btn--primary"
 
   - image_path: /assets/new_images/Team_final.jpg 

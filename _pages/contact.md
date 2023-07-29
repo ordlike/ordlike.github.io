@@ -1,11 +1,11 @@
 ---
-layout: splash
+layout: single
 permalink: /contact/
 author_profile: true
 sidebar_main: true
 ---
 
-> # ***Direct E-mail System***
+# ***| Direct Message System***
 
 <html>
 <head>
@@ -29,7 +29,7 @@ sidebar_main: true
                 var email = this.email.value;
                 var message = this.message.value;
                 if (!title || !email || !message) {
-                    window.alert('Please fill in all fields.');
+                    window.alert('Please fill in all blanks.');
                     return;
                 }
     

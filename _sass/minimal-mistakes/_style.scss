@@ -1,0 +1,17 @@
+/* 사진과 이메일을 한 줄에 두 명씩 배치하는 스타일 */
+.member {
+    display: inline-block;
+    width: 200px; /* 멤버 당 폭 조절 */
+    margin: 10px; /* 멤버 간 간격 조절 */
+    text-align: center;
+  }
+  
+  img {
+    width: 100px; /* 사진 크기 조절 */
+    border-radius: 50%; /* 사진을 원형으로 만듦 */
+  }
+  
+  p {
+    margin: 5px;
+  }
+  
