@@ -13,103 +13,85 @@ sidebar_main: true
 </div> <br><br><br><br><br><br><br><br><br>
 
 
+## Hello! I am Chaehwan Park
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact Form</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('6NrA1NVH-yQj6Nas4');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_ybo0xbb', 'template_fz0bb1f', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-</head>
-<body>
-    <form id="contact-form">
-        <input type="hidden" name="contact_number">
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-    </form>
-</body>
-</html>
+---
+
+### Portfolio
+
+---
+
+#### Research Field [[Go Into LAB]](https://sites.google.com/site/seunghwalab/)
+
+✓ Design of Materials and Structures
+
+✓ Mechanical Reliability Test of Composites
+
+✓ Multiscale and Modeling of Material Properties
+
+<img class="contain" src="images/SKANG.gif"/>
 
 
+---
 
-<!-- #### Contact easily through below!
-Everything is welcome :)
+#### Education
+KAIST, M.S., [Graduate school of MECH](https://me.kaist.ac.kr/main/main.html), Feb 2022 - Present
+
+HANYANG University, B.S., [Mechanical Engineering](http://me.hanyang.ac.kr/), Mar 2018 - Dec 2021
+
+||<span style="color:rgb(38, 124, 185)">GPA</span>|<span style="color:rgb(38, 124, 185)">Rank</span>|<span style="color:rgb(38, 124, 185)">Score</span>|
+|----|----|----|----|
+|Cumulative|4.32|3/242|97.9|
+
+---
+
+#### Awards and Experiences
+Hanyang academic best award, Mar 2021
+
+National science and engineering scholarship, Aug 2020
+
+Fourth industrial revolution program Completion, Jun 2020
+
+Hanyang academic excellence award, Mar 2019
+
+Samsung dream class Math-tutor program Completion, Jan 2019
+
+Hanyang abroad student tutoring Dynamics-tutor program Completion, Jul 2020
+
+Hanyang abroad student tutoring Mechanics of Materials-tutor program Completion, Mar 2021
+
+Hanyang abroad student tutoring Thermodynamics-tutor program Completion, Mar 2021
+
+Hanyang abroad student tutoring Fluid Mechanics-tutor program Completion, Jun 2021 
+
+---
+
+#### International Conference
+2022, Jinwook Yeo, Sukheon Kang, Minwoo Park and Seunghwa Ryu, "Deep Learning-Based Optimization, 3D printing, and Testing of Adhesive Pillar Shape with Directionality", ENGE 2022
+
+---
+
+#### Domestic Conference
+2023, 강석헌, 문현빈, 여진욱, 박건도, 유제천, 유승화, "Design of auxetic metamaterials for Improved low cycle fatigue life and Poisson's ratio using data-driven optimization", 2023 대한기계학회 CAE 및 응용역학부문 춘계학술대회
+
+2023, 박건도, 이준형, 강석헌, Flavia Libonati, 유승화, "3 channel tensile test for a fast estimation of fatigue strength of composite laminates", 2023 대한기계학회 신뢰성부문 춘계학술대회
+
+2022, 박건도, 김영수, 김민기, 송치현, 강석헌, 박진규, 유승화, "Designing staggered platelet composite structure with Gaussian process regression based Bayesian optimization", 2022 대한기계학회 CAE 및 응용역학부문 춘계학술대회
+
+---
+
+#### Personal
+I like to sing in choir. so I'm in charge of the vice-captain of my university choir club GLEE!
 <br>
-<input type="text" name="name" placeholder="Enter your name" style="width:100%">
+Come visit [GLEE](https://www.youtube.com/channel/UCd3RBgdgh2xeIMHPRJBOFDw) Choir Club!
+
+I also like to collect shoes!
 <br>
-<input type="text" name="email" placeholder="Enter your email address" style="width:100%">
-<br>
-<input type="text" name="phone" placeholder="Enter your phone number" style="width:100%">
-<br>
+Come visit my [Shoes Instagram](https://www.instagram.com/honey__ksh/)
 
-<textarea name="message" rows="5" placeholder="Enter the contents" style="width:100%"></textarea>
-<br>
-<input type="button" name="submit" value="Send" style= "color:white; background:rgb(38, 124, 185); border-radius:5px"/>
+<font color="white">I have a girlfriend Minyoung. She is the most lovely in the world!  </font>  
 
+<font color="white">Come visit <a href="https://instagram.com/minong_e_da/"><font color="white">My LOVE</font></a></font>
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-</script>
+---
 
-<script type="text/javascript">
-	import{ init } from 'emailjs-com';
-    init("user_6NrA1NVH-yQj6Nas4");
-	$(document).ready(function() {
-		emailjs.init("user_6NrA1NVH-yQj6Nas4");		
-
-    $('input[name=submit]').click(function(){       	 
-          
-        var templateParams = {	
-             name: $('input[name=name]').val(),
-            phone: $('input[name=phone]').val(), 
-            email : $('input[name=email]').val(),
-            message : $('textarea[name=message]').val()
-           				};
-
-
-​                	
-​         emailjs.send('service_ybo0xbb', 'template_fz0bb1f', templateParams)
-​         	.then(function(response) {
-​         	  console.log('SUCCESS!', response.status, response.text);
-​         	}, function(error) {
-​         	       console.log('FAILED...', error);
-​         	});
-
-
-​         	       
-
-
-        });
-        
-      })();
-
-
-	</script>
-(Last Update: 09/28/2021)
- -->
