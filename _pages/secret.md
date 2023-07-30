@@ -5,7 +5,6 @@ author_profile: true
 sidebar_main: false
 ---
 **Secret Gallery**
-<!DOCTYPE html>
 <html>
 <head>
     <title>Gallery</title>

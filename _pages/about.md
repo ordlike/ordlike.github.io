@@ -16,7 +16,10 @@ sidebar_main: true
             <img src="./../images/about/profile.jpg" alt="Profile Picture" class="profile-image">
         </div>
         <div class="profile-info">
-            <h1>Your Name</h1>
+            <p><h1 style="color: #5695A8;">Chae-hwan Park</h1></p>
+            <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+            <br><strong>E-mail</strong> 3418star@naver.com
+            <br><strong>Research Areas</strong> Circuit design and IOT device fabrication
             <p>Occupation</p>
             <p>Email: your.email@example.com</p>
             <p>Location: Your City, Country</p>
@@ -101,32 +104,7 @@ I also like to collect shoes!
 <br>
 Come visit my [Shoes Instagram](https://www.instagram.com/honey__ksh/)
 
-<font color="white">★ Welcome to Secret Gallery! ★  </font>  
 
-<font color="white">Come visit <a href="/secret"><font color="white">Enter</font></a></font>
 
+<font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
 ---
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lab Members</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="member-container">
-        <div class="member">
-            <a href="" style="color: #5695A8;">
-                <img src="./../assets/new_images/team/changjun_final.jpg" alt="Member 1">
-            </a>
-            <div class="member-info">
-                <h2 style="color: #5695A8;">Chang-jun Lee</h2>
-                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
-                <br><strong>Research Areas</strong> 3D CAD modeling
-            </div>
-        </div>
-        <!-- 다른 멤버 정보를 이곳에 추가하세요 -->
-    </div>
-</body>
-</html>
