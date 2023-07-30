@@ -4,6 +4,25 @@ permalink: /team/
 author_profile: true
 sidebar_main: false
 ---
+<html>
+<head>
+    <title>Lab Members</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* member-info 텍스트 크기 조절을 위한 새로운 스타일 추가 */
+        .member-info {
+            font-size: 18px; /* 원하는 크기로 설정하세요 */
+        }
+
+        /* 모바일 화면에 대한 스타일 조정 */
+        @media (max-width: 768px) {
+            .member-info {
+                font-size: 14px; /* 모바일 화면에 맞게 작은 폰트 크기로 변경 */
+            }
+        }
+    </style>
+</head>
+<body>
 <br>
 # | Team. EE Disign Project 
 <html>
