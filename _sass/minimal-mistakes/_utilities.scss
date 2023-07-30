@@ -758,3 +758,13 @@ p {
   font-size: 18px;
   margin-bottom: 8px;
 }
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile-image-container {
+    margin-bottom: 20px;
+  }
+}
