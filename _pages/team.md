@@ -93,7 +93,7 @@ sidebar_main: false
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seung-ju Cha</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> 
+                <br><strong>E-mail</strong> chaseungju990201@gmail.com
                 <br><strong>Research Areas</strong> Machine learning
             </div>
         </div>
