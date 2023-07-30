@@ -132,6 +132,17 @@ sidebar_main: false
             </div>
         </div>
     </div>
-
+<html>
+<head>
+    <title>Lab Members</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* member-info 텍스트 크기 조절을 위한 새로운 스타일 추가 */
+        .member-info {
+            font-size: 18px; /* 원하는 크기로 설정하세요 */
+        }
+    </style>
+</head>
+<body>
 
 
