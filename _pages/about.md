@@ -114,9 +114,9 @@ I also like to collect shoes!
 <br>
 Come visit my [Shoes Instagram](https://www.instagram.com/honey__ksh/)
 
-<font color="white">I have a girlfriend Minyoung. She is the most lovely in the world!  </font>  
+<font color="white">★ Welcome to Secret Gallery! ★  </font>  
 
-<font color="white">Come visit <a href="https://instagram.com/minong_e_da/"><font color="white">My LOVE</font></a></font>
+<font color="white">Come visit <a href="/secret"><font color="white">Enter</font></a></font>
 
 ---
 

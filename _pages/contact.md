@@ -2,7 +2,7 @@
 layout: single
 permalink: /contact/
 author_profile: true
-sidebar_main: true
+sidebar_main: false
 ---
 # ***| Direct Message System***
 <html>

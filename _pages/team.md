@@ -5,7 +5,55 @@ author_profile: true
 sidebar_main: false
 ---
 <br>
-# | ME Design Project Team
+# | Team. EE Disign Project 
+<html>
+<head>
+    <title>Lab Members</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="member-container">
+        <div class="member">
+            <a href="" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/changjun_final.jpg" alt="Member 1">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Chang-jun Lee</h2>
+                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
+                <br><strong>Research Areas</strong> 3D CAD modeling
+            </div>
+        </div>
+        <div class="member">
+            <a href="" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/donghoon_final.jpg" alt="Member 2">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Dong-hoon Oh</h2>
+                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> hoon6049@hanyang.ac.kr
+                <br><strong>Research Areas</strong> Computer Vision Research
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="member-container">
+        <div class="member">
+            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 1">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Seung-ju Cha</h2>
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> 
+                <br><strong>Research Areas</strong> Machine learning
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+---
+# | Team. ME Disign Project 
 <html>
 <head>
     <title>Lab Members</title>
@@ -52,9 +100,8 @@ sidebar_main: false
     </div>
 </body>
 </html>
-
 ---
-# | Team. 1공의 독수리
+# | Team. Hanyang Academic Town
 <html>
 <head>
     <title>Lab Members</title>

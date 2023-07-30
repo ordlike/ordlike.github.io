@@ -2,7 +2,7 @@
 title: "Welcome to ORDLIKE!"
 layout: splash
 permalink: /main/
-date: 2016-03-23T11:48:41-04:00        
+date: 2023-07-30     
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
