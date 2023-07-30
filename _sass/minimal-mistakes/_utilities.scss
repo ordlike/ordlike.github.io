@@ -714,3 +714,47 @@ a.reversefootnote {
 .gallery a:hover .overlay {
   opacity: 0.7; /* 마우스를 올리면 투명도를 0.7로 변경하여 효과를 보여줌 */
 }
+
+/*프로필*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  flex-wrap: wrap;
+}
+
+.profile-image-container {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0; /* 이미지 컨테이너의 margin을 0으로 설정 */
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  flex: 0 0 50%;
+  padding: 20px;
+  margin: 0; /* 프로필 정보 컨테이너의 margin을 0으로 설정 */
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}

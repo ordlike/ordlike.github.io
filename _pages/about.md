@@ -4,41 +4,28 @@ permalink: /about/
 author_profile: true
 sidebar_main: true
 ---
-<!DOCTYPE html>
+> # Chae Hwan Park
 <html>
 <head>
-    <title>Chae Hwan Park</title>
+    <title>My Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="float: left; margin-right: 20px;">
-        <img src="./../images/about/profile.jpg" alt="profile" style="zoom: 35%;">
+    <div class="profile-container">
+        <div class="profile-image-container">
+            <img src="./../images/about/profile.jpg" alt="Profile Picture" class="profile-image">
+        </div>
+        <div class="profile-info">
+            <h1>Your Name</h1>
+            <p>Occupation</p>
+            <p>Email: your.email@example.com</p>
+            <p>Location: Your City, Country</p>
+            <!-- 기타 추가 정보 입력 -->
+        </div>
     </div>
-    <h1>Hello! I am Chaehwan Park</h1>
-    <hr>
-    <h2>Portfolio</h2>
-    <hr>
-    <h3>Research Field <a href="https://sites.google.com/site/seunghwalab/">[Go Into LAB]</a></h3>
-    <ul>
-        <li>Design of Materials and Structures</li>
-        <li>Mechanical Reliability Test of Composites</li>
-        <li>Multiscale and Modeling of Material Properties</li>
-    </ul>
-    <img class="contain" src="images/SKANG.gif" alt="Research Field Image">
 </body>
 </html>
 
-
-
-> # Chae Hwan Park
->
-
-<div style="float: left;">
-  <img src="./../images/about/profile.jpg" alt="profile" style="zoom:35%;">
-</div> <br><br><br><br><br><br><br><br><br>
-
-
-## Hello! I am Chaehwan Park
 
 ---
 
@@ -120,3 +107,26 @@ Come visit my [Shoes Instagram](https://www.instagram.com/honey__ksh/)
 
 ---
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Members</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="member-container">
+        <div class="member">
+            <a href="" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/changjun_final.jpg" alt="Member 1">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Chang-jun Lee</h2>
+                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
+                <br><strong>Research Areas</strong> 3D CAD modeling
+            </div>
+        </div>
+        <!-- 다른 멤버 정보를 이곳에 추가하세요 -->
+    </div>
+</body>
+</html>
