@@ -17,12 +17,10 @@ sidebar_main: true
         </div>
         <div class="profile-info">
             <p><h1 style="color: #5695A8;">Chae-hwan Park</h1></p>
-            <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
-            <br><strong>E-mail</strong> 3418star@naver.com
-            <br><strong>Research Areas</strong> Circuit design and IOT device fabrication
-            <p>Occupation</p>
-            <p>Email: your.email@example.com</p>
-            <p>Location: Your City, Country</p>
+            <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University</p>
+            <p><strong>E-mail</strong> 3418star@naver.com</p>
+            <p><strong>Research Areas</strong> Circuit Design and IOT Device</p>
+
             <!-- 기타 추가 정보 입력 -->
         </div>
     </div>
