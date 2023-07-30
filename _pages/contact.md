@@ -5,8 +5,7 @@ author_profile: true
 sidebar_main: false
 ---
 # ***| Direct Message System***
-<br>
-<html>
+
 <head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -56,7 +55,6 @@ sidebar_main: false
         <input type="submit" value="Send">
     </form>
 </body>
-</html>
 
 
 
