@@ -4,7 +4,7 @@ permalink: /about/
 author_profile: true
 sidebar_main: true
 ---
-> # Direct Message System
+> # About Me
 <html>
 <head>
     <title>My Profile</title>
@@ -30,7 +30,7 @@ sidebar_main: true
 ---
 
 #### Education
-B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024 (Expected)
+B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024(Expected)
 
 ---
 
