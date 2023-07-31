@@ -36,11 +36,11 @@ B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/), Hanyang University, Mar
 
 #### Awards 
 
-Hanyang Hanyang Learning Pacemaker program  Award, Jul 2023
+Hanyang Hanyang Learning Pacemaker program Award, Jul 2023
 
-LG Electronics Product Design Project  Completion, Jun 2023
+LG Electronics Product Design Project Award, Jun 2023
 
-Mechanical Engineering Design Project May 2023 
+Mechanical Engineering Design Projec Award, May 2023 
 
 Hanyang Academic Town program Award, Dec 2022
 
@@ -49,7 +49,7 @@ Hanyang Engineering Drone Design Award, Jun 2018
 ---
 
 #### Experiences
-Samsung dream class Mentoring program Completion, Jan 2019
+Samsung dream class Mentoring program Completion, 2022 ~ 2023(Expected)
 
 ---
 
