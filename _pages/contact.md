@@ -4,8 +4,7 @@ permalink: /contact/
 author_profile: true
 sidebar_main: false
 ---
-<br>
- ***| Direct Message System***
+# | Team. EE Disign Project 
 <html>
 <head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>

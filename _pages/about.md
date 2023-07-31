@@ -17,7 +17,7 @@ sidebar_main: true
         </div>
         <div class="profile-info">
             <p><h1 style="color: #5695A8;">Chae-hwan Park</h1></p>
-            <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University</p>
+            <p><strong>UG Year 4</strong>&nbsp;&nbsp;Mechanical Engineering, Hanyang University</p>
             <p><strong>E-mail</strong> 3418star@naver.com</p>
             <p><strong>Research Areas</strong> Circuit Design and IOT Device</p>
 
@@ -50,7 +50,7 @@ sidebar_main: true
 #### Education
 KAIST, M.S., [Graduate school of MECH](https://me.kaist.ac.kr/main/main.html), Feb 2022 - Present
 
-HANYANG University, B.S., [Mechanical Engineering](http://me.hanyang.ac.kr/), Mar 2018 - Dec 2021
+HANYANG University, B.S., [Mechanical Engineering](http://me.hanyang.ac.kr/), Mar 2018 - Feb 2024(Expected)
 
 ||<span style="color:rgb(38, 124, 185)">GPA</span>|<span style="color:rgb(38, 124, 185)">Rank</span>|<span style="color:rgb(38, 124, 185)">Score</span>|
 |----|----|----|----|
