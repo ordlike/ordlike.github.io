@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Chaehwan Park"
-  avatar           : "/assets/new_images/profile.jpg" 
+  avatar           : "./../assets/new_images/me.jpg" 
   bio              : "4th year, **Hanyang tech B.s.** "
   location         : "South korea"
   email            : 

@@ -13,7 +13,7 @@ sidebar_main: true
 <body>
     <div class="profile-container">
         <div class="profile-image-container">
-            <img src="./../images/about/profile.jpg" alt="Profile Picture" class="profile-image">
+            <img src="./../assets/new_images/me.jpg" alt="Profile Picture" class="profile-image">
         </div>
         <div class="profile-info">
             <p><h1 style="color: #5695A8;">Chae-hwan Park</h1></p>
