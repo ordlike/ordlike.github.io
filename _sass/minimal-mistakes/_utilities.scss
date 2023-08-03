@@ -641,9 +641,17 @@ a.reversefootnote {
   .member img {
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: px;
+    margin-bottom: 5px;
+    display: block; /* 이미지를 블록 레벨 요소로 변경하여 가운데 정렬이 되지 않도록 함 */
+    margin: 0 auto; /* 이미지를 가운데로 정렬 */
+  }
+
+  .member-info {
+    text-align: left; /* 정보 텍스트를 왼쪽 정렬로 변경 */
+    width: 100%; /* 정보 텍스트를 가로로 꽉 차게 함 */
   }
 }
+
 
 /* 모바일 화면에만 적용되는 스타일 */
 // @media screen and (max-width: 767px) {
