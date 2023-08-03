@@ -633,18 +633,19 @@ a.reversefootnote {
 @media screen and (max-width: 767px) {
   .member {
     width: 100%;
-    margin-right: 0; /* 모바일 화면에서는 오른쪽 여백을 없앱니다. */
-    flex-direction: column; /* 모바일 화면에서 아이템들을 세로로 정렬합니다. */
-    align-items: flex-start; /* 좌측으로 정렬하여 이미지와 텍스트를 분리합니다. */
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center; /* 가운데 정렬을 위해 추가 */
   }
 
   .member img {
-    max-width: 100%; /* 이미지를 컨테이너의 100% 너비로 표시합니다. */
-    margin-right: 0; /* 모바일 화면에서 이미지 오른쪽 여백을 없앱니다. */
-    margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격을 추가합니다. */
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: px;
   }
 }
-// /* 모바일 화면에만 적용되는 스타일 */
+
+/* 모바일 화면에만 적용되는 스타일 */
 // @media screen and (max-width: 767px) {
 //   .member {
 //       width: 100%;
