@@ -1,10 +1,10 @@
 ---
 layout: splash
-permalink: /secret/
+permalink: /gallery/
 author_profile: true
 sidebar_main: false
 ---
-**Secret Gallery**
+> # Gallery of Memories
 <html>
 <head>
     <title>Gallery</title>

@@ -9,6 +9,8 @@ main:
   - title: "Projects"
     url: /main/
   - title: "News"
-    url: https://www.hanyang.ac.kr
+    url: https://www.hanyang.ac.kr 
+  - title: "Photo"
+    url: /gallery/
   - title: "Contact"
     url: /contact/

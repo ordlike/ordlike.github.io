@@ -122,13 +122,13 @@ sidebar_main: false
         </div>
         <div class="member">
             <a href="https://sites.google.com/hanyang.ac.kr/tsdlab/members" style="color: #5695A8;">
-                <img src="./../assets/new_images/team/jeongwoo_final.jpg" alt="Member 2">
+                <img src="./../assets/new_images/team/euihyeon_final.jpg" alt="Member 2">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Jeong-woo Woo</h2>
+                <h2 style="color: #5695A8;">Eui-hyeon Park </h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> korwoo1@hanyang.ac.kr
-                <br><strong>Research Areas</strong> Translational Soft Devices
+                <br><strong>E-mail</strong> pyh4683@hanyang.ac.kr
+                <br><strong>Research Areas</strong> Vehicle controls
             </div>
         </div>
     </div>
