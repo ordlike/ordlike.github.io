@@ -142,7 +142,7 @@ sidebar_main: false
                 <h2 style="color: #5695A8;">Nyong-Nyun Nii</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> yonghun12345687@gmail.com
-                <br><strong>Research Areas</strong> Robot Operating System
+                <br><strong>Research Areas</strong> Robot operating system
             </div>
         </div>
     </div>
