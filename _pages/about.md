@@ -13,10 +13,10 @@ sidebar_main: true
 <body>
     <div class="profile-container">
         <div class="profile-image-container">
-            <img src="./../assets/new_images/me.jpg" alt="Profile Picture" class="profile-image">
+            <img src="./../assets/new_images/ORD.jpg" alt="Profile Picture" class="profile-image">
         </div>
         <div class="profile-info">
-            <p><h1 style="color: #5695A8;">Chae-hwan Park</h1></p>
+            <p><h1 style="color: #5695A8;">Chae-Hwan Park</h1></p>
             <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University</p>
             <p><strong>E-mail</strong> 3418star@naver.com</p>
             <p><strong>Research Areas</strong> Circuit Design and IOT Device</p>
