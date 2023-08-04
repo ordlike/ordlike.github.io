@@ -110,7 +110,7 @@ sidebar_main: false
 <body>
     <div class="member-container">
         <div class="member">
-            <a href="http://mcdm.hanyang.ac.kr/sub1_1.jsp?no=4" style="color: #5695A8;">
+            <a href="" style="color: #5695A8;">
                 <img src="./../assets/new_images/team/seonghyeon_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
