@@ -19,7 +19,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Yong-hyeon Lee</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> yonghun12345687@gmail.com
                 <br><strong>Research Areas</strong> Robot operating system
             </div>
@@ -137,7 +137,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Eui-hyeon Park </h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> pyh4683@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Vehicle controls
             </div>
