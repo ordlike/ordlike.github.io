@@ -18,7 +18,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/yonghyun_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Yong-Hyun Lee</h2>
+                <h2 style="color: #5695A8;">Yong-hyeon Lee</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> yonghun12345687@gmail.com
                 <br><strong>Research Areas</strong> Robot operating system
@@ -29,7 +29,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Seung-Ju Cha</h2>
+                <h2 style="color: #5695A8;">Seung-ju Cha</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> chaseungju990201@gmail.com
                 <br><strong>Research Areas</strong> Machine learning
@@ -43,7 +43,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/changjun_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Chang-Jun Lee</h2>
+                <h2 style="color: #5695A8;">Chang-jun Lee</h2>
                 <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
                 <br><strong>Research Areas</strong> 3D CAD modeling
@@ -54,7 +54,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/donghoon_final.jpg" alt="Member 2">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Dong-Hoon Oh</h2>
+                <h2 style="color: #5695A8;">Dong-hoon Oh</h2>
                 <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> hoon6049@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Computer Vision 
@@ -77,7 +77,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/jeonghoon_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Jeong-Hoon Lee</h2>
+                <h2 style="color: #5695A8;">Jeong-hoon Lee</h2>
                 <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> chjklmpwy@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Translational Soft Devices
@@ -88,7 +88,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/jeongwoo_final.jpg" alt="Member 2">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Jeong-Woo Woo</h2>
+                <h2 style="color: #5695A8;">Jeong-woo Woo</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> korwoo1@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Translational Soft Devices
@@ -125,7 +125,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/seonghyeon_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Seoung-Hyeon Yuk</h2>
+                <h2 style="color: #5695A8;">Seoung-hyeon Yuk</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> tjdgusdbr213@naver.com
                 <br><strong>Research Areas</strong> Semiconductor packaging
@@ -136,7 +136,7 @@ sidebar_main: false
                 <img src="./../assets/new_images/team/euihyeon_final.jpg" alt="Member 2">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Eui-Hyeon Park </h2>
+                <h2 style="color: #5695A8;">Eui-hyeon Park </h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> pyh4683@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Vehicle controls
