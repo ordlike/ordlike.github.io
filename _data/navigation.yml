@@ -7,9 +7,9 @@ main:
     url: /team/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Projects"
-    url: /main/
+    url: https://ordlike.github.io
   - title: "News"
-    url: https://www.hanyang.ac.kr 
+    url: /news/
   - title: "Photo"
     url: /gallery/
   - title: "Contact"

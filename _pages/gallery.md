@@ -65,7 +65,7 @@ sidebar_main: false
             <a href="./../assets/new_images/team/secret/baseball.jpg">
                 <img src="./../assets/new_images/team/secret/baseball.jpg" alt="Image 2">
                 <div class="overlay">
-                    <h3>롯데 VS LG</h3>
+                    <h3>잠실야구장</h3>
                 </div>
             </a>
         </div>

@@ -14,6 +14,31 @@ sidebar_main: false
 <body>
     <div class="member-container">
         <div class="member">
+            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/yonghyun_final.jpg" alt="Member 1">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Yong-Hyun Lee</h2>
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> yonghun12345687@gmail.com
+                <br><strong>Research Areas</strong> Robot operating system
+            </div>
+        </div>
+        <div class="member">
+            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+                <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 1">
+            </a>
+            <div class="member-info">
+                <h2 style="color: #5695A8;">Seung-Ju Cha</h2>
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> chaseungju990201@gmail.com
+                <br><strong>Research Areas</strong> Machine learning
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="member-container">
+        <div class="member">
             <a href="" style="color: #5695A8;">
                 <img src="./../assets/new_images/team/changjun_final.jpg" alt="Member 1">
             </a>
@@ -33,20 +58,6 @@ sidebar_main: false
                 <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> hoon6049@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Computer Vision 
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="member-container">
-        <div class="member">
-            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
-                <img src="./../assets/new_images/team/seungju_final.jpg" alt="Member 1">
-            </a>
-            <div class="member-info">
-                <h2 style="color: #5695A8;">Seung-Ju Cha</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> chaseungju990201@gmail.com
-                <br><strong>Research Areas</strong> Machine learning
             </div>
         </div>
     </div>
@@ -84,7 +95,7 @@ sidebar_main: false
             </div>
         </div>
     </div>
-    <br>
+    <!-- <br>
     <div class="member-container">
         <div class="member">
             <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
@@ -97,7 +108,7 @@ sidebar_main: false
                 <br><strong>Research Areas</strong> Machine learning
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
 ---
@@ -133,19 +144,19 @@ sidebar_main: false
         </div>
     </div>
     <br>
-    <div class="member-container">
+    <!-- <div class="member-container">
         <div class="member">
             <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
                 <img src="./../assets/new_images/team/yonghyun_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
-                <h2 style="color: #5695A8;">Nyong-Nyun Nii</h2>
+                <h2 style="color: #5695A8;">Yong-Hyun Lee</h2>
                 <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> yonghun12345687@gmail.com
                 <br><strong>Research Areas</strong> Robot operating system
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
 <html>
