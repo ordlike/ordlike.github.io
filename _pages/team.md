@@ -132,7 +132,7 @@ sidebar_main: false
             </div>
         </div>
         <div class="member">
-            <a href="https://sites.google.com/hanyang.ac.kr/tsdlab/members" style="color: #5695A8;">
+            <a href="" style="color: #5695A8;">
                 <img src="./../assets/new_images/team/euihyeon_final.jpg" alt="Member 2">
             </a>
             <div class="member-info">
