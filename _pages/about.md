@@ -82,6 +82,6 @@ B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/), Hanyang University, Mar
 My hobbies are playing the piano and drums! I'm very interested in music!
 <br>Visit [[My Blog]](https://blog.naver.com/ordlike) and [[My Instagram]](https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==]), Come in!
 <br>
-
+(Last Update: 2023/08/06)
 <!-- <font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
 --- -->
