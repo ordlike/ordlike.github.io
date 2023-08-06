@@ -77,7 +77,7 @@ sidebar_main: false
                 </div>
             </a>
         </div>
-        <div class="image-container">
+        <!-- <div class="image-container">
             <a href="./../assets/new_images/team/secret/event.jpg">
                 <img src="./../assets/new_images/team/secret/event.jpg" alt="Image 4">
                 <div class="overlay">
@@ -92,7 +92,7 @@ sidebar_main: false
                     <h3>누구지?</h3>
                 </div>
             </a>
-        </div>
+        </div> -->
         <!-- 나머지 이미지를 동일한 방식으로 추가 -->
     </div>
 </body>

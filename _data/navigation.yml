@@ -6,10 +6,10 @@ main:
   - title: "Team"
     url: /team/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Projects"
-    url: https://ordlike.github.io
   - title: "News"
     url: /news/
+  - title: "Projects"
+    url: /projects/
   - title: "Photo"
     url: /gallery/
   - title: "Contact"

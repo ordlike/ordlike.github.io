@@ -42,7 +42,7 @@ feature_row:
   - image_path: /assets/new_images/main_car.jpg
     title: <center>Projects</center>
     excerpt: "Let me introduce the **Projects** I've been working on!"
-    url: "#test-link"
+    url: "/projects/"
     btn_label: "Read More"
     btn_class: "btn--primary"
     
@@ -51,7 +51,7 @@ feature_row2:
     alt: "placeholder image 2"
     title: "2023 Mechanical Engineering Design Project Awarded!"
     excerpt: "At the Mechanical Engineering Design Project presentation held on Monday, May 22, 2023, in the lobby of HIT 6th floor and the conference room 612, our team won the award under the theme of 'Wearable Smart Key Using Gesture Recognition'"
-    url: "#test-link"
+    url: "/second/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 # feature_row3:
