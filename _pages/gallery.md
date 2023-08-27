@@ -52,7 +52,7 @@ sidebar_main: false
     </style>
 </head>
 <body>
-    <div class="gallery">
+        <div class="gallery">
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/2023-08-28.jpg">
                 <img src="./../assets/new_images/team/secret/2023-08-28.jpg" alt="Image 1">
@@ -61,7 +61,6 @@ sidebar_main: false
                 </div>
             </a>
         </div>
-        <div class="gallery">
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/beech.jpg">
                 <img src="./../assets/new_images/team/secret/beech.jpg" alt="Image 1">
