@@ -47,11 +47,11 @@ feature_row:
     btn_class: "btn--primary"
     
 feature_row2:
-  - image_path: /assets/new_images/news1.jpg
+  - image_path: /assets/new_images/news2.jpg
     alt: "placeholder image 2"
-    title: "2023 Mechanical Engineering Design Project Awarded!"
-    excerpt: "At the Mechanical Engineering Design Project presentation held on Monday, May 22, 2023, in the lobby of HIT 6th floor and the conference room 612, our team won the award under the theme of 'Wearable Smart Key Using Gesture Recognition'"
-    url: "/second/"
+    title: "Playing the drums at the Band Club Hanullim Performance!"
+    excerpt: "On October 6, 2023, I played the drums for 'Buzz - Journey For Myself' at the Hanwoollim Freshman Performance, a band club at Hanyang University's College of Engineering."
+    url: "/third/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 # feature_row3:
