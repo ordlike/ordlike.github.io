@@ -49,7 +49,7 @@ feature_row:
 feature_row2:
   - image_path: /assets/new_images/news2.jpg
     alt: "placeholder image 2"
-    title: "Playing the drums at the Band Club Hanullim Performance!"
+    title: "Playing the drums at the Band Club Hanwoollim Performance!"
     excerpt: "On October 6, 2023, I played the drums for 'Buzz - Journey For Myself' at the Hanwoollim Freshman Performance, a band club at Hanyang University's College of Engineering."
     url: "/third/"
     btn_label: "Read More"
