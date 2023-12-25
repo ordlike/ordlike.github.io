@@ -19,7 +19,7 @@ sidebar_main: false
             position: relative;
             width: 100%;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 25px;
         }
         .image-container img {
             width: 100%;
@@ -54,8 +54,16 @@ sidebar_main: false
 <body>
         <div class="gallery">
         <div class="image-container">
+            <a href="./../assets/new_images/team/secret/2023-11-20.jpg">
+                <img src="./../assets/new_images/team/secret/2023-11-20.jpg" alt="Image 1">
+                <div class="overlay">
+                    <h3>시상식</h3>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
             <a href="./../assets/new_images/team/secret/2023-08-28.jpg">
-                <img src="./../assets/new_images/team/secret/2023-08-28.jpg" alt="Image 1">
+                <img src="./../assets/new_images/team/secret/2023-08-28.jpg" alt="Image 2">
                 <div class="overlay">
                     <h3>제주여행</h3>
                 </div>
@@ -63,7 +71,7 @@ sidebar_main: false
         </div>
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/beech.jpg">
-                <img src="./../assets/new_images/team/secret/beech.jpg" alt="Image 1">
+                <img src="./../assets/new_images/team/secret/beech.jpg" alt="Image 3">
                 <div class="overlay">
                     <h3>속초여행</h3>
                 </div>
@@ -71,7 +79,7 @@ sidebar_main: false
         </div>
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/baseball.jpg">
-                <img src="./../assets/new_images/team/secret/baseball.jpg" alt="Image 2">
+                <img src="./../assets/new_images/team/secret/baseball.jpg" alt="Image 4">
                 <div class="overlay">
                     <h3>잠실야구장</h3>
                 </div>
@@ -79,7 +87,7 @@ sidebar_main: false
         </div>
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/youngme.jpg">
-                <img src="./../assets/new_images/team/secret/youngme.jpg" alt="Image 3">
+                <img src="./../assets/new_images/team/secret/youngme.jpg" alt="Image 5">
                 <div class="overlay">
                     <h3>어린시절</h3>
                 </div>

@@ -110,9 +110,9 @@ author:
   location         : "South korea"
   email            : 
   links:
-    - label: "3418star@naver.com"
+    - label: "ordlike@snu.ac.kr"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:3418star@naver.com"
+      url: "mailto:ordlike@snu.ac.kr"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/ordlike"
@@ -138,6 +138,9 @@ footer:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
+    - label: "Blog"
+      icon: "fas fa-fw fa-link"
+      url: "https://blog.naver.com/ordlike"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:

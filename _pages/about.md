@@ -18,8 +18,8 @@ sidebar_main: true
         </div>
         <div class="profile-info">
             <p><h1 style="color: #5695A8;">Chae-Hwan Park</h1></p>
-            <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University</p>
-            <p><strong>E-mail</strong> 3418star@naver.com</p>
+            <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME and EE, Hanyang University</p>
+            <p><strong>E-mail</strong> ordlike@snu.ac.kr</p>
             <p><strong>Research Areas</strong> Circuit Design and IOT device</p>
             <!-- 기타 추가 정보 입력 -->
         </div>
@@ -31,7 +31,8 @@ sidebar_main: true
 ---
 
 #### Education
-B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/) and [Electronic Engineering](http://ee.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024(Expected)
+- M.S. Candidate [Electrical and Computer Engineering](https://ece.snu.ac.kr/), Seoul National University, Mar 2024 - (Expected)
+- B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/) and [Electronic Engineering](http://ee.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024(Expected)
 
 ***+ Relevant Coursework:*** 
 
@@ -54,12 +55,15 @@ B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/) and [Electronic Engineer
 ---
 
 #### Awards 
+- ✔️ Mechanical Engineering Design Project2 Award, Nov 2023 
+
+<img src="./../images/about/mechanical_award.jpg" alt="dreamclass" style="zoom: 17%;" />
 
 - ✔️ Hanyang Hanyang Learning Pacemaker program Award, Jul 2023
 
 - ✔️ LG Electronics Product Design Project Award, Jun 2023
 
-- ✔️ Mechanical Engineering Design Projec Award, May 2023 
+- ✔️ Mechanical Engineering Design Project1 Award, May 2023 
 
 - ✔️ Hanyang Academic Town program Award, Dec 2022
 
@@ -83,6 +87,6 @@ My hobbies are playing the piano and drums! I'm very interested in music!
 <br>Visit [[My Blog]](https://blog.naver.com/ordlike) and [[My Instagram]](https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==]), Come in!
 <br>
 <br>
-(Last Update: 2023/10/11)
+(Last Update: 2023/12/26)
 <!-- <font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
 --- -->
