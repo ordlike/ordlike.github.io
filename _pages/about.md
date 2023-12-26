@@ -36,22 +36,22 @@ sidebar_main: true
 
 ***+ Relevant Coursework:*** 
 
-​	• Electric Engineering (A+)
+<ul>
+    <li>Electric Engineering (A+)</li>
+    <li>Electronic Engineering(A+)</li>
 
-​	• Electronic Engineering(A+)      
+    <li>Circuit Theory1 (A+)</li>
+    <li>The Physics of Solid-state Electronics (A+)</li>
 
-​	• Circuit Theory1 (A+)          
+    <li>Circuit Theory2 (A+)</li>
+    <li>Semiconductor Devices (A+)</li>
 
-​	• The Physics of Solid-state Electronics (A+) 
+    <li>Electronic Circuit1 (A0)</li>
+    <li>Semiconductor Fabrications (A+)</li>
 
-​	• Circuit Theory2 (A+)   
-
-​	• Semiconductor Devices (A+)
-
-​	• Electronic Circuit1 (A0)
-
-​	• Semiconductor Fabrications (A+)
-
+    <li>Electronic Circuit2 (A+)</li>
+    <li>VLSI Engineering (A0)</li>
+  </ul>
 ---
 
 #### Awards 
