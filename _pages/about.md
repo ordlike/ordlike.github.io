@@ -99,6 +99,6 @@ My hobbies are playing the piano and drums! I'm very interested in music!
 <br>Visit [[My Blog]](https://blog.naver.com/ordlike) and [[My Instagram]](https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==]), Come in!
 <br>
 <br>
-(Last Update: 2024/02/20)
+(Last Update: 2024/02/21)
 <!-- <font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
 --- -->

@@ -216,7 +216,7 @@ feature_row2:
             <p>If you want more information <strong>About me</strong>, please come in!</p>
         </a>
         <a href="/team">
-            <img src="/assets/new_images/Team_final.jpg" alt="Team">
+            <img src="/assets/new_images/Team_2_final.jpg" alt="Team">
             <h1>Team</h1>
             <p>Introducing the <strong>Team members</strong> who worked with me.</p>
         </a>
@@ -228,14 +228,14 @@ feature_row2:
  </section>
     <h1 class="hot-news-header">:: HOT News ::</h1>
     <div class="hot-news-container">
-        <a href="/third/" class="hot-news-item">
-            <img src="/assets/new_images/news2.jpg" alt="hot 1">
+        <a href="/fourth/" class="hot-news-item">
+            <img src="/assets/new_images/news3.jpg" alt="hot 1">
             <div class="text-container">
-                <h1>Playing the drums at the Band Club Hanwoollim Performance!</h1>
-                <p>On October 6, 2023, I played the drums for 'Buzz - Journey For Myself' at the Hanwoollim Freshman Performance, a band club at Hanyang University's College of Engineering.</p>
+                <h1>Graduated from Hanyang University!</h1>
+                <p>On February 16, 2024, I received a bachelor's degree in mechanical engineering and electronic engineering at Hanyang University's first half of  the ceremony. Please congratulate me!</p>
             </div>
             <div class="btn--primary-container">
-                <a class="btn--primary" href="/third/">Read More</a>
+                <a class="btn--primary" href="/fourth/">Read More</a>
             </div>
         </a>
     </div>
