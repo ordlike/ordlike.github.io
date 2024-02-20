@@ -26,12 +26,13 @@ sidebar_main: true
             <p><strong>B.S.</strong>&nbsp;&nbsp;ME and EE, Hanyang University</p>
             <p><strong>E-mail</strong> ordlike@snu.ac.kr</p>
             <p><strong>Research Areas</strong> Circuit Design and IOT device</p>
-            <p><strong>Additional Info</strong>: <a href="https://blog.naver.com/ordlike">Blog</a> and <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==">Instagram</a></p>
+            <p><strong>Additional Info</strong> <a href="https://blog.naver.com/ordlike">Blog</a> and <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==">Instagram</a></p>
             <!-- 기타 추가 정보 입력 -->
         </div>
     </div>
 </body>
 </html>
+
 
 
 
