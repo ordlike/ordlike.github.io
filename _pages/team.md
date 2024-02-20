@@ -8,7 +8,7 @@ sidebar_main: false
 # | Team. EE Disign Project 
 <html>
 <head>
-    <title>Lab Members</title>
+    <title>Members</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Yong-hyeon Lee</h2>
-                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> yonghun12345687@gmail.com
                 <br><strong>Research Areas</strong> Robot operating system
             </div>
@@ -30,7 +30,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seung-ju Cha</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> chaseungju990201@gmail.com
                 <br><strong>Research Areas</strong> Machine learning
             </div>
@@ -44,7 +44,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Chang-jun Lee</h2>
-                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
                 <br><strong>Research Areas</strong> 3D CAD modeling
             </div>
@@ -55,7 +55,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Dong-hoon Oh</h2>
-                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> hoon6049@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Computer Vision 
             </div>
@@ -89,7 +89,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Jeong-woo Woo</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> korwoo1@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Translational Soft Devices
             </div>
@@ -126,7 +126,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seoung-hyeon Yuk</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> tjdgusdbr213@naver.com
                 <br><strong>Research Areas</strong> Semiconductor packaging
             </div>
@@ -137,7 +137,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Eui-hyeon Park </h2>
-                <strong>UG Year 3</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> pyh4683@hanyang.ac.kr
                 <br><strong>Research Areas</strong> Vehicle controls
             </div>

@@ -10,6 +10,11 @@ sidebar_main: true
 <head>
     <title>My Profile</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-info {
+            line-height: 1.5; /* 줄 간격을 조정합니다. */
+        }
+    </style>
 </head>
 <body>
     <div class="profile-container">
@@ -18,9 +23,10 @@ sidebar_main: true
         </div>
         <div class="profile-info">
             <p><h1 style="color: #5695A8;">Chae-Hwan Park</h1></p>
-            <p><strong>UG Year 4</strong>&nbsp;&nbsp;ME and EE, Hanyang University</p>
+            <p><strong>B.S.</strong>&nbsp;&nbsp;ME and EE, Hanyang University</p>
             <p><strong>E-mail</strong> ordlike@snu.ac.kr</p>
             <p><strong>Research Areas</strong> Circuit Design and IOT device</p>
+            <p><strong>Additional Info</strong>: <a href="https://blog.naver.com/ordlike">Blog</a> and <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==">Instagram</a></p>
             <!-- 기타 추가 정보 입력 -->
         </div>
     </div>
@@ -28,11 +34,12 @@ sidebar_main: true
 </html>
 
 
+
 ---
 
 #### Education
-- M.S. Candidate [Electrical and Computer Engineering](https://ece.snu.ac.kr/), Seoul National University, Mar 2024 - (Expected)
-- B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/) and [Electronic Engineering](http://ee.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024(Expected)
+- M.S. [Electrical and Computer Engineering](https://ece.snu.ac.kr/), Seoul National University, Mar 2024 -
+- B.S. [Mechanical Engineering](http://me.hanyang.ac.kr/) and [Electronic Engineering](http://ee.hanyang.ac.kr/), Hanyang University, Mar 2018 - Feb 2024
 
 ***+ Relevant Coursework:*** 
 
@@ -55,6 +62,10 @@ sidebar_main: true
 ---
 
 #### Awards 
+- ✔️ Hanyang Academic excellence award, Feb 2024
+
+- ✔️ Hanyang Academic Town program Award, Dec 2023
+
 - ✔️ Mechanical Engineering Design Project2 Award, Nov 2023 
 
 <img src="./../images/about/mechanical_award.jpg" alt="dreamclass" style="zoom: 17%;" />
@@ -72,7 +83,7 @@ sidebar_main: true
 ---
 
 #### Experiences
-- ✔️ Samsung dream class Mentoring program Completion, 2022 ~ 2023(Expected)
+- ✔️ Samsung dream class Mentoring program Completion, 2022 ~ 2024(Expected)
 
 <img src="./../images/about/dreamclass.jpg" alt="dreamclass" style="zoom: 67%;" />
 
@@ -87,6 +98,6 @@ My hobbies are playing the piano and drums! I'm very interested in music!
 <br>Visit [[My Blog]](https://blog.naver.com/ordlike) and [[My Instagram]](https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==]), Come in!
 <br>
 <br>
-(Last Update: 2023/12/26)
+(Last Update: 2024/02/20)
 <!-- <font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
 --- -->
