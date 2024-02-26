@@ -198,7 +198,7 @@ feature_row2:
 </style>
 
 <p class="department-info">
-  Dept. of <em>Mechanical Engineering</em> & <em>Electronic Engineering</em> at Hanyang University, Seoul.<br>
+  Dept. of <em>Electrical and Computer Engineering</em> at Seoul National University, Seoul.<br>
   If you have any questions, please feel free to contact me.
 </p>
 
