@@ -6,7 +6,7 @@ date: 2023-12-25
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
-  overlay_image: /assets/new_images/mainprofile_HYU.jpg
+  overlay_image: /assets/new_images/mainprofile_HYU2.jpg
   
   actions:
   - label: "Download CV"
@@ -232,7 +232,7 @@ feature_row2:
             <img src="/assets/new_images/news3.jpg" alt="hot 1">
             <div class="text-container">
                 <h1>Graduated from Hanyang University!</h1>
-                <p>On February 16, 2024, I received a bachelor's degree in mechanical engineering and electronic engineering at Hanyang University's first half of  the ceremony. Please congratulate me!</p>
+                <p>On February 16, 2024, I received a Bachelor's degree in mechanical engineering and electronic engineering at Hanyang University's first half of  the ceremony. Please congratulate me!</p>
             </div>
             <div class="btn--primary-container">
                 <a class="btn--primary" href="/fourth/">Read More</a>
