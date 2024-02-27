@@ -50,13 +50,13 @@ sidebar_main: true
 
     <li>Circuit Theory1 (A+)</li>
     <li>The Physics of Solid-state Electronics (A+)</li>
-
+    
     <li>Circuit Theory2 (A+)</li>
     <li>Semiconductor Devices (A+)</li>
-
+    
     <li>Electronic Circuit1 (A0)</li>
     <li>Semiconductor Fabrications (A+)</li>
-
+    
     <li>Electronic Circuit2 (A+)</li>
     <li>VLSI Engineering (A0)</li>
   </ul>
@@ -95,10 +95,9 @@ sidebar_main: true
 ---
 
 #### Personal
-My hobbies are playing the piano and drums! I'm very interested in music!
-<br>Visit [[My Blog]](https://blog.naver.com/ordlike) and [[My Instagram]](https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==]), Come in!
+My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2024/02/21)
-<!-- <font color="white">★ Welcome to Secret Gallery! ★  <a href="/secret"><font color="white">Enter the Gallary</font></a></font>
---- -->
+(Last Update: 2024/02/27)
+
+<br>![bottom](./../images/about/bottom.jpg)
