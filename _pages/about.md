@@ -98,6 +98,6 @@ sidebar_main: true
 My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2024/02/27)
+(Last Update: 2024/03/26)
 
 <br>![bottom](./../images/about/bottom.jpg)

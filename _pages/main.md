@@ -6,7 +6,7 @@ date: 2023-12-25
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
-  overlay_image: /assets/new_images/mainprofile_HYU2.jpg
+  overlay_image: /assets/new_images/main.gif
   
   actions:
   - label: "Download CV"
@@ -211,7 +211,7 @@ feature_row2:
 <body>
     <section class="feature-container">
         <a href="/about">
-            <img src="/assets/new_images/aboutme_final.jpg" alt="About me">
+            <img src="/assets/new_images/aboutme_final.gif" alt="About me">
             <h1>About me</h1>
             <p>If you want more information <strong>About me</strong>, please come in!</p>
         </a>
