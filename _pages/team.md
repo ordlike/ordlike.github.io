@@ -127,8 +127,8 @@ sidebar_main: false
             <div class="member-info">
                 <h2 style="color: #5695A8;">Seoung-hyeon Yuk</h2>
                 <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> tjdgusdbr213@naver.com
-                <br><strong>Research Areas</strong> Semiconductor packaging
+                <br><strong>E-mail</strong> seonghyeon.yuk@mobis.com
+                <br><strong>Research Areas</strong> Power semiconductor module develop
             </div>
         </div>
         <div class="member">
