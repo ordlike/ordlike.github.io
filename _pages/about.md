@@ -67,6 +67,8 @@ sidebar_main: true
 
 - ✔️ Hanyang Academic Town program Award, Dec 2023
 
+<img src="./../images/about/hanyang academic_award.jpg" alt="dreamclass" style="zoom: 15%;" />
+
 - ✔️ Mechanical Engineering Design Project2 Award, Nov 2023 
 
 <img src="./../images/about/mechanical_award.jpg" alt="dreamclass" style="zoom: 17%;" />
@@ -90,7 +92,7 @@ sidebar_main: true
 
 - ✔️ Busan-Incheon 633km Bicycle Land Run, 2020
 
-<img src="./../images/about/국토종주.jpg" alt="국토종주" style="zoom:67%;" />
+<img src="./../images/about/국토종주.jpg" alt="국토종주" style="zoom:70%;" />
 
 ---
 
@@ -98,6 +100,6 @@ sidebar_main: true
 My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2024/03/26)
+(Last Update: 2024/04/14)
 
 <br>![bottom](./../images/about/bottom.jpg)
