@@ -7,7 +7,7 @@ sidebar_main: false
 > # Conference
 
 <ul style="list-style-type: disc;">
-  <li style="font-size: 1em;">
+  <li style="font-size: 1.1em;">
     <sub>
       ChaeHwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, Soo-Yeon Lee, "μLED pixel circuit based on Low-Temperature Polysilicon and Oxide Thin Film Transistors for pulse width modulation with extremely short falling time", International Conference on Electro-physics & Information Technology Applications 2024 (ICEP-ITA 2024), Tashkent, Uzbekistan, June 2024 (Oral)
     </sub>
