@@ -86,9 +86,13 @@ sidebar_main: true
 ---
 
 #### Experiences
+- ✔️ KIDS Display school : Display Backplane / Drive and Circuit, 2024 
+
+<img src="./../images/about/KIDSschool.png" alt="dreamclass" style="zoom: 75%;" /> 
+
 - ✔️ Samsung dream class Mentoring program Completion, 2022 ~ 2024(Expected)
 
-<img src="./../images/about/dreamclass.jpg" alt="dreamclass" style="zoom: 67%;" />
+<img src="./../images/about/dreamclass2.png" alt="dreamclass" style="zoom: 70%;" />
 
 - ✔️ Busan-Incheon 633km Bicycle Land Run, 2020
 
@@ -100,6 +104,6 @@ sidebar_main: true
 My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2024/04/14)
+(Last Update: 2024/08/16)
 
 <br>![bottom](./../images/about/bottom.jpg)
