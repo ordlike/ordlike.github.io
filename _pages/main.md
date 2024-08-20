@@ -220,10 +220,10 @@ feature_row2:
             <h1>Team</h1>
             <p>Introducing the <strong>Team members</strong> who worked with me.</p>
         </a>
-        <a href="/projects">
-            <img src="/assets/new_images/project2_original.jpg" alt="Projects">
-            <h1>Projects</h1>
-            <p>Let me introduce the <strong>Projects</strong> I've been working on!</p>
+        <a href="/research">
+            <img src="/assets/new_images/project2_original.jpg" alt="research">
+            <h1>Research</h1>
+            <p>Let me introduce the <strong>Research</strong> I've been working on!</p>
         </a>
  </section>
     <h1 class="hot-news-header">:: HOT News ::</h1>
