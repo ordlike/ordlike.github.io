@@ -2,7 +2,7 @@
 title: "Welcome to ORDLIKE!"
 layout: splash
 permalink: /main/
-date: 2023-12-25     
+date: 2025-02-02    
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -228,14 +228,14 @@ feature_row2:
  </section>
     <h1 class="hot-news-header">:: HOT News ::</h1>
     <div class="hot-news-container">
-        <a href="/fourth/" class="hot-news-item">
-            <img src="/assets/new_images/news3.jpg" alt="hot 1">
+        <a href="/fifth/" class="hot-news-item">
+            <img src="/assets/new_images/news4.png" alt="hot 1">
             <div class="text-container">
-                <h1>Graduated from Hanyang University!</h1>
-                <p>On February 16, 2024, I received a Bachelor's degree in mechanical engineering and electronic engineering at Hanyang University's first half of  the ceremony. Please congratulate me!</p>
+                <h1>Completed the full marathon course!</h1>
+                <p>On November 3rd, 2024, I completed the 42.195km full course of the Seoul Marathon hosted by JTBC in 5 hours, 39 minutes and 29 seconds. Please congratulate me!</p>
             </div>
             <div class="btn--primary-container">
-                <a class="btn--primary" href="/fourth/">Read More</a>
+                <a class="btn--primary" href="/fifth/">Read More</a>
             </div>
         </a>
     </div>

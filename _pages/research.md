@@ -5,11 +5,22 @@ author_profile: true
 sidebar_main: false
 ---
 > # Conference
-
-<ul style="list-style-type: disc;">
-  <li style="font-size: 1.1em;">
+<ul style="list-style-type: disc; font-size: 1.1em;">
+  <li>
     <sub>
-      ChaeHwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, Soo-Yeon Lee, "μLED pixel circuit based on Low-Temperature Polysilicon and Oxide Thin Film Transistors for pulse width modulation with extremely short falling time", International Conference on Electro-physics & Information Technology Applications 2024 (ICEP-ITA 2024), Tashkent, Uzbekistan, June 2024 (Oral)
+      박채환, 안수빈, 신승윤, 이지호, 최현진, 이수연,  
+      "고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교",  
+      Korean Meeting on Information Display 2025 (KMID 2025),  
+      Gangneung, Korea, January 2025 (Poster)
+    </sub>
+  </li>
+  <li>
+    <sub>
+      Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, Soo-Yeon Lee,  
+      "μLED pixel circuit based on Low-Temperature Polysilicon and Oxide Thin Film Transistors for  
+      pulse width modulation with extremely short falling time",  
+      International Conference on Electro-physics & Information Technology Applications 2024 (ICEP-ITA 2024),  
+      Tashkent, Uzbekistan, June 2024 (Oral)
     </sub>
   </li>
 </ul>
@@ -124,6 +135,30 @@ sidebar_main: false
     </style>
 </head>
 <body>
+    <div class="bottom-section">
+        <header>
+            <h1>Seoul National University</h1>
+        </header>
+    </div>
+    <section>
+        <div class="project-container">
+            <div class="project-card" onclick="openGallery('/assets/new_images/project5.jpg')">
+                <img src="/assets/new_images/project5.jpg" alt="Project 3">
+                <div class="project-details">
+                    <div class="project-title">PCB circuit design</div>
+                    <div class="project-description">PPG(Photoplethysmogram) measurement PCB, ACE Lab, 2024</div>
+                </div>
+            </div>
+             <div class="project-card" onclick="openGallery('/assets/new_images/project4_original.jpg')">
+                <img src="/assets/new_images/project4.jpg" alt="Project 3">
+                <div class="project-details">
+                    <div class="project-title">2022 Winter vacation Intern</div>
+                    <div class="project-description">Piezo based Stiffness Sensor, Hero Lab, 2022</div>
+                </div>
+            </div>           
+            <!-- 다른 프로젝트 카드들도 같은 방식으로 수정 -->
+        </div>
+    </section>
     <div class="top-section">
         <header>
             <h1>Hanyang University</h1>
@@ -138,7 +173,7 @@ sidebar_main: false
                     <div class="project-description">실내 3D Map 생성을 통한 미래 편의 기술 확충<br><br>▶ YouTube link ◀</div>
                 </div>
             </a>
-             <a href="https://www.youtube.com/watch?v=2-kjNgfCKaI&t=18s" class="project-card" onclick="openGallery('/assets/new_images/project2_original.jpg')">
+            <a href="https://www.youtube.com/watch?v=2-kjNgfCKaI&t=18s" class="project-card" onclick="openGallery('/assets/new_images/project2_original.jpg')">
                 <img src="/assets/new_images/project2.jpg" alt="Project 2">
                 <div class="project-details">
                     <div class="project-title">ME Capstone Design Project 2</div>
@@ -149,41 +184,23 @@ sidebar_main: false
                 <img src="/assets/new_images/project1.jpg" alt="Project 1">
                 <div class="project-details">
                     <div class="project-title">ME Capstone Design Project 1</div>
-                    <div class="project-description">Wearable Smart Key Using Gesture Recognition (car body), 2023 </div>
+                    <div class="project-description">Wearable Smart Key Using Gesture Recognition (car body), 2023</div>
                 </div>
             </div>
             <div class="project-card" onclick="openGallery('/assets/new_images/project0_original.jpg')">
                 <img src="/assets/new_images/project0.jpg" alt="Project 1">
                 <div class="project-details">
                     <div class="project-title">EE Capstone Design Project</div>
-                    <div class="project-description">Wearable Smart Key Using Gesture Recognition (Controller), 2023 </div>
+                    <div class="project-description">Wearable Smart Key Using Gesture Recognition (Controller), 2023</div>
                 </div>
             </div>
             <a href="https://www.youtube.com/watch?v=pfUYDsK3Zlc" class="project-card" onclick="openGallery('/assets/new_images/project00_original.jpg')">
                 <img src="/assets/new_images/project00.jpg" alt="Project 2">
                 <div class="project-details">
                     <div class="project-title">2022 Hanyang Academic Town</div>
-                    <div class="project-description">ASAP system( Automatic Secondary Accident Prevention system), 2022<br><br>▶ YouTube link ◀</div>
+                    <div class="project-description">ASAP system (Automatic Secondary Accident Prevention system), 2022<br><br>▶ YouTube link ◀</div>
                 </div>
             </a>
-        </div>
-            <!-- 다른 프로젝트 카드들도 같은 방식으로 수정 -->
-    </section>
-    <div class="bottom-section">
-        <header>
-            <h1>Seoul National University</h1>
-        </header>
-    </div>
-    <section>
-        <div class="project-container">
-            <div class="project-card" onclick="openGallery('/assets/new_images/project4_original.jpg')">
-                <img src="/assets/new_images/project4.jpg" alt="Project 3">
-                <div class="project-details">
-                    <div class="project-title">2022 Winter vacation Intern</div>
-                    <div class="project-description">Piezo based Stiffness Sensor, Hero Lab, 2022</div>
-                </div>
-            </div>
-            <!-- 다른 프로젝트 카드들도 같은 방식으로 수정 -->
         </div>
     </section>
     <div class="gallery-container" id="galleryContainer" onclick="closeGallery()">

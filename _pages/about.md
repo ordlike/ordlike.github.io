@@ -65,13 +65,13 @@ sidebar_main: true
 #### Awards 
 - ✔️ Hanyang Academic excellence award, Feb 2024
 
-- ✔️ Hanyang Academic Town program Award, Dec 2023
+<img src="./../images/about/graduate_award.jpg" alt="dreamclass" style="zoom: 16%;" />  
 
-<img src="./../images/about/hanyang academic_award.jpg" alt="dreamclass" style="zoom: 15%;" />
+- ✔️ Hanyang Academic Town program Award, Dec 2023
 
 - ✔️ Mechanical Engineering Design Project2 Award, Nov 2023 
 
-<img src="./../images/about/mechanical_award.jpg" alt="dreamclass" style="zoom: 17%;" />
+<img src="./../images/about/awards.png" alt="dreamclass" style="zoom: 70%;" />  
 
 - ✔️ Hanyang Hanyang Learning Pacemaker program Award, Jul 2023
 
@@ -94,9 +94,10 @@ sidebar_main: true
 
 <img src="./../images/about/dreamclass2.png" alt="dreamclass" style="zoom: 70%;" />
 
+- ✔️ JTBC Seoul Marathon 42.195km (full-course), 2024
 - ✔️ Busan-Incheon 633km Bicycle Land Run, 2020
 
-<img src="./../images/about/국토종주.jpg" alt="국토종주" style="zoom:70%;" />
+<img src="./../images/about/마라톤_국토종주.png" alt="마라톤_국토종주" style="zoom:70%;" />
 
 ---
 
@@ -104,6 +105,6 @@ sidebar_main: true
 My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2024/08/16)
+(Last Update: 2025/02/02)
 
 <br>![bottom](./../images/about/bottom.jpg)
