@@ -19,8 +19,8 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Yong-hyeon Lee</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> yonghun12345687@gmail.com
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
+                <br><strong>E-mail</strong> younnj@snu.ac.kr
                 <br><strong>Research Areas</strong> Robot operating system
             </div>
         </div>
@@ -44,7 +44,7 @@ sidebar_main: false
             </a>
             <div class="member-info">
                 <h2 style="color: #5695A8;">Chang-jun Lee</h2>
-                <strong>UG Year 4</strong>&nbsp;&nbsp;ME, Hanyang University
+                <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
                 <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
                 <br><strong>Research Areas</strong> 3D CAD modeling
             </div>

@@ -54,13 +54,21 @@ sidebar_main: false
 <body>
         <div class="gallery">
                 <div class="image-container">
+            <a href="./../assets/new_images/team/secret/kmid.png">
+                <img src="./../assets/new_images/team/secret/kmid.png" alt="Image 1">
+                <div class="overlay">
+                    <h3>KMID 2025</h3>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
             <a href="./../assets/new_images/team/secret/2024-02-17.jpg">
                 <img src="./../assets/new_images/team/secret/2024-02-17.jpg" alt="Image 1">
                 <div class="overlay">
                     <h3>대관령여행</h3>
                 </div>
             </a>
-        </div>
+        </div>        
         <div class="image-container">
             <a href="./../assets/new_images/team/secret/2023-11-20.jpg">
                 <img src="./../assets/new_images/team/secret/2023-11-20.jpg" alt="Image 2">

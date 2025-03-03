@@ -25,7 +25,7 @@ sidebar_main: true
             <p><h1 style="color: #5695A8;">Chae-Hwan Park</h1></p>
             <p><strong>B.S.</strong>&nbsp;&nbsp;ME and EE, Hanyang University</p>
             <p><strong>E-mail</strong> ordlike@snu.ac.kr</p>
-            <p><strong>Research Areas</strong> Circuit Design and IOT device</p>
+            <p><strong>Research Areas</strong> CMOS/TFT Circuit Design and IOT Devices</p>
             <p><strong>Additional Info</strong> <a href="https://blog.naver.com/ordlike">Blog</a> , <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==">Instagram</a> , <a href="https://sites.google.com/view/snu-acelab">Laboratory</a></p>
             <!-- 기타 추가 정보 입력 -->
         </div>
@@ -105,6 +105,6 @@ sidebar_main: true
 My hobbies are playing the piano and drums! I'm very interested in music! 
 <br>
 <br>
-(Last Update: 2025/02/02)
+(Last Update: 2025/03/03)
 
 <br>![bottom](./../images/about/bottom.jpg)
