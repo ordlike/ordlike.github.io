@@ -45,7 +45,7 @@ sidebar_main: false
             <div class="member-info">
                 <h2 style="color: #5695A8;">Chang-jun Lee</h2>
                 <strong>B.S.</strong>&nbsp;&nbsp;ME, Hanyang University
-                <br><strong>E-mail</strong> lcj3436@hanyang.ac.kr
+                <br><strong>E-mail</strong> changjoon@kaist.ac.kr
                 <br><strong>Research Areas</strong> 3D CAD modeling
             </div>
         </div>
