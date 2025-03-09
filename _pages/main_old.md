@@ -15,7 +15,7 @@ header:
     url: "/contact/"
 
   caption: #"Photo credit: [****](https://unsplash.com)"
-excerpt: "Hello! I'm Chaehwan Park. <br> ORDLIKE Website is My personal homepage. "
+excerpt: "Hello! I'm Chae-Hwan Park. <br> ORDLIKE Website is My personal homepage. "
 intro: 
   - excerpt: 'Dept. of *Mechanical Engineering* & *Electronic Engineering* at Hanyang University, Seoul. 
   If you have any questions, please feel free to contact me. ' 

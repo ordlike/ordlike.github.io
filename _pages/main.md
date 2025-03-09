@@ -15,7 +15,7 @@ header:
     url: "/contact/"
   
   caption: #"Photo credit: [****](https://unsplash.com)"
-excerpt: "Hello! I'm Chaehwan Park. <br> ORDLIKE Website is My personal homepage. "
+excerpt: "Hello! I'm Chae-Hwan Park. <br> ORDLIKE Website is My personal homepage. "
 
 feature_row2:
   - image_path: /assets/new_images/news2.jpg

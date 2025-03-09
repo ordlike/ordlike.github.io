@@ -14,7 +14,7 @@ sidebar_main: false
 <body>
     <div class="member-container">
         <div class="member">
-            <a href="https://sites.google.com/view/hyu-mm/members" style="color: #5695A8;">
+            <a href="https://softrobotics.snu.ac.kr/people.php" style="color: #5695A8;">
                 <img src="./../assets/new_images/team/yonghyun_final.jpg" alt="Member 1">
             </a>
             <div class="member-info">
