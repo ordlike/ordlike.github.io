@@ -8,8 +8,16 @@ sidebar_main: false
 <ul style="list-style-type: disc; font-size: 1.1em;">
   <li>
     <sub>
-      박채환, 안수빈, 신승윤, 이지호, 최현진, 이수연,  
-      "고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교",  
+      Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee, 
+      "Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing Falling Time and Enhancing Gray-Level Expression", 
+      Society for Information Display 2025 (SID 2025), 
+      San Jose, USA, May 2025 (Poster)
+    </sub>
+  </li>
+  <li>
+    <sub>
+      Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee, 
+      "고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교", 
       Korean Meeting on Information Display 2025 (KMID 2025),  
       Gangneung, Korea, January 2025 (Poster)
     </sub>
