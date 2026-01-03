@@ -48,7 +48,7 @@ sidebar_main: false
   }
   .section-divider { width: 100%; }
   .section-divider .line-bold { height: 4px; background: var(--accent); border-radius: 6px; }
-  .section-divider .line-thin { height: 1px; background: #cbd5e1; margin-top: 10px; width: 100%; }
+
 
   /* ===== Grid ===== */
   .gallery-grid {
@@ -132,6 +132,56 @@ sidebar_main: false
   }
   .gallery-item:hover .gallery-overlay h3,
   .gallery-item:hover .gallery-overlay p { transform: translateY(0); }
+     
+
+     /* =========================================
+   Gallery 페이지: 테마 기본 구분선 완전 제거
+   ========================================= */
+
+    /* h2 / section-label 아래 자동 border 제거 */
+    .section-header,
+    .section-header h2,
+    .section-label {
+    border-bottom: none !important;
+    }
+
+    /* 테마가 넣는 hr 제거 */
+    .page__content hr {
+    display: none !important;
+    }
+
+    /* section-header 뒤에 붙는 가상요소 제거 */
+    .section-header::after,
+    .section-header::before,
+    .section-label::after,
+    .section-label::before {
+    content: none !important;
+    }
+
+    /* 혹시 남아있는 얇은 separator 대비 */
+    .page__content > * {
+    border-top: none !important;
+    }
+
+    /* =========================================
+   Gallery 제목-파란선 간격 정밀 조정
+   ========================================= */
+
+    /* 제목 아래 여백 줄이기 */
+    .section-label {
+    margin-bottom: 0px !important;  /* 기본값보다 대폭 감소 */
+    }
+
+    /* divider 자체 위 여백 제거 */
+    .section-divider {
+    margin-top: 0 !important;
+    }
+
+    /* 혹시 남아있는 h2 기본 여백 제거 */
+    .section-header h2 {
+    margin-bottom: 0px !important;
+    }
+
 
   /* =========================================================
      ✅ Lightbox가 메뉴바 아래에서만 뜨게
@@ -232,7 +282,6 @@ sidebar_main: false
     <h2 class="section-label">Gallery of Memories</h2>
     <div class="section-divider">
       <div class="line-bold"></div>
-      <div class="line-thin"></div>
     </div>
   </div>
 

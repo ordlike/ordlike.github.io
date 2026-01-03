@@ -271,7 +271,7 @@ sidebar_main: true
           - JTBC Seoul Marathon 42.195km (Full-course) <span class="date-tag">2024</span><br>
           - Busan-Incheon 633km Bicycle Land Run <span class="date-tag">2020</span>
         </p>
-        <div class="img-frame"><img src="/images/about/마라톤2_국토종주.png" alt="Sports"></div>
+        <div class="img-frame" style="max-width: 950px; margin: 15px auto 25px auto;"><img src="/images/about/마라톤2_국토종주.png" alt="Sports"></div>
       </ul>
     </div>
   </div>

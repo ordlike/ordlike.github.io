@@ -622,6 +622,24 @@ sidebar_main: false
     .card-img-wrap{ height: 210px; }
     .custom-grid{ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   }
+
+
+  /* ✅ 모바일에서 Details / Download Materials 버튼을 한 줄로 고정 */
+@media (max-width: 900px){
+  .hero-cta{
+    flex-wrap: nowrap;          /* 줄바꿈 금지 */
+    gap: 10px;
+  }
+
+  .hero-cta .btn{
+    flex: 1 1 0;                /* 두 버튼을 1:1로 */
+    justify-content: center;    /* 가운데 정렬 */
+    white-space: nowrap;        /* 버튼 내부 줄바꿈 금지 */
+    padding: 10px 10px;         /* 살짝 줄여서 한 줄에 들어가게 */
+    font-size: 0.88rem;         /* 살짝 축소 */
+  }
+
+  
 </style>
 
 <!-- ========================= Conference ========================= -->
