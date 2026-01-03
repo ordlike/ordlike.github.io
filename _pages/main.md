@@ -183,7 +183,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <div class="department-banner">
   <p>
-    Dept. of <em>Electrical and Computer Engineering</em> at <strong>Seoul National University</strong>, South Korea.<br>
+    Dept. of <em>Electrical and Computer Engineering</em> at <em>Seoul National University</em>, South Korea.<br>
     If you have any questions, please feel free to contact me.
   </p>
 </div>

@@ -667,16 +667,15 @@ sidebar_main: false
       </p>
       <div class="keyword-row">
         <span class="keyword-chip">Si-CMOS</span>
-        <span class="keyword-chip">Neuron circuit</span>
         <span class="keyword-chip">IGZO-TFT</span>
-        <span class="keyword-chip">Driving circuit</span>
+        <span class="keyword-chip">Neuron circuit</span>
       </div>
 
       <!-- ✅ changed buttons -->
       <div class="hero-cta">
         <button class="btn primary" type="button"
-          onclick="showComingSoon('Project Details', 'The project details page is currently under preparation.')">
-          📌 Project Details
+          onclick="showComingSoon('Details', 'The project details page is currently under preparation.')">
+          📌 Details
         </button>
 
         <button class="btn ghost" type="button"
@@ -706,14 +705,14 @@ sidebar_main: false
         <span class="keyword-chip">FPGA</span>
         <span class="keyword-chip">MCU/MPU</span>
         <span class="keyword-chip">Sensor</span>
-        <span class="keyword-chip">Wire bonding</span>
+
       </div>
 
       <!-- ✅ changed buttons -->
       <div class="hero-cta">
         <button class="btn primary" type="button"
-          onclick="showComingSoon('Project Details', 'The project details page is currently under preparation.')">
-          📌 Project Details
+          onclick="showComingSoon('Details', 'The project details page is currently under preparation.')">
+          📌 Details
         </button>
 
         <button class="btn ghost" type="button"
@@ -883,7 +882,7 @@ sidebar_main: false
       현재 기능을 준비 중입니다.
     </div>
     <div class="comingsoon-actions">
-      <button class="comingsoon-btn" type="button" onclick="closeComingSoon()">확인</button>
+      <button class="comingsoon-btn" type="button" onclick="closeComingSoon()">OK</button>
     </div>
   </div>
 </div>

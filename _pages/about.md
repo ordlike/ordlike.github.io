@@ -62,16 +62,40 @@ sidebar_main: true
   .hero-img img { width: 100%; height: 100%; object-fit: cover; }
   
   .hero-text h1 { 
-    font-size: 2.4rem; 
+    font-size: 1.8rem; 
     margin: 0 0 15px; 
     color: rgb(15, 15, 112); 
     font-weight: 850; 
   }
+
+  /* ✅ 줄 간격 */
+  .hero-text p {
+    margin: 6px 0;
+    line-height: 1.45;
+  }
+
+  /* ✅ 버튼 컨테이너(PC 기본은 flex) */
+  .hero-links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
   
   .link-chip {
-    padding: 10px 20px; border-radius: 12px; border: 1px solid var(--border);
-    text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.95rem;
-    background: #f8fafc; transition: 0.3s; display: inline-block; margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;           /* ✅ 글자 줄바꿈 방지 */
   }
   .link-chip:hover { background: var(--accent-blue); color: #fff; transform: translateY(-3px); }
 
@@ -126,18 +150,33 @@ sidebar_main: true
   .course-item {
     background: #f8fafc; padding: 14px 18px; border-radius: 12px;
     display: flex; justify-content: space-between; 
-    align-items: center; /* 줄바꿈 시 Grade 수직 중앙 정렬 */
+    align-items: center;
     font-size: 0.95rem; font-weight: 600;
     border: 1px solid var(--border);
-    line-height: 1.3; /* 줄바꿈 시 간격 조절 */
+    line-height: 1.3;
   }
   .grade { color: var(--accent-blue); font-weight: 800; }
 
+  /* ✅✅ 핵심: 모바일에서 버튼을 3개 나란히 강제 */
   @media (max-width: 850px) {
     .hero-card { flex-direction: column; text-align: center; padding: 40px; }
     .bento-grid { grid-template-columns: 1fr; }
     .full-width { grid-column: span 1; }
     .section-label { font-size: 2.2rem; }
+
+    .hero-links{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      justify-items: stretch;
+    }
+    .link-chip{
+      width: 100%;
+      padding: 10px 0;      /* ✅ 폭이 좁아지니 좌우 패딩 줄임 */
+      font-size: 0.9rem;    /* ✅ 폰트 살짝 축소 */
+      border-radius: 12px;
+    }
   }
 </style>
 
@@ -154,7 +193,9 @@ sidebar_main: true
         <p><strong>E-mail</strong> ordlike@snu.ac.kr</p>
         <p><strong>Research Areas</strong> CMOS/TFT Circuit Design, Neuromorphic Device and System Design</p>
       </div>
-      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+
+      <!-- ✅ class 적용 -->
+      <div class="hero-links">
         <a href="https://blog.naver.com/ordlike" target="_blank" class="link-chip">Blog</a>
         <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==" target="_blank" class="link-chip">Instagram</a>
         <a href="https://sites.google.com/view/snu-acelab" target="_blank" class="link-chip">Laboratory</a>
@@ -164,14 +205,14 @@ sidebar_main: true
 
   <div class="section-header">
     <span class="section-label">Education</span>
-    <div class="double-line"><div class="line-thick"></div><div class="line-thin"></div></div>
+    <div class="double-line"><div class="line-thick"></div></div>
   </div>
   
   <div class="bento-grid">
     <div class="bento-card full-width">
       <span class="card-label">Degrees & Path</span>
       <ul class="info-list">
-        <li><strong>Seoul National University</strong>&nbsp; Integrated M.S.-Ph.D in <a href="https://ece.snu.ac.kr/" style="color: inherit; text-decoration: underline;">Electrical and Computer Engineering</a> <span class="date-tag">Mar 2024 - Present</span></li>
+        <li><strong>Seoul National University</strong>&nbsp; M.S.-Ph.D in <a href="https://ece.snu.ac.kr/" style="color: inherit; text-decoration: underline;">Electrical and Computer Engineering</a> <span class="date-tag">Mar 2024 - Present</span></li>
         <li><strong>Hanyang University</strong>&nbsp; B.S. in <a href="http://me.hanyang.ac.kr/" style="color: inherit; text-decoration: underline;">Mechanical Engineering</a> & <a href="http://ee.hanyang.ac.kr/" style="color: inherit; text-decoration: underline;">Electronic Engineering</a> <span class="date-tag">Mar 2018 - Feb 2024</span></li>
       </ul>
     </div>
@@ -180,9 +221,9 @@ sidebar_main: true
       <div class="course-grid">
         <div class="course-item">Electric Engineering <span class="grade">A+</span></div>
         <div class="course-item">Electronic Engineering <span class="grade">A+</span></div>
-        <div class="course-item">Circuit<br>Theory 1 <span class="grade">A+</span></div>
+        <div class="course-item">Circuit Theory 1 <span class="grade">A+</span></div>
         <div class="course-item">The Physics of Solid-state <span class="grade">A+</span></div>
-        <div class="course-item">Circuit<br>Theory 2 <span class="grade">A+</span></div>
+        <div class="course-item">Circuit Theory 2 <span class="grade">A+</span></div>
         <div class="course-item">Semiconductor Devices <span class="grade">A+</span></div>
         <div class="course-item">Electronic Circuit 1 <span class="grade">A0</span></div>
         <div class="course-item">Semiconductor Fabrications <span class="grade">A+</span></div>
@@ -194,7 +235,7 @@ sidebar_main: true
 
   <div class="section-header">
     <span class="section-label">Awards</span>
-    <div class="double-line"><div class="line-thick"></div><div class="line-thin"></div></div>
+    <div class="double-line"><div class="line-thick"></div></div>
   </div>
   <div class="bento-grid">
     <div class="bento-card full-width">
@@ -214,7 +255,7 @@ sidebar_main: true
 
   <div class="section-header">
     <span class="section-label">Experiences</span>
-    <div class="double-line"><div class="line-thick"></div><div class="line-thin"></div></div>
+    <div class="double-line"><div class="line-thick"></div></div>
   </div>
   <div class="bento-grid">
     <div class="bento-card full-width">
@@ -237,7 +278,7 @@ sidebar_main: true
 
   <div class="section-header">
     <span class="section-label">Personal</span>
-    <div class="double-line"><div class="line-thick"></div><div class="line-thin"></div></div>
+    <div class="double-line"><div class="line-thick"></div></div>
   </div>
   <div class="bento-card full-width" style="padding: 60px; margin-bottom: 40px;">
     <div style="text-align: center;">
