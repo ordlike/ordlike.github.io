@@ -4,21 +4,30 @@ layout: splash
 permalink: /main/
 date: 2025-02-02    
 header:
-  overlay_color: "#05192D"
-  overlay_filter: "0.35"
+  overlay_color: "#000"
+  overlay_filter: "0.3"
   overlay_image: /assets/new_images/main.gif
   actions:
-    - label: "<i class='fas fa-file-download'></i> Download CV"
+    - label: "Download CV"
       url: "https://raw.githubusercontent.com/ordlike/ordlike.github.io/master/Files/C.V_Chaehwan%20Park.pdf" 
-    - label: "<i class='fas fa-envelope'></i> Contact Me"
+    - label: "Direct Contact"
       url: "/contact/"
-excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D Researcher at SNU ACE Lab.<br><small></small>"
+excerpt: "Hello! I'm Chae-Hwan Park. <br> ORDLIKE Website is My personal homepage. "
+
+feature_row2:
+  - image_path: /assets/new_images/news2.jpg
+    alt: "placeholder image 2"
+    title: "Playing the drums at the Band Club Hanwoollim Performance!"
+    excerpt: "On October 6, 2023, I played the drums for 'Buzz - Journey For Myself' at the Hanwoollim Freshman Performance, a band club at Hanyang University's College of Engineering."
+    url: "/third/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 <style>
-  /* ===== 전역 스타일 최적화 ===== */
+  /* ===== 디자인 테마 설정 (세련된 스타일 유지) ===== */
   :root {
-    --primary-blue: rgb(15, 15, 112);
+    --primary-blue: #0E4A84;
     --dark-blue: #05192D;
     --bg-light: #f8fafc;
     --text-main: #1e293b;
@@ -34,13 +43,13 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     background: #fff;
     padding: 25px 20px;
     text-align: center;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #DCDCDC;
     font-family: 'Pretendard', sans-serif;
   }
   .department-banner p {
-    margin: 0; font-size: 0.95rem; color: var(--text-main); line-height: 1.6;
+    margin: 0; font-size: 11px; color: #000; line-height: 1.6;
   }
-  .department-banner em { color: var(--primary-blue); font-style: normal; font-weight: 700; }
+  .department-banner em { font-style: italic; }
 
   /* 메인 컨테이너 */
   .main-content-wrapper {
@@ -67,6 +76,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(226, 232, 240, 0.5);
+    min-height: 480px;
   }
 
   .nav-card:hover {
@@ -76,7 +86,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   .nav-card .img-box {
     width: 100%;
-    height: 220px;
+    height: 320px;
     overflow: hidden;
   }
 
@@ -90,28 +100,29 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   .nav-card .text-box {
     padding: 30px;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .nav-card h2 {
-    margin: 0 0 12px; font-size: 1.5rem; color: var(--primary-blue); font-weight: 800;
+  .nav-card h1 {
+    margin: 0 0 12px; font-size: 1.5rem; color: #000; font-weight: 800;
   }
 
   .nav-card p {
-    margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;
+    margin: 0; font-size: 0.95rem; color: #000; line-height: 1.5;
   }
 
   /* 뉴스 섹션 헤더 */
-  .section-title {
-    font-size: 2rem;
-    font-weight: 850;
-    color: var(--primary-blue);
+  .hot-news-header {
+    font-weight: bold;
+    font-size: 35px;
     margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .section-title::after {
-    content: ""; flex: 1; height: 1px; background: #e2e8f0;
+    text-align: left;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 40px;
+    color: #000000;
   }
 
   /* 뉴스 카드 디자인 (Bento Style) */
@@ -140,42 +151,33 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
   }
 
-  .news-tag {
-    color: var(--primary-blue);
-    font-weight: 800;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    display: block;
-  }
-
-  .news-text h3 {
-    font-size: 1.8rem; margin: 0 0 20px; color: var(--text-main); font-weight: 800; line-height: 1.3;
+  .news-text h1 {
+    font-size: 1.8rem; margin: 0 0 20px; color: #000; font-weight: 800; line-height: 1.3;
   }
 
   .news-text p {
-    font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;
+    font-size: 1.05rem; color: #000; margin-bottom: 30px; line-height: 1.6;
   }
 
-  .read-more-btn {
+  .btn--primary {
     align-self: flex-start;
     padding: 12px 28px;
-    background: var(--primary-blue);
+    background-color: #0E4A84;
     color: #fff !important;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: var(--transition);
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
   }
-  .news-card:hover .read-more-btn { background: var(--dark-blue); transform: translateX(5px); }
+  .btn--primary:hover { background-color: rgb(15, 15, 112); }
 
-  /* 반응형 처리 */
   @media (max-width: 900px) {
     .nav-grid { grid-template-columns: 1fr; }
     .news-card { flex-direction: column; }
+    .nav-card { min-height: auto; }
     .news-img { min-height: 200px; }
     .news-text { padding: 30px; }
   }
@@ -183,7 +185,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <div class="department-banner">
   <p>
-    Dept. of <em>Electrical and Computer Engineering</em> at <strong>Seoul National University</strong>, South Korea.<br>
+    Dept. of <em>Electrical and Computer Engineering</em> at Seoul National University, Seoul.<br>
     If you have any questions, please feel free to contact me.
   </p>
 </div>
@@ -192,40 +194,41 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   
   <section class="nav-grid">
     <a href="/about" class="nav-card">
-      <div class="img-box"><img src="/assets/new_images/aboutme_final.gif" alt="About"></div>
+      <div class="img-box"><img src="/assets/new_images/aboutme_final.gif" alt="About me"></div>
       <div class="text-box">
-        <h2>About Me</h2>
-        <p>If you want more information About me, please come in!</p>
+        <h1>About me</h1>
+        <p>If you want more information <strong>About me</strong>, please come in!</p>
       </div>
     </a>
+
     <a href="/team" class="nav-card">
       <div class="img-box"><img src="/assets/new_images/Team_2_final.jpg" alt="Team"></div>
       <div class="text-box">
-        <h2>Team</h2>
-        <p>Introducing the Team members who worked with me.</p>
+        <h1>Team</h1>
+        <p>Introducing the <strong>Team members</strong> who worked with me.</p>
       </div>
     </a>
+
     <a href="/research" class="nav-card">
-      <div class="img-box"><img src="/assets/new_images/project2_original.jpg" alt="Research"></div>
+      <div class="img-box"><img src="/assets/new_images/project2_original.jpg" alt="research"></div>
       <div class="text-box">
-        <h2>Research</h2>
-        <p>Let me introduce the Research I've been working on!</p>
+        <h1>Research</h1>
+        <p>Let me introduce the <strong>Research</strong> I've been working on!</p>
       </div>
     </a>
   </section>
 
-  <div class="section-title">Latest Updates</div>
+  <h1 class="hot-news-header">:: HOT News ::</h1>
   
-  <section class="hot-news-section">
+  <section class="hot-news-container">
     <a href="/fifth/" class="news-card">
       <div class="news-img">
-        <img src="/assets/new_images/news4.png" alt="Marathon">
+        <img src="/assets/new_images/news4.png" alt="hot 1">
       </div>
       <div class="news-text">
-        <span class="news-tag">Achievement • Nov 2024</span>
-        <h3>Completed the Full Marathon Course!</h3>
-        <p>Successfully finished the 42.195km JTBC Seoul Marathon in 5h 39m. A meaningful journey testing physical and mental limits.</p>
-        <span class="read-more-btn">Read Full Story →</span>
+        <h1>Completed the full marathon course!</h1>
+        <p>On November 3rd, 2024, I completed the 42.195km full course of the Seoul Marathon hosted by JTBC in 5 hours, 39 minutes and 29 seconds. Please congratulate me!</p>
+        <span class="btn--primary">Read More</span>
       </div>
     </a>
   </section>
