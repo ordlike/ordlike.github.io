@@ -94,6 +94,20 @@ sidebar_main: false
     text-transform: uppercase;
   }
 
+  /* ✅ "Conference" 아래 회색 실선(테마 기본 underline) 제거 */
+  h2.section-title{
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    background-image: none !important;
+  }
+
+  /* (혹시 테마가 내부 span에도 줄을 주는 경우 방어) */
+  h2.section-title *{
+    border-bottom: none !important;
+    background-image: none !important;
+  }
+
   /* ================= Conference ================= */
   .conf-list{
     list-style: none;

@@ -197,7 +197,6 @@ sidebar_main: false
   <div class="section-header">
     <span class="section-label">EE Design Project Team</span>
     <div class="line-thick"></div>
-    <div class="line-thin"></div>
   </div>
 
   <div class="member-grid">
@@ -253,7 +252,6 @@ sidebar_main: false
   <div class="section-header">
     <span class="section-label">ME Design Project Team</span>
     <div class="line-thick"></div>
-    <div class="line-thin"></div>
   </div>
 
   <div class="member-grid">
@@ -285,7 +283,6 @@ sidebar_main: false
   <div class="section-header">
     <span class="section-label">Hanyang Academic Town</span>
     <div class="line-thick"></div>
-    <div class="line-thin"></div>
   </div>
 
   <div class="member-grid">
