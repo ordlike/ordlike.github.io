@@ -2,14 +2,14 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Research"
+    url: /research/ 
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Team"
     url: /team/
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "News"
     url: /news/
-  - title: "Research"
-    url: /research/
   - title: "Photo"
     url: /gallery/
   - title: "Contact"
