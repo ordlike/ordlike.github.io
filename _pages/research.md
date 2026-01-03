@@ -628,7 +628,7 @@ sidebar_main: false
 @media (max-width: 900px){
   .hero-cta{
     flex-wrap: nowrap;          /* 줄바꿈 금지 */
-    gap: 10px;
+    gap: 8px;
   }
 
   .hero-cta .btn{
@@ -636,7 +636,7 @@ sidebar_main: false
     justify-content: center;    /* 가운데 정렬 */
     white-space: nowrap;        /* 버튼 내부 줄바꿈 금지 */
     padding: 10px 10px;         /* 살짝 줄여서 한 줄에 들어가게 */
-    font-size: 0.88rem;         /* 살짝 축소 */
+    font-size: 0.84rem;         /* 살짝 축소 */
   }
 
   
