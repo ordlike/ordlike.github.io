@@ -36,7 +36,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   .page__content {
     background-color: var(--bg-light) !important;
     padding: 0 !important;
-    position: relative; /* ✅ 오버레이를 page__content에 붙이기 위해 */
+    position: relative;
     z-index: 0;
   }
 
@@ -65,7 +65,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     margin: 0 auto;
     padding: 60px 20px;
     position: relative;
-    z-index: 2; /* ✅ 오버레이 위로 */
+    z-index: 2;
   }
 
   .nav-grid {
@@ -213,15 +213,13 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <style>
   /* =========================================================
-     DOT MODE + VINTAGE (✅ overlay를 .page__content에만 적용)
+     DOT MODE + VINTAGE (overlay를 .page__content에만 적용)
      ========================================================= */
 
-  /* 전체 톤(세피아/콘트라스트) */
   body.dot-mode{
     filter: saturate(1.05) contrast(1.08) sepia(0.22);
   }
 
-  /* 배경(종이) */
   body.dot-mode .page__content{
     background:
       radial-gradient(900px 520px at 18% 12%, rgba(60,45,25,0.10) 0%, rgba(60,45,25,0.00) 62%),
@@ -241,14 +239,13 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   body.dot-mode .department-banner{ border-bottom-color: rgba(90, 70, 35, 0.18); }
   body.dot-mode .section-title::after{ background: rgba(90, 70, 35, 0.22); }
 
-  /* ✅ 오버레이는 page__content에만 붙인다 (고양이는 fixed라 영향 X) */
   body.dot-mode .page__content::before,
   body.dot-mode .page__content::after{
     content:"";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 1;              /* main-content-wrapper(z=2)보다 아래 */
+    z-index: 1;
   }
 
   body.dot-mode .page__content::before{
@@ -300,14 +297,15 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   body.dot-mode .dotmode-badge{ display: block; }
 
   /* =========================================================
-     CAT (PNG) - ✅ 반응형 크기 + 기본 완전 숨김
+     CAT (PNG)
+     - ✅ 말풍선이 고양이 내부 absolute라 항상 같은 거리 유지
+     - ✅ flip(scaleX)은 cat-sprite만 적용 (말풍선 글씨 반전 방지)
      ========================================================= */
   .cat-walker{
     position: fixed;
     left: 20px;
     top: 45vh;
 
-    /* ✅ 모바일에서 너무 커서 아래 못 가는 문제 해결: 반응형 크기 */
     width: clamp(180px, 82vw, 352px);
     height: clamp(180px, 82vw, 352px);
 
@@ -318,7 +316,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     visibility: hidden;
     pointer-events: none;
 
-    transform: translate3d(var(--x, 0px), var(--y, 0px), 0) scaleX(var(--sx, 1));
+    /* ✅ translate만 여기서 */
+    transform: translate3d(var(--x, 0px), var(--y, 0px), 0);
     filter: drop-shadow(0 12px 14px rgba(0,0,0,0.18));
     transition: opacity .25s ease, visibility .25s ease;
     will-change: transform;
@@ -331,7 +330,15 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     pointer-events: auto;
   }
 
-  .cat-walker img{
+  .cat-sprite{
+    width: 100%;
+    height: 100%;
+    transform: scaleX(var(--sx, 1));
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .cat-sprite img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -342,50 +349,96 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     animation: catBounce .35s ease-in-out infinite alternate;
   }
   @keyframes catBounce{
-    from { transform: translate3d(var(--x,0px), var(--y,0px), 0) scaleX(var(--sx,1)); }
-    to   { transform: translate3d(var(--x,0px), calc(var(--y,0px) - 2px), 0) scaleX(var(--sx,1)); }
+    from { transform: translate3d(var(--x,0px), var(--y,0px), 0); }
+    to   { transform: translate3d(var(--x,0px), calc(var(--y,0px) - 2px), 0); }
   }
 
   body.cat-on .cat-walker.is-sitting{
     animation: catBreathe 2.5s ease-in-out infinite !important;
   }
   @keyframes catBreathe {
-    0%, 100% { transform: translate3d(var(--x,0px), var(--y,0px), 0) scaleX(var(--sx,1)) scale(0.92); }
-    50%      { transform: translate3d(var(--x,0px), calc(var(--y,0px) + 1px), 0) scaleX(var(--sx,1)) scale(0.94); }
+    0%, 100% { transform: translate3d(var(--x,0px), var(--y,0px), 0) scale(0.92); }
+    50%      { transform: translate3d(var(--x,0px), calc(var(--y,0px) + 1px), 0) scale(0.94); }
   }
 
+  /* =========================================================
+     CUTE BUBBLE (cat 기준 absolute)
+     ========================================================= */
   .cat-bubble{
-    position: fixed;
+    position: absolute;
+    left: 18%;          /* ✅ 말풍선 좌우 위치 미세조정 포인트 */
+    top: -14px;         /* ✅ 말풍선 높이(머리 위) 미세조정 포인트 */
     z-index: 26000;
-    padding: 9px 12px;
-    background: rgba(255,255,255,0.95);
-    border: 1px solid rgba(0,0,0,0.08);
+
+    padding: 10px 14px;
     border-radius: 999px;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.12);
     font-weight: 900;
     font-size: 13px;
-    color: rgba(15,15,112,0.95);
+    letter-spacing: 0.02em;
+
+    color: rgba(15,15,112,0.98);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,248,255,0.95));
+    border: 1px solid rgba(0,0,0,0.08);
+
+    box-shadow:
+      0 14px 34px rgba(0,0,0,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.85);
+
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px) scale(0.98);
     pointer-events: none;
     transition: opacity .18s ease, transform .18s ease;
+    will-change: transform, opacity;
   }
-  .cat-bubble.show{ opacity: 1; transform: translateY(0); }
+
+  .cat-bubble::after{
+    content:"";
+    position: absolute;
+    left: 18px;
+    bottom: -7px;
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    border-left: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transform: rotate(45deg);
+    border-bottom-left-radius: 3px;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+  }
+
+  .cat-bubble.show{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: bubblePop .35s ease-out;
+  }
+
+  @keyframes bubblePop{
+    0%   { transform: translateY(10px) scale(0.92); }
+    60%  { transform: translateY(-2px) scale(1.04); }
+    100% { transform: translateY(0) scale(1); }
+  }
 
   body.dot-mode .cat-bubble{
-    background: rgba(243,234,215,0.95);
-    border-color: rgba(55,40,22,0.18);
     color: rgba(55,40,22,0.92);
+    background: linear-gradient(180deg, rgba(243,234,215,0.98), rgba(238,226,200,0.94));
+    border-color: rgba(55,40,22,0.18);
     box-shadow: 0 16px 36px rgba(45, 35, 20, 0.14);
+  }
+  body.dot-mode .cat-bubble::after{
+    border-left-color: rgba(55,40,22,0.18);
+    border-bottom-color: rgba(55,40,22,0.18);
   }
 </style>
 
 <div class="dotmode-badge">VINTAGE DOT</div>
 
+<!-- ✅ 말풍선을 고양이 내부로 이동 -->
 <div class="cat-walker" id="catWalker" aria-label="ORDLIKE Cat" title="Click me!">
-  <img src="/assets/new_images/esteregg/ordlike_cat.png" alt="ORDLIKE Cat">
+  <div class="cat-sprite">
+    <img src="/assets/new_images/esteregg/ordlike_cat.png" alt="ORDLIKE Cat">
+  </div>
+  <div class="cat-bubble" id="catBubble" aria-hidden="true">냐옹!</div>
 </div>
-<div class="cat-bubble" id="catBubble" aria-hidden="true">야옹!</div>
 
 <script>
 /* =========================================================
@@ -451,8 +504,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <script>
 /* =========================================================
-   CAT Behavior (✅ Option A: vp.height + EXTRA_Y)
-   - clampWithVP에서 viewport 높이를 EXTRA_Y만큼 "가상 확장"
+   CAT Behavior
+   ✅ Option A: vp.height + EXTRA_Y (가상 아래 확장)
+   ✅ 말풍선은 cat 내부 absolute라 위치 계산/보정 불필요
    ========================================================= */
 (function(){
   const cat = document.getElementById("catWalker");
@@ -461,7 +515,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   const EDGE_PAD = 24;
 
-  // ✅ OPTION A: 아래쪽 이동 여유(픽셀). 필요하면 200~800 사이로 조절
+  // ✅ 아래쪽 이동 여유(픽셀) — 여기만 바꾸면 됨 (200~900 추천)
   const EXTRA_Y = 700;
 
   const BASE_SPEED = 2.15;
@@ -482,6 +536,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   const SIT_COOLDOWN_MS = 6500;
   const SIT_CHANCE = 0.10;
   const SIT_MIN_MOVE_MS = 2200;
+
+  // 말풍선 유지 시간
+  const BUBBLE_SHOW_MS = 950;
 
   let enabled = false;
 
@@ -517,7 +574,6 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     return { w: r.width, h: r.height };
   }
 
-  // ✅ OPTION A 핵심: maxY 계산에서 vp.height에 EXTRA_Y를 더함
   function clampWithVP(px, py){
     const vp = getVP();
     const cs = getCatSize();
@@ -543,15 +599,10 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   }
 
   function showMeow(text){
-    bubble.textContent = text || "야옹!";
+    bubble.textContent = text || "냐옹~ 🐾";
     bubble.classList.add("show");
-
-    const r = cat.getBoundingClientRect();
-    bubble.style.left = (r.left + r.width * 0.15) + "px";
-    bubble.style.top  = (r.top - 12) + "px";
-
     clearTimeout(showMeow.__t);
-    showMeow.__t = setTimeout(()=> bubble.classList.remove("show"), 900);
+    showMeow.__t = setTimeout(()=> bubble.classList.remove("show"), BUBBLE_SHOW_MS);
   }
 
   function setSitting(on){
@@ -584,7 +635,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   cat.addEventListener("click", (e)=>{
     e.stopPropagation();
-    const msgs = ["Wanny!", "tung..tung..", "meow!", "ORDLIKE!", "🐾"];
+    const msgs = ["냐옹! 🐾", "두둥..두둥..", "meow! ✨", "ORDLIKE! 💙", "냥냥~ 😺"];
     showMeow(msgs[Math.floor(Math.random() * msgs.length)]);
     try { if (navigator.vibrate) navigator.vibrate(18); } catch(_){}
   });
