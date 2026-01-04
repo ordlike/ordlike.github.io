@@ -253,7 +253,6 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   body.dot-mode .page__content::before{
     opacity: 0.30;
-    /* mix-blend-mode는 여기서 써도 되지만, 고양이 침범을 원천 차단했으니 안전 */
     mix-blend-mode: multiply;
     background:
       linear-gradient(to right, rgba(55,40,22,0.20) 0 1.6px, transparent 1.6px 100%) 0 0 / 28px 28px,
@@ -285,7 +284,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     position: fixed;
     right: 14px;
     bottom: 14px;
-    z-index: 20000; /* ✅ 최상단 */
+    z-index: 20000;
     padding: 10px 12px;
     border-radius: 12px;
     font-weight: 900;
@@ -309,10 +308,10 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     top: 45vh;
 
     /* ✅ 모바일에서 너무 커서 아래 못 가는 문제 해결: 반응형 크기 */
-    width: clamp(180px, 42vw, 352px);
-    height: clamp(180px, 42vw, 352px);
+    width: clamp(180px, 82vw, 352px);
+    height: clamp(180px, 82vw, 352px);
 
-    z-index: 25000;          /* ✅ 오버레이보다 확실히 위 */
+    z-index: 25000;
     user-select: none;
 
     opacity: 0;
@@ -323,7 +322,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     filter: drop-shadow(0 12px 14px rgba(0,0,0,0.18));
     transition: opacity .25s ease, visibility .25s ease;
     will-change: transform;
-    touch-action: none;
+    touch-action: pan-y;
   }
 
   body.cat-on .cat-walker{
@@ -452,8 +451,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <script>
 /* =========================================================
-   CAT Behavior (✅ 실제 cat 크기 rect 기반으로 clamp)
-   - 모바일에서 visualViewport가 작아져도 아래까지 내려감
+   CAT Behavior (✅ Option A: vp.height + EXTRA_Y)
+   - clampWithVP에서 viewport 높이를 EXTRA_Y만큼 "가상 확장"
    ========================================================= */
 (function(){
   const cat = document.getElementById("catWalker");
@@ -461,6 +460,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   if(!cat || !bubble) return;
 
   const EDGE_PAD = 24;
+
+  // ✅ OPTION A: 아래쪽 이동 여유(픽셀). 필요하면 200~800 사이로 조절
+  const EXTRA_Y = 700;
 
   const BASE_SPEED = 2.15;
   const FOLLOW_BOOST = 1.10;
@@ -511,16 +513,18 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   }
 
   function getCatSize(){
-    // ✅ CSS clamp 결과(실제 픽셀 크기)로 계산
     const r = cat.getBoundingClientRect();
     return { w: r.width, h: r.height };
   }
 
+  // ✅ OPTION A 핵심: maxY 계산에서 vp.height에 EXTRA_Y를 더함
   function clampWithVP(px, py){
     const vp = getVP();
     const cs = getCatSize();
+
     const maxX = vp.width  - EDGE_PAD - cs.w;
-    const maxY = vp.height - EDGE_PAD - cs.h;
+    const maxY = (vp.height + EXTRA_Y) - EDGE_PAD - cs.h;
+
     x = clamp(px, EDGE_PAD, Math.max(EDGE_PAD, maxX));
     y = clamp(py, EDGE_PAD, Math.max(EDGE_PAD, maxY));
   }
@@ -528,7 +532,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   function pickRandomTarget(){
     const vp = getVP();
     targetX = rand(EDGE_PAD, Math.max(EDGE_PAD, vp.width  - EDGE_PAD));
-    targetY = rand(EDGE_PAD, Math.max(EDGE_PAD, vp.height - EDGE_PAD));
+    targetY = rand(EDGE_PAD, Math.max(EDGE_PAD, (vp.height + EXTRA_Y) - EDGE_PAD));
     lastTargetPick = Date.now();
   }
 
@@ -643,7 +647,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
       const ux = mdx / (mdist || 1);
       const uy = mdy / (mdist || 1);
       desiredX = clamp(cx + ux * 280, EDGE_PAD, vp.width  - EDGE_PAD);
-      desiredY = clamp(cy + uy * 280, EDGE_PAD, vp.height - EDGE_PAD);
+      desiredY = clamp(cy + uy * 280, EDGE_PAD, (vp.height + EXTRA_Y) - EDGE_PAD);
       desiredSpeed = MAX_SPEED;
       lastTargetPick = now - (TARGET_REPICK_MS - 900);
     }else if(mdist > FOLLOW_DIST){
