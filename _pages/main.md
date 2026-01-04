@@ -298,8 +298,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   /* =========================================================
      CAT (PNG)
-     - ✅ 말풍선이 고양이 내부 absolute라 항상 같은 거리 유지
-     - ✅ flip(scaleX)은 cat-sprite만 적용 (말풍선 글씨 반전 방지)
+     - 말풍선이 고양이 내부 absolute라 항상 같은 거리 유지
+     - flip(scaleX)은 cat-sprite만 적용 (말풍선 반전 방지)
      ========================================================= */
   .cat-walker{
     position: fixed;
@@ -316,7 +316,6 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     visibility: hidden;
     pointer-events: none;
 
-    /* ✅ translate만 여기서 */
     transform: translate3d(var(--x, 0px), var(--y, 0px), 0);
     filter: drop-shadow(0 12px 14px rgba(0,0,0,0.18));
     transition: opacity .25s ease, visibility .25s ease;
@@ -366,8 +365,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
      ========================================================= */
   .cat-bubble{
     position: absolute;
-    left: 18%;          /* ✅ 말풍선 좌우 위치 미세조정 포인트 */
-    top: -14px;         /* ✅ 말풍선 높이(머리 위) 미세조정 포인트 */
+    left: 18%;    /* 말풍선 좌우 */
+    top: -14px;   /* 말풍선 높이 */
     z-index: 26000;
 
     padding: 10px 14px;
@@ -432,7 +431,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <div class="dotmode-badge">VINTAGE DOT</div>
 
-<!-- ✅ 말풍선을 고양이 내부로 이동 -->
+<!-- 말풍선을 고양이 내부로 이동 -->
 <div class="cat-walker" id="catWalker" aria-label="ORDLIKE Cat" title="Click me!">
   <div class="cat-sprite">
     <img src="/assets/new_images/esteregg/ordlike_cat.png" alt="ORDLIKE Cat">
@@ -506,7 +505,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 /* =========================================================
    CAT Behavior
    ✅ Option A: vp.height + EXTRA_Y (가상 아래 확장)
-   ✅ 말풍선은 cat 내부 absolute라 위치 계산/보정 불필요
+   ✅ PC/모바일 EXTRA_Y 자동 + 창 리사이즈 시 실시간 반영
+   ✅ 말풍선은 cat 내부 absolute라 위치 계산 필요 없음
    ========================================================= */
 (function(){
   const cat = document.getElementById("catWalker");
@@ -515,8 +515,26 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   const EDGE_PAD = 24;
 
-  // ✅ 아래쪽 이동 여유(픽셀) — 여기만 바꾸면 됨 (200~900 추천)
-  const EXTRA_Y = 700;
+  // =========================================================
+  // EXTRA_Y (실시간 갱신)
+  // - BASE_EXTRA_Y: PC 기본
+  // - MOBILE_EXTRA_Y_ADD: 모바일(또는 모바일처럼 좁은 창) 추가
+  // =========================================================
+  const BASE_EXTRA_Y = 700;
+  const MOBILE_EXTRA_Y_ADD = 300;
+
+  let EXTRA_Y = BASE_EXTRA_Y;
+
+  function computeIsMobile(){
+    const narrow = window.innerWidth <= 768; // 창 줄이면 모바일처럼 취급
+    const touchy = ("ontouchstart" in window) || (navigator.maxTouchPoints > 0);
+    return narrow || touchy;
+  }
+
+  function updateExtraY(){
+    const isMobile = computeIsMobile();
+    EXTRA_Y = isMobile ? (BASE_EXTRA_Y + MOBILE_EXTRA_Y_ADD) : BASE_EXTRA_Y;
+  }
 
   const BASE_SPEED = 2.15;
   const FOLLOW_BOOST = 1.10;
@@ -537,7 +555,6 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   const SIT_CHANCE = 0.10;
   const SIT_MIN_MOVE_MS = 2200;
 
-  // 말풍선 유지 시간
   const BUBBLE_SHOW_MS = 950;
 
   let enabled = false;
@@ -617,6 +634,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   window.__ORDLIKE_CAT_ENABLE = function(on){
     enabled = !!on;
+    updateExtraY(); // ✅ 켜는 순간 현재 창 크기 기준으로 결정
+
     if(enabled){
       pickRandomTarget();
       clampWithVP(x, y);
@@ -635,7 +654,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   cat.addEventListener("click", (e)=>{
     e.stopPropagation();
-    const msgs = ["냐옹! 🐾", "두둥..두둥..", "meow! ✨", "ORDLIKE! 💙", "냥냥~ 😺"];
+    const msgs = ["냐옹! 🐾", "두둥..두둥..", "meow! ✨", "ORDLIKE! 💙", "냥냥~ 😺", "퐁실퐁실~ ☁️"];
     showMeow(msgs[Math.floor(Math.random() * msgs.length)]);
     try { if (navigator.vibrate) navigator.vibrate(18); } catch(_){}
   });
@@ -740,17 +759,25 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   }
 
   function onViewportChange(){
+    // ✅ 창 크기 바뀔 때마다 EXTRA_Y를 다시 계산하고 즉시 반영
+    updateExtraY();
+
     if(!enabled) return;
+
     clampWithVP(x, y);
     pickRandomTarget();
     setCSSVars();
   }
 
+  // 초기 1회 계산
+  updateExtraY();
+
   window.addEventListener("resize", onViewportChange, {passive:true});
   if(window.visualViewport){
     window.visualViewport.addEventListener("resize", onViewportChange, {passive:true});
-    window.visualViewport.addEventListener("scroll", ()=>{
+    window.visualViewport.addEventListener("scroll", ()=> {
       if(!enabled) return;
+      // scroll은 EXTRA_Y 재계산까진 불필요하지만, 위치는 즉시 보정
       clampWithVP(x, y);
       setCSSVars();
     }, {passive:true});
