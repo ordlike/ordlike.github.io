@@ -521,7 +521,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   // - MOBILE_EXTRA_Y_ADD: 모바일(또는 모바일처럼 좁은 창) 추가
   // =========================================================
   const BASE_EXTRA_Y = 700;
-  const MOBILE_EXTRA_Y_ADD = 300;
+  const MOBILE_EXTRA_Y_ADD = 600;
 
   let EXTRA_Y = BASE_EXTRA_Y;
 
