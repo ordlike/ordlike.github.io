@@ -298,8 +298,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   /* =========================================================
      CAT (PNG)
-     - 말풍선이 고양이 내부 absolute라 항상 같은 거리 유지
-     - flip(scaleX)은 cat-sprite만 적용 (말풍선 반전 방지)
+     - ✅ 말풍선이 고양이 내부 absolute라 항상 같은 거리 유지
+     - ✅ flip(scaleX)은 cat-sprite만 적용 (말풍선 글씨 반전 방지)
+     - ✅ 클릭/터치 시 조금씩 커짐: --cat-scale
      ========================================================= */
   .cat-walker{
     position: fixed;
@@ -316,7 +317,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     visibility: hidden;
     pointer-events: none;
 
-    transform: translate3d(var(--x, 0px), var(--y, 0px), 0);
+    /* ✅ translate + scale(클릭시 성장) */
+    transform: translate3d(var(--x, 0px), var(--y, 0px), 0) scale(var(--cat-scale, 1));
+    transform-origin: center;
     filter: drop-shadow(0 12px 14px rgba(0,0,0,0.18));
     transition: opacity .25s ease, visibility .25s ease;
     will-change: transform;
@@ -348,16 +351,16 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     animation: catBounce .35s ease-in-out infinite alternate;
   }
   @keyframes catBounce{
-    from { transform: translate3d(var(--x,0px), var(--y,0px), 0); }
-    to   { transform: translate3d(var(--x,0px), calc(var(--y,0px) - 2px), 0); }
+    from { transform: translate3d(var(--x,0px), var(--y,0px), 0) scale(var(--cat-scale,1)); }
+    to   { transform: translate3d(var(--x,0px), calc(var(--y,0px) - 2px), 0) scale(var(--cat-scale,1)); }
   }
 
   body.cat-on .cat-walker.is-sitting{
     animation: catBreathe 2.5s ease-in-out infinite !important;
   }
   @keyframes catBreathe {
-    0%, 100% { transform: translate3d(var(--x,0px), var(--y,0px), 0) scale(0.92); }
-    50%      { transform: translate3d(var(--x,0px), calc(var(--y,0px) + 1px), 0) scale(0.94); }
+    0%, 100% { transform: translate3d(var(--x,0px), var(--y,0px), 0) scale(calc(var(--cat-scale,1) * 0.92)); }
+    50%      { transform: translate3d(var(--x,0px), calc(var(--y,0px) + 1px), 0) scale(calc(var(--cat-scale,1) * 0.94)); }
   }
 
   /* =========================================================
@@ -365,8 +368,8 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
      ========================================================= */
   .cat-bubble{
     position: absolute;
-    left: 18%;    /* 말풍선 좌우 */
-    top: -14px;   /* 말풍선 높이 */
+    left: 18%;
+    top: -14px;
     z-index: 26000;
 
     padding: 10px 14px;
@@ -431,7 +434,6 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <div class="dotmode-badge">VINTAGE DOT</div>
 
-<!-- 말풍선을 고양이 내부로 이동 -->
 <div class="cat-walker" id="catWalker" aria-label="ORDLIKE Cat" title="Click me!">
   <div class="cat-sprite">
     <img src="/assets/new_images/esteregg/ordlike_cat.png" alt="ORDLIKE Cat">
@@ -441,7 +443,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <script>
 /* =========================================================
-   Easter Egg Trigger (same)
+   Easter Egg Trigger
    ========================================================= */
 (function(){
   const REQUIRED_CLICKS = 5;
@@ -505,8 +507,10 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 /* =========================================================
    CAT Behavior
    ✅ Option A: vp.height + EXTRA_Y (가상 아래 확장)
-   ✅ PC/모바일 EXTRA_Y 자동 + 창 리사이즈 시 실시간 반영
-   ✅ 말풍선은 cat 내부 absolute라 위치 계산 필요 없음
+   ✅ PC/모바일 자동 분기 + 창 리사이즈 시 실시간 반영
+   ✅ 말풍선은 cat 내부 absolute라 위치 계산 불필요
+   ✅ 클릭/터치 할 때마다 조금씩 커짐
+   ✅ (NEW) 시간이 지나면 10초마다 조금씩 원래 크기로 복귀
    ========================================================= */
 (function(){
   const cat = document.getElementById("catWalker");
@@ -515,27 +519,60 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   const EDGE_PAD = 24;
 
-  // =========================================================
-  // EXTRA_Y (실시간 갱신)
-  // - BASE_EXTRA_Y: PC 기본
-  // - MOBILE_EXTRA_Y_ADD: 모바일(또는 모바일처럼 좁은 창) 추가
-  // =========================================================
-  const BASE_EXTRA_Y = 700;
-  const MOBILE_EXTRA_Y_ADD = 600;
+  // ===============================
+  // EXTRA_Y (Responsive + Live)
+  // ===============================
+  const EXTRA_Y_PC = 700;            // PC 기본값
+  const EXTRA_Y_MOBILE_ADD = 300;    // 모바일이면 +300
+  const MOBILE_BREAKPOINT = 900;     // px 
 
-  let EXTRA_Y = BASE_EXTRA_Y;
+  let extraY = EXTRA_Y_PC;
 
-  function computeIsMobile(){
-    const narrow = window.innerWidth <= 768; // 창 줄이면 모바일처럼 취급
-    const touchy = ("ontouchstart" in window) || (navigator.maxTouchPoints > 0);
-    return narrow || touchy;
+  // ===============================
+  // CAT SCALE (Touch/Click to grow)
+  // ===============================
+  let catScale = 1.0;
+  const SCALE_STEP = 0.2;
+  const SCALE_MAX  = 5.2;
+
+  // ===============================
+  // (NEW) Scale Decay: 10초마다 조금씩 1.0으로 복귀
+  // ===============================
+  const SCALE_BASE = 1.0;                 // 원래 크기
+  const SCALE_DECAY_INTERVAL_MS = 20;  // 10초마다
+  const SCALE_DECAY_STEP = 0.005;          // 한 번에 줄어드는 양 (원하면 0.02~0.06로 조절)
+  let scaleDecayTimer = null;
+
+  function startScaleDecay(){
+    stopScaleDecay();
+    scaleDecayTimer = setInterval(()=>{
+      if(!enabled) return;
+
+      // 이미 원래 크기면 유지
+      if(catScale <= SCALE_BASE + 1e-6) {
+        catScale = SCALE_BASE;
+        return;
+      }
+
+      // 조금씩 감소
+      catScale = Math.max(SCALE_BASE, catScale - SCALE_DECAY_STEP);
+
+      // 줄어든 만큼 화면 밖 튀는 것 방지
+      clampWithVP(x, y);
+      setCSSVars();
+    }, SCALE_DECAY_INTERVAL_MS);
   }
 
-  function updateExtraY(){
-    const isMobile = computeIsMobile();
-    EXTRA_Y = isMobile ? (BASE_EXTRA_Y + MOBILE_EXTRA_Y_ADD) : BASE_EXTRA_Y;
+  function stopScaleDecay(){
+    if(scaleDecayTimer){
+      clearInterval(scaleDecayTimer);
+      scaleDecayTimer = null;
+    }
   }
 
+  // ===============================
+  // Motion tuning
+  // ===============================
   const BASE_SPEED = 2.15;
   const FOLLOW_BOOST = 1.10;
   const MAX_SPEED  = 5.0;
@@ -586,7 +623,13 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     return { width, height };
   }
 
+  function recomputeExtraY(){
+    const vp = getVP();
+    extraY = (vp.width <= MOBILE_BREAKPOINT) ? (EXTRA_Y_PC + EXTRA_Y_MOBILE_ADD) : EXTRA_Y_PC;
+  }
+
   function getCatSize(){
+    // ✅ transform(scale)까지 반영된 실제 크기 기준
     const r = cat.getBoundingClientRect();
     return { w: r.width, h: r.height };
   }
@@ -596,7 +639,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     const cs = getCatSize();
 
     const maxX = vp.width  - EDGE_PAD - cs.w;
-    const maxY = (vp.height + EXTRA_Y) - EDGE_PAD - cs.h;
+    const maxY = (vp.height + extraY) - EDGE_PAD - cs.h;
 
     x = clamp(px, EDGE_PAD, Math.max(EDGE_PAD, maxX));
     y = clamp(py, EDGE_PAD, Math.max(EDGE_PAD, maxY));
@@ -605,7 +648,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   function pickRandomTarget(){
     const vp = getVP();
     targetX = rand(EDGE_PAD, Math.max(EDGE_PAD, vp.width  - EDGE_PAD));
-    targetY = rand(EDGE_PAD, Math.max(EDGE_PAD, (vp.height + EXTRA_Y) - EDGE_PAD));
+    targetY = rand(EDGE_PAD, Math.max(EDGE_PAD, (vp.height + extraY) - EDGE_PAD));
     lastTargetPick = Date.now();
   }
 
@@ -613,6 +656,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     cat.style.setProperty("--x", x + "px");
     cat.style.setProperty("--y", y + "px");
     cat.style.setProperty("--sx", (vx >= 0 ? 1 : -1));
+    cat.style.setProperty("--cat-scale", catScale.toFixed(3));
   }
 
   function showMeow(text){
@@ -634,17 +678,18 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   window.__ORDLIKE_CAT_ENABLE = function(on){
     enabled = !!on;
-    updateExtraY(); // ✅ 켜는 순간 현재 창 크기 기준으로 결정
-
     if(enabled){
+      recomputeExtraY();
       pickRandomTarget();
       clampWithVP(x, y);
       setCSSVars();
       cat.classList.add("is-moving");
+      startScaleDecay();            // ✅ (NEW) 켜질 때 자동 복귀 시작
       requestAnimationFrame(step);
     }else{
       cat.classList.remove("is-moving", "is-sitting");
       bubble.classList.remove("show");
+      stopScaleDecay();             // ✅ (NEW) 꺼질 때 타이머 정지
     }
   };
 
@@ -654,7 +699,15 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
   cat.addEventListener("click", (e)=>{
     e.stopPropagation();
-    const msgs = ["냐옹! 🐾", "두둥..두둥..", "meow! ✨", "ORDLIKE! 💙", "냥냥~ 😺", "퐁실퐁실~ ☁️"];
+
+    // ✅ 터치/클릭할 때마다 조금씩 커짐
+    catScale = Math.min(SCALE_MAX, catScale + SCALE_STEP);
+
+    // 커진 만큼 clamp 재계산 (화면 밖으로 튀는 것 방지)
+    clampWithVP(x, y);
+    setCSSVars();
+
+    const msgs = ["냐옹! 🐾", "두둥..두둥..", "meow! ✨", "ORDLIKE! 💙", "냥냥~ 😺", "커진다냥! 😆"];
     showMeow(msgs[Math.floor(Math.random() * msgs.length)]);
     try { if (navigator.vibrate) navigator.vibrate(18); } catch(_){}
   });
@@ -717,7 +770,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
       const ux = mdx / (mdist || 1);
       const uy = mdy / (mdist || 1);
       desiredX = clamp(cx + ux * 280, EDGE_PAD, vp.width  - EDGE_PAD);
-      desiredY = clamp(cy + uy * 280, EDGE_PAD, (vp.height + EXTRA_Y) - EDGE_PAD);
+      desiredY = clamp(cy + uy * 280, EDGE_PAD, (vp.height + extraY) - EDGE_PAD);
       desiredSpeed = MAX_SPEED;
       lastTargetPick = now - (TARGET_REPICK_MS - 900);
     }else if(mdist > FOLLOW_DIST){
@@ -759,31 +812,31 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   }
 
   function onViewportChange(){
-    // ✅ 창 크기 바뀔 때마다 EXTRA_Y를 다시 계산하고 즉시 반영
-    updateExtraY();
-
     if(!enabled) return;
 
+    // ✅ 창 크기 바뀌면 즉시 extraY 재계산 (PC ↔ 모바일 실시간 반영)
+    recomputeExtraY();
+
+    // ✅ 현재 위치/타겟을 새 maxY 기준으로 즉시 보정
     clampWithVP(x, y);
     pickRandomTarget();
     setCSSVars();
   }
-
-  // 초기 1회 계산
-  updateExtraY();
 
   window.addEventListener("resize", onViewportChange, {passive:true});
   if(window.visualViewport){
     window.visualViewport.addEventListener("resize", onViewportChange, {passive:true});
     window.visualViewport.addEventListener("scroll", ()=> {
       if(!enabled) return;
-      // scroll은 EXTRA_Y 재계산까진 불필요하지만, 위치는 즉시 보정
+      // 스크롤 중에도 바닥 튀는 현상 방지
+      recomputeExtraY();
       clampWithVP(x, y);
       setCSSVars();
     }, {passive:true});
   }
 })();
 </script>
+
 
 <div class="department-banner">
   <p>
