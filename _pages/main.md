@@ -317,7 +317,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     visibility: hidden;
     pointer-events: none;
 
-    /* ✅ translate + scale(클릭시 성장) */
+    /* ✅ translate + scale */
     transform: translate3d(var(--x, 0px), var(--y, 0px), 0) scale(var(--cat-scale, 1));
     transform-origin: center;
     filter: drop-shadow(0 12px 14px rgba(0,0,0,0.18));
@@ -505,12 +505,10 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
 
 <script>
 /* =========================================================
-   CAT Behavior
-   ✅ Option A: vp.height + EXTRA_Y (가상 아래 확장)
+   CAT Behavior (PC / Mobile different scale rules)
    ✅ PC/모바일 자동 분기 + 창 리사이즈 시 실시간 반영
-   ✅ 말풍선은 cat 내부 absolute라 위치 계산 불필요
-   ✅ 클릭/터치 할 때마다 조금씩 커짐
-   ✅ (NEW) 시간이 지나면 10초마다 조금씩 원래 크기로 복귀
+   ✅ 클릭/터치 시 조금씩 커짐
+   ✅ 10초마다 조금씩 원래 크기로 복귀
    ========================================================= */
 (function(){
   const cat = document.getElementById("catWalker");
@@ -520,27 +518,89 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   const EDGE_PAD = 24;
 
   // ===============================
+  // Breakpoints
+  // ===============================
+  const MOBILE_BREAKPOINT = 900; // px
+
+  function getVP(){
+    const vv = window.visualViewport;
+    const width  = vv ? vv.width  : window.innerWidth;
+    const height = vv ? vv.height : window.innerHeight;
+    return { width, height };
+  }
+  function isMobileNow(){
+    return getVP().width <= MOBILE_BREAKPOINT;
+  }
+
+  // ===============================
   // EXTRA_Y (Responsive + Live)
   // ===============================
-  const EXTRA_Y_PC = 700;            // PC 기본값
-  const EXTRA_Y_MOBILE_ADD = 300;    // 모바일이면 +300
-  const MOBILE_BREAKPOINT = 900;     // px 
-
+  const EXTRA_Y_PC = 700;
+  const EXTRA_Y_MOBILE_ADD = 300;
   let extraY = EXTRA_Y_PC;
 
-  // ===============================
-  // CAT SCALE (Touch/Click to grow)
-  // ===============================
-  let catScale = 1.0;
-  const SCALE_STEP = 0.2;
-  const SCALE_MAX  = 5.2;
+  function recomputeExtraY(){
+    extraY = isMobileNow() ? (EXTRA_Y_PC + EXTRA_Y_MOBILE_ADD) : EXTRA_Y_PC;
+  }
 
   // ===============================
-  // (NEW) Scale Decay: 10초마다 조금씩 1.0으로 복귀
+  // SCALE PROFILES (핵심: 모바일/PC 다르게)
   // ===============================
-  const SCALE_BASE = 1.0;                 // 원래 크기
-  const SCALE_DECAY_INTERVAL_MS = 20;  // 10초마다
-  const SCALE_DECAY_STEP = 0.005;          // 한 번에 줄어드는 양 (원하면 0.02~0.06로 조절)
+  const SCALE_PROFILE_PC = {
+    base: 1.00,   // PC 시작 크기
+    max: 5.2,    // ✅ PC 최대치 (원하면 여기만 바꾸면 됨)
+    step: 0.2    // 클릭 1번당 증가량
+  };
+
+  const SCALE_PROFILE_MOBILE = {
+    base: 0.75,   // ✅ 모바일 시작 크기 더 작게
+    max: 1.7,    // ✅ 모바일 최대치 더 작게
+    step: 0.05    // 모바일 클릭 증가량도 더 작게
+  };
+
+  // 현재 적용중 프로필
+  let scaleBase = SCALE_PROFILE_PC.base;
+  let scaleMax  = SCALE_PROFILE_PC.max;
+  let scaleStep = SCALE_PROFILE_PC.step;
+
+  // 실제 스케일 값
+  let catScale = scaleBase;
+
+  function applyScaleProfile(forceClampNow){
+    const mobile = isMobileNow();
+    const p = mobile ? SCALE_PROFILE_MOBILE : SCALE_PROFILE_PC;
+
+    const prevBase = scaleBase;
+    scaleBase = p.base;
+    scaleMax  = p.max;
+    scaleStep = p.step;
+
+    // 켜진 상태에서 리사이즈로 프로필이 바뀌면:
+    // - base는 "원래 크기(복귀 목표)"라 바뀌는 게 정상
+    // - 현재 catScale이 새 max를 넘으면 즉시 깎아줌
+    // - 원하면 base 변화에 비율로 따라가게도 가능하지만, 여기선 안정적으로 clamp만
+    if(forceClampNow){
+      catScale = Math.min(catScale, scaleMax);
+      catScale = Math.max(catScale, scaleBase);
+      clampWithVP(x, y);
+      setCSSVars();
+    }else{
+      // 처음 enable 시에는 base로 맞춰 시작
+      catScale = scaleBase;
+    }
+
+    // base가 바뀌면 decay의 목표도 자동으로 바뀜
+    // (SCALE_BASE를 별도 상수로 두지 않고 scaleBase 사용)
+    if(Math.abs(prevBase - scaleBase) > 1e-6){
+      // nothing else needed
+    }
+  }
+
+  // ===============================
+  // Scale Decay (10초마다 조금씩 "scaleBase"로)
+  // ===============================
+  const SCALE_DECAY_INTERVAL_MS = 20; // ✅ 10초마다
+  const SCALE_DECAY_STEP = 0.005;         // ✅ 한 번에 줄어드는 양
   let scaleDecayTimer = null;
 
   function startScaleDecay(){
@@ -548,16 +608,15 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     scaleDecayTimer = setInterval(()=>{
       if(!enabled) return;
 
-      // 이미 원래 크기면 유지
-      if(catScale <= SCALE_BASE + 1e-6) {
-        catScale = SCALE_BASE;
+      // 이미 목표(base)에 도달했으면 유지
+      if(catScale <= scaleBase + 1e-6){
+        catScale = scaleBase;
         return;
       }
 
       // 조금씩 감소
-      catScale = Math.max(SCALE_BASE, catScale - SCALE_DECAY_STEP);
+      catScale = Math.max(scaleBase, catScale - SCALE_DECAY_STEP);
 
-      // 줄어든 만큼 화면 밖 튀는 것 방지
       clampWithVP(x, y);
       setCSSVars();
     }, SCALE_DECAY_INTERVAL_MS);
@@ -616,20 +675,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   function rand(min, max){ return Math.random() * (max - min) + min; }
   function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
 
-  function getVP(){
-    const vv = window.visualViewport;
-    const width  = vv ? vv.width  : window.innerWidth;
-    const height = vv ? vv.height : window.innerHeight;
-    return { width, height };
-  }
-
-  function recomputeExtraY(){
-    const vp = getVP();
-    extraY = (vp.width <= MOBILE_BREAKPOINT) ? (EXTRA_Y_PC + EXTRA_Y_MOBILE_ADD) : EXTRA_Y_PC;
-  }
-
   function getCatSize(){
-    // ✅ transform(scale)까지 반영된 실제 크기 기준
     const r = cat.getBoundingClientRect();
     return { w: r.width, h: r.height };
   }
@@ -680,16 +726,17 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     enabled = !!on;
     if(enabled){
       recomputeExtraY();
+      applyScaleProfile(false);   // ✅ enable 시 모바일/PC에 맞는 base로 시작
       pickRandomTarget();
       clampWithVP(x, y);
       setCSSVars();
       cat.classList.add("is-moving");
-      startScaleDecay();            // ✅ (NEW) 켜질 때 자동 복귀 시작
+      startScaleDecay();
       requestAnimationFrame(step);
     }else{
       cat.classList.remove("is-moving", "is-sitting");
       bubble.classList.remove("show");
-      stopScaleDecay();             // ✅ (NEW) 꺼질 때 타이머 정지
+      stopScaleDecay();
     }
   };
 
@@ -700,10 +747,9 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   cat.addEventListener("click", (e)=>{
     e.stopPropagation();
 
-    // ✅ 터치/클릭할 때마다 조금씩 커짐
-    catScale = Math.min(SCALE_MAX, catScale + SCALE_STEP);
+    // ✅ 클릭마다 증가 (모바일/PC 각기 다른 step/max 적용)
+    catScale = Math.min(scaleMax, catScale + scaleStep);
 
-    // 커진 만큼 clamp 재계산 (화면 밖으로 튀는 것 방지)
     clampWithVP(x, y);
     setCSSVars();
 
@@ -814,10 +860,11 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   function onViewportChange(){
     if(!enabled) return;
 
-    // ✅ 창 크기 바뀌면 즉시 extraY 재계산 (PC ↔ 모바일 실시간 반영)
     recomputeExtraY();
 
-    // ✅ 현재 위치/타겟을 새 maxY 기준으로 즉시 보정
+    // ✅ 리사이즈(PC↔모바일 전환 포함) 시 스케일 프로필 즉시 반영
+    applyScaleProfile(true);
+
     clampWithVP(x, y);
     pickRandomTarget();
     setCSSVars();
@@ -828,15 +875,17 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
     window.visualViewport.addEventListener("resize", onViewportChange, {passive:true});
     window.visualViewport.addEventListener("scroll", ()=> {
       if(!enabled) return;
-      // 스크롤 중에도 바닥 튀는 현상 방지
       recomputeExtraY();
       clampWithVP(x, y);
       setCSSVars();
     }, {passive:true});
   }
+
+  // (페이지 로드 직후에도 프로필 미리 계산해두기)
+  recomputeExtraY();
+  applyScaleProfile(false);
 })();
 </script>
-
 
 <div class="department-banner">
   <p>
