@@ -295,7 +295,7 @@ sidebar_main: true
       <img src="/images/about/bottom.jpg" alt="Bottom Banner" style="width: 100%; max-width: 1000px; border-radius: 20px;">
     </div>
     <footer style="text-align: center; color: var(--text-muted); font-size: 0.95rem; font-family: sans-serif;">
-      Last Update: 2026/01/03
+      Last Update: 2026/01/31
     </footer>
   </div>
 </div>

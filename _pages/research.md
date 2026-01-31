@@ -647,8 +647,19 @@ sidebar_main: false
   <h2 class="section-title">Conference</h2>
 
   <ul class="conf-list">
+
+      <li class="conf-item">
+      <span class="conf-authors">Chae-Hwan Park, Seung Yoon Shin, Seong Eun Kim, Min Kang, and Soo-Yeon Lee</span>
+      <div class="conf-title"><span>A Schmitt-Trigger Comperator-Based Noise-Robust Reconfigurable Leaky Integrate-and-Fire Neuron Circuit for Spiking Neural Networks</span></div>
+      <div class="conf-info">
+        KCS 2026 · Jeongseon, Korea
+        <span class="type-tag">Poster</span>
+      </div>
+    </li>
+
+
     <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, Soo-Yeon Lee</span>
+      <span class="conf-authors">Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee</span>
       <div class="conf-title">
         <a href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">
           Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing Falling Time and Enhancing Gray-Level Expression
@@ -664,7 +675,7 @@ sidebar_main: false
     </li>
 
     <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, Soo-Yeon Lee</span>
+      <span class="conf-authors">Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee</span>
       <div class="conf-title"><span>고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교</span></div>
       <div class="conf-info">
         KMID 2025 · Gangneung, Korea
@@ -673,7 +684,7 @@ sidebar_main: false
     </li>
 
     <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, Soo-Yeon Lee</span>
+      <span class="conf-authors">Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, and Soo-Yeon Lee</span>
       <div class="conf-title">
         <span>μLED pixel circuit based on Low-Temperature Polysilicon and Oxide Thin Film Transistors for pulse width modulation with extremely short falling time</span>
       </div>
@@ -858,12 +869,12 @@ sidebar_main: false
       </div>
     </div>
 
-    <!-- EE Capstone Design (Controller) (Zoom) -->
-    <div class="custom-card" onclick="openGallery('/assets/new_images/project0_original.jpg')">
+    <!-- EE Capstone Design (Controller) (Video Modal) -->
+    <div class="custom-card" onclick="openVideo('/assets/new_images/research/Final.mp4')">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project0.jpg" alt="controller wearable">
         <div class="card-corner">Wearable</div>
-        <div class="card-hint">🔍 Zoom</div>
+        <div class="card-hint">▶ Video</div>
       </div>
       <div class="card-content">
         <span class="card-tag">Wearable</span>
@@ -871,8 +882,8 @@ sidebar_main: false
         <p class="card-desc">Wearable Smart Key Using Gesture Recognition (Controller)</p>
       </div>
       <div class="card-footer">
-        <span style="font-weight:700; color: rgba(31,42,55,0.62); font-size:0.86rem;">Hanyang</span>
-        <span style="font-weight:700; color: rgba(31,42,55,0.52); font-size:0.86rem;">2023</span>
+        <div class="youtube-label">📺 Watch on Video</div>
+        <span style="font-weight:700; color: rgba(31,42,55,0.52); font-size:0.86rem;">2022</span>
       </div>
     </div>
 
@@ -902,6 +913,81 @@ sidebar_main: false
   <span class="close-btn" onclick="event.stopPropagation(); closeGallery()">&times;</span>
   <img class="gallery-image" id="galleryImage" src="" alt="Gallery Image">
 </div>
+
+<!-- ========================= Video Modal ========================= -->
+<div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
+  <div class="video-modal" id="videoModal" onclick="event.stopPropagation()">
+    <span class="video-close" onclick="closeVideo()">&times;</span>
+    <video id="videoPlayer" controls playsinline>
+      <source id="videoSource" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<style>
+  /* ================= Video Modal Styles ================= */
+  .video-overlay{
+    display:none;
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    background: rgba(0,0,0,0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  .video-modal{
+    width: min(960px, 92vw);
+    border-radius: 18px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.40);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(8px);
+    animation: videoPop .18s ease-out forwards;
+  }
+
+  @keyframes videoPop{
+    from { opacity: 0; transform: translateY(10px) scale(0.99); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .video-modal video{
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+  }
+
+  .video-close{
+    position:absolute;
+    top: 12px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size: 26px;
+    cursor:pointer;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.16);
+    transition: transform .15s ease, background .2s ease;
+    user-select:none;
+    z-index: 2;
+  }
+  .video-close:hover{
+    transform: rotate(90deg);
+    background: rgba(255,255,255,0.16);
+  }
+</style>
 
 <!-- ========================= Coming Soon Modal ========================= -->
 <div class="comingsoon-overlay" id="comingSoonOverlay" onclick="closeComingSoon()">
@@ -956,11 +1042,44 @@ sidebar_main: false
     document.body.style.overflow = 'auto';
   }
 
+  /* ===== Video Modal ===== */
+  function openVideo(videoSrc){
+    const overlay = document.getElementById('videoOverlay');
+    const player = document.getElementById('videoPlayer');
+    const source = document.getElementById('videoSource');
+
+    source.src = videoSrc;
+    player.load();
+
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    const playPromise = player.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
+  }
+
+  function closeVideo(){
+    const overlay = document.getElementById('videoOverlay');
+    const player = document.getElementById('videoPlayer');
+    const source = document.getElementById('videoSource');
+
+    player.pause();
+    player.currentTime = 0;
+    source.src = "";
+    player.load();
+
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
   /* ===== ESC handling ===== */
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeGallery();
       closeComingSoon();
+      closeVideo();
     }
   });
 </script>
