@@ -196,9 +196,11 @@ sidebar_main: true
 
       <!-- ✅ class 적용 -->
       <div class="hero-links">
-        <a href="https://blog.naver.com/ordlike" target="_blank" class="link-chip">Blog</a>
         <a href="https://instagram.com/chae_wanny?igshid=ZDc4ODBmN[jlmNQ==" target="_blank" class="link-chip">Instagram</a>
+        <a href="https://www.linkedin.com/in/chae-hwan-park-00977531a" target="_blank" class="link-chip">Linkedin</a>
+        <a href="https://blog.naver.com/ordlike" target="_blank" class="link-chip">Blog</a>
         <a href="https://sites.google.com/view/snu-acelab" target="_blank" class="link-chip">Laboratory</a>
+
       </div>
     </div>
   </div>

@@ -116,43 +116,41 @@ author:
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/ordlike"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ordlike"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/chae_wanny?igshid=ZDc4ODBmNjlmNQ=="
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/chae-hwan-park-00977531a"
+
 
 # Site Footer
+
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      # url: "https://twitter.com/yourid"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      # url: "https://facebook.com/yourid"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/ordlike"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
       url: "https://github.com/ordlike"
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/chae-hwan-park-00977531a"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/chae_wanny?igshid=ZDc4ODBmNjlmNQ=="
+
+
 
 
 # Reading Files
