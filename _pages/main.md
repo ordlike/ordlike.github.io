@@ -932,7 +932,7 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
       <div class="news-text">
         <span class="news-tag">Achievement • Jan 2026</span>
         <h3>The 33rd KCS 2026 Excellent Poster Award!</h3>
-        <p>Successfully finished the 42.195km JTBC Seoul Marathon in 5h 39m. A meaningful journey testing physical and mental limits.</p>
+        <p>At The 33rd Korean Conference on Semiconductors (KCS 2026), I received the Excellent Poster Award in the T. AI Division.</p>
         <span class="read-more-btn">Read Full Story →</span>
       </div>
     </a>
