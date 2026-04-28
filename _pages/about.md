@@ -332,7 +332,7 @@ sidebar_main: true
     <div class="bento-card full-width">
       <span class="card-label">Honors & Recognition</span>
       <ul class="info-list">
-        <li><strong>The 33rd Korean Conference on Semiconductors (KCS 2026) Excellent Poster Award</strong><span class="date-tag">Feb 2026</span></li>
+        <li><strong>The 33rd Korean Conference on Semiconductors (KCS 2026) Excellent Poster Award</strong><span class="date-tag">Jan 2026</span></li>
         <div class="img-frame" style="max-width: 500px; margin: 15px auto 25px auto;"><img src="/images/about/KCS_awards.png" alt="Award"></div>
         <li><strong>Hanyang Academic Excellence Award</strong><span class="date-tag">Feb 2024</span></li>
         <div class="img-frame" style="max-width: 400px; margin: 15px auto 25px auto;"><img src="/images/about/graduate_award.jpg" alt="Award"></div>

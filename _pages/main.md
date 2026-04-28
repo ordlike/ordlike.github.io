@@ -925,13 +925,13 @@ excerpt: "<strong>Hello! I'm Chae-Hwan Park. </strong><br>Integrated M.S.-Ph.D R
   <div class="section-title">Latest Updates</div>
 
   <section class="hot-news-section">
-    <a href="/fifth/" class="news-card">
+    <a href="/sixth/" class="news-card">
       <div class="news-img">
-        <img src="/assets/new_images/news4.png" alt="Marathon">
+        <img src="/assets/new_images/news5.png" alt="Marathon">
       </div>
       <div class="news-text">
-        <span class="news-tag">Achievement • Nov 2024</span>
-        <h3>Completed the Full Marathon Course!</h3>
+        <span class="news-tag">Achievement • Jan 2026</span>
+        <h3>The 33rd KCS 2026 Excellent Poster Award!</h3>
         <p>Successfully finished the 42.195km JTBC Seoul Marathon in 5h 39m. A meaningful journey testing physical and mental limits.</p>
         <span class="read-more-btn">Read Full Story →</span>
       </div>
