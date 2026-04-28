@@ -46,7 +46,12 @@ sidebar_main: false
     margin: 0 0 20px 0;
     padding: 6px 0;
     position: relative;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    background-image: none !important;
   }
+
   .section-title::before{
     content:"";
     width: 12px;
@@ -55,6 +60,7 @@ sidebar_main: false
     background: linear-gradient(135deg, var(--primary), var(--primary2));
     box-shadow: 0 10px 20px rgba(14,74,132,0.18);
   }
+
   .section-title::after{
     content:"";
     position:absolute;
@@ -64,6 +70,11 @@ sidebar_main: false
     height: 3px;
     border-radius: 999px;
     background: linear-gradient(90deg, var(--primary), rgba(14,74,132,0.12));
+  }
+
+  h2.section-title *{
+    border-bottom: none !important;
+    background-image: none !important;
   }
 
   .uni-header{
@@ -76,6 +87,7 @@ sidebar_main: false
     position: relative;
     overflow: hidden;
   }
+
   .uni-header::after{
     content:"";
     position:absolute;
@@ -86,6 +98,7 @@ sidebar_main: false
     background: radial-gradient(circle, rgba(255,255,255,0.18), rgba(255,255,255,0));
     transform: rotate(25deg);
   }
+
   .uni-header h1{
     margin: 0;
     font-size: 1.05rem;
@@ -94,80 +107,105 @@ sidebar_main: false
     text-transform: uppercase;
   }
 
-  /* ✅ "Conference" 아래 회색 실선(테마 기본 underline) 제거 */
-  h2.section-title{
-    border-bottom: none !important;
-    box-shadow: none !important;
-    background: none !important;
-    background-image: none !important;
+  /* ================= Publications ================= */
+  .pub-block{
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.055);
+    padding: 20px;
+    margin-bottom: 22px;
   }
 
-  /* (혹시 테마가 내부 span에도 줄을 주는 경우 방어) */
-  h2.section-title *{
-    border-bottom: none !important;
-    background-image: none !important;
+  .pub-subtitle{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+    margin: 0 0 14px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 
-  /* ================= Conference ================= */
-  .conf-list{
+  .pub-subtitle h3{
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 850;
+    color: rgb(15, 15, 112);
+    letter-spacing: -0.02em;
+  }
+
+  .pub-count{
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--primary);
+    background: rgba(14,74,132,0.08);
+    border: 1px solid rgba(14,74,132,0.14);
+    padding: 5px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .pub-list{
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
+    gap: 10px;
+  }
+
+  .pub-item{
+    display: grid;
+    grid-template-columns: 86px 1fr;
     gap: 14px;
+    padding: 13px 14px;
+    border: 1px solid rgba(0,0,0,0.065);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff, #fbfcfe);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
   }
 
-  .conf-item{
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--r);
-    padding: 18px 18px;
-    box-shadow: 0 10px 26px rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .conf-item::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    width: 6px;
-    background: linear-gradient(180deg, var(--primary), var(--primary2));
-  }
-  .conf-item::after{
-    content:"";
-    position:absolute;
-    right:-140px;
-    top:-140px;
-    width: 260px;
-    height: 260px;
-    background: radial-gradient(circle, rgba(14,74,132,0.10), rgba(14,74,132,0));
-  }
-  .conf-item:hover{
-    transform: translateY(-4px);
-    box-shadow: var(--shadow2);
-    border-color: rgba(14,74,132,0.28);
+  .pub-item:hover{
+    transform: translateY(-2px);
+    border-color: rgba(14,74,132,0.22);
+    box-shadow: 0 10px 24px rgba(14,74,132,0.08);
   }
 
-  .conf-authors{
+  .pub-year{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 34px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    color:#fff;
+    font-size: 0.82rem;
+    font-weight: 850;
+    letter-spacing: 0.02em;
+  }
+
+  .pub-content{
+    min-width: 0;
+  }
+
+  .pub-authors{
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 0.86rem;
     display:block;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     font-weight: 600;
+    line-height: 1.35;
   }
 
-  .conf-title{
-    font-weight: 700;
-    font-size: 0.9rem;
+  .pub-title{
+    font-weight: 750;
+    font-size: 0.93rem;
     line-height: 1.38;
     color: #162231;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
-  .conf-title a{
+  .pub-title a{
     color: inherit;
     text-decoration: none;
     background-image: linear-gradient(transparent 78%, rgba(14,74,132,0.16) 0);
@@ -175,53 +213,71 @@ sidebar_main: false
     background-repeat: no-repeat;
     transition: color .2s ease;
   }
-  .conf-title a:hover{
+
+  .pub-title a:hover{
     color: var(--primary);
   }
 
-  .conf-info{
+  .pub-meta{
     display:flex;
-    align-items: center;
-    gap: 10px;
+    align-items:center;
+    gap: 8px;
     flex-wrap: wrap;
-    font-size: 0.88rem;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 750;
+    color: var(--primary);
+  }
+
+  .pub-venue{
     color: var(--primary);
   }
 
   .type-tag{
-    font-size: 0.78rem;
-    font-weight: 700;
-    padding: 5px 10px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 9px;
     border-radius: 999px;
     background: rgba(14,74,132,0.08);
     border: 1px solid rgba(14,74,132,0.16);
     color: var(--primary);
+    line-height: 1.2;
   }
 
-  .conf-actions{
-    margin-top: 10px;
+  .status-tag{
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(15,15,112,0.06);
+    border: 1px solid rgba(15,15,112,0.14);
+    color: rgb(15, 15, 112);
+    line-height: 1.2;
+  }
+
+  .pub-actions{
+    margin-top: 8px;
     display:flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
   }
 
   .pill-btn{
     display:inline-flex;
     align-items:center;
-    gap: 8px;
-    padding: 9px 12px;
+    gap: 6px;
+    padding: 6px 10px;
     border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.78rem;
+    font-weight: 800;
     text-decoration: none;
     border: 1px solid rgba(14,74,132,0.18);
     color: var(--primary);
     background: rgba(255,255,255,0.92);
     transition: transform .2s ease, background .2s ease;
   }
+
   .pill-btn:hover{
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     background: rgba(14,74,132,0.05);
   }
 
@@ -241,6 +297,7 @@ sidebar_main: false
     overflow: hidden;
     position: relative;
   }
+
   .research-hero::after{
     content:"";
     position:absolute;
@@ -259,12 +316,14 @@ sidebar_main: false
     letter-spacing: -0.03em;
     color: rgb(15, 15, 112);
   }
+
   .research-hero-text p{
     margin: 0 0 12px 0;
     line-height: 1.75;
     color: rgba(31,42,55,0.86);
     font-weight: 500;
   }
+
   .research-hero-text b{
     font-weight: 700;
     color: rgba(20,36,58,0.92);
@@ -276,6 +335,7 @@ sidebar_main: false
     gap: 8px;
     margin-top: 12px;
   }
+
   .keyword-chip{
     font-size: 0.78rem;
     font-weight: 700;
@@ -307,20 +367,24 @@ sidebar_main: false
     border: 1px solid transparent;
     cursor: pointer;
   }
+
   .btn.primary{
     background: linear-gradient(135deg, var(--primary), var(--primary2));
     color:#fff;
     box-shadow: 0 12px 28px rgba(14,74,132,0.18);
   }
+
   .btn.primary:hover{
     transform: translateY(-2px);
     box-shadow: 0 16px 36px rgba(14,74,132,0.22);
   }
+
   .btn.ghost{
     background: rgba(255,255,255,0.86);
     color: var(--primary);
     border-color: rgba(14,74,132,0.18);
   }
+
   .btn.ghost:hover{
     transform: translateY(-2px);
     background: rgba(14,74,132,0.05);
@@ -336,6 +400,7 @@ sidebar_main: false
     min-height: 280px;
     width: 100%;
   }
+
   .research-hero-media img{
     width:100%;
     height:100%;
@@ -343,6 +408,7 @@ sidebar_main: false
     display:block;
     transition: transform .35s ease;
   }
+
   .research-hero-media:hover img{ transform: scale(1.035); }
 
   /* ================= Projects Grid ================= */
@@ -374,6 +440,7 @@ sidebar_main: false
     position: relative;
     cursor: pointer;
   }
+
   .custom-card:hover{
     transform: translateY(-5px);
     box-shadow: var(--shadow2);
@@ -387,6 +454,7 @@ sidebar_main: false
     overflow:hidden;
     flex: 0 0 auto;
   }
+
   .card-img-wrap img{
     width:100%;
     height:100%;
@@ -394,6 +462,7 @@ sidebar_main: false
     display:block;
     transition: transform .35s ease;
   }
+
   .custom-card:hover .card-img-wrap img{ transform: scale(1.035); }
 
   .card-img-wrap::after{
@@ -419,6 +488,7 @@ sidebar_main: false
     border: 1px solid rgba(255,255,255,0.16);
     z-index: 2;
   }
+
   .card-hint{
     position:absolute;
     right: 14px;
@@ -437,6 +507,7 @@ sidebar_main: false
     padding: 18px;
     flex: 1 1 auto;
   }
+
   .card-tag{
     font-size: 0.72rem;
     font-weight: 750;
@@ -446,6 +517,7 @@ sidebar_main: false
     margin-bottom: 8px;
     display:block;
   }
+
   .card-title{
     font-size: 1.10rem;
     font-weight: 750;
@@ -453,6 +525,7 @@ sidebar_main: false
     line-height: 1.25;
     color: #152232;
   }
+
   .card-desc{
     font-size: 0.93rem;
     color: var(--muted);
@@ -481,7 +554,7 @@ sidebar_main: false
     gap: 6px;
   }
 
-  /* ================= Lightbox (Image Zoom) ================= */
+  /* ================= Lightbox Image Zoom ================= */
   .gallery-container{
     display:none;
     position: fixed;
@@ -493,12 +566,14 @@ sidebar_main: false
     align-items:center;
     backdrop-filter: blur(7px);
   }
+
   .gallery-image{
     max-width: 92%;
     max-height: 86%;
     border-radius: 12px;
     box-shadow: 0 0 40px rgba(255,255,255,0.16);
   }
+
   .close-btn{
     position:absolute;
     top: 22px;
@@ -517,6 +592,7 @@ sidebar_main: false
     transition: transform .2s ease, background .2s ease;
     user-select:none;
   }
+
   .close-btn:hover{
     transform: scale(1.05);
     background: rgba(255,255,255,0.18);
@@ -582,6 +658,7 @@ sidebar_main: false
     place-items:center;
     transition: transform .15s ease, background .2s ease;
   }
+
   .comingsoon-close:hover{
     transform: rotate(90deg);
     background: rgba(255,255,255,0.18);
@@ -611,89 +688,260 @@ sidebar_main: false
     cursor:pointer;
     transition: transform .15s ease, background .2s ease;
   }
+
   .comingsoon-btn:hover{
     transform: translateY(-1px);
     background: rgba(14,74,132,0.10);
   }
 
+  /* ================= Video Modal ================= */
+  .video-overlay{
+    display:none;
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    background: rgba(0,0,0,0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  .video-modal{
+    width: min(960px, 92vw);
+    border-radius: 18px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.40);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(8px);
+    animation: videoPop .18s ease-out forwards;
+  }
+
+  @keyframes videoPop{
+    from { opacity: 0; transform: translateY(10px) scale(0.99); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .video-modal video{
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+  }
+
+  .video-close{
+    position:absolute;
+    top: 12px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size: 26px;
+    cursor:pointer;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.16);
+    transition: transform .15s ease, background .2s ease;
+    user-select:none;
+    z-index: 2;
+  }
+
+  .video-close:hover{
+    transform: rotate(90deg);
+    background: rgba(255,255,255,0.16);
+  }
+
+  /* ================= Responsive ================= */
   @media (max-width: 900px){
-    .research-hero{ grid-template-columns: 1fr; padding: 18px; }
-    .section-title{ font-size: 1.55rem; }
-    .card-img-wrap{ height: 210px; }
-    .custom-grid{ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .research-hero{
+      grid-template-columns: 1fr;
+      padding: 18px;
+    }
+
+    .section-title{
+      font-size: 1.55rem;
+    }
+
+    .card-img-wrap{
+      height: 210px;
+    }
+
+    .custom-grid{
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .hero-cta{
+      flex-wrap: nowrap;
+      gap: 8px;
+    }
+
+    .hero-cta .btn{
+      flex: 1 1 0;
+      justify-content: center;
+      white-space: nowrap;
+      padding: 10px 10px;
+      font-size: 0.84rem;
+    }
   }
 
+  @media (max-width: 700px){
+    .pub-block{
+      padding: 16px;
+    }
 
-  /* ✅ 모바일에서 Details / Download Materials 버튼을 한 줄로 고정 */
-@media (max-width: 900px){
-  .hero-cta{
-    flex-wrap: nowrap;          /* 줄바꿈 금지 */
-    gap: 8px;
+    .pub-item{
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 13px;
+    }
+
+    .pub-year{
+      width: fit-content;
+      padding: 0 12px;
+      height: 30px;
+      font-size: 0.78rem;
+    }
+
+    .pub-subtitle{
+      align-items:flex-start;
+      flex-direction: column;
+      gap: 8px;
+    }
   }
-
-  .hero-cta .btn{
-    flex: 1 1 0;                /* 두 버튼을 1:1로 */
-    justify-content: center;    /* 가운데 정렬 */
-    white-space: nowrap;        /* 버튼 내부 줄바꿈 금지 */
-    padding: 10px 10px;         /* 살짝 줄여서 한 줄에 들어가게 */
-    font-size: 0.84rem;         /* 살짝 축소 */
-  }
-
-  
 </style>
 
-<!-- ========================= Conference ========================= -->
-<div class="section-container" id="conference">
-  <h2 class="section-title">Conference</h2>
+<!-- ========================= Publications ========================= -->
+<div class="section-container" id="publications">
+  <h2 class="section-title">Publications</h2>
 
-  <ul class="conf-list">
+<!-- ================= Journals ================= -->
+<div class="pub-block" id="journals">
+  <div class="pub-subtitle">
+    <h3>Journals</h3>
+    <span class="pub-count">Selected journal papers</span>
+  </div>
 
-      <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Seung Yoon Shin, Seong Eun Kim, Min Kang, and Soo-Yeon Lee</span>
-      <div class="conf-title"><span>A Schmitt-Trigger Comperator-Based Noise-Robust Reconfigurable Leaky Integrate-and-Fire Neuron Circuit for Spiking Neural Networks</span></div>
-      <div class="conf-info">
-        KCS 2026 · Jeongseon, Korea
-        <span class="type-tag">Poster</span>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="pub-year">2026</div>
+      <div class="pub-content">
+        <span class="pub-authors">Sunyeol Bae, Junhyeong Park, Hyung-Jun Noh, Jaybum Kim, Yumin Yun, Chae-Hwan Park, and Soo-Yeon Lee</span>
+        <div class="pub-title">
+          <a href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">
+            Subthreshold Swing Control in IGZO TFTs Using Floating-Gate Engineering for AMOLED Displays
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="pub-venue">Journal of the Society for Information Display</span>
+          <span class="status-tag">Accepted</span>
+        </div>
+        <div class="pub-actions">
+          <a class="pill-btn" href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">🔗 Paper</a>
+        </div>
       </div>
     </li>
 
-
-    <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee</span>
-      <div class="conf-title">
-        <a href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">
-          Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing Falling Time and Enhancing Gray-Level Expression
-        </a>
-      </div>
-      <div class="conf-info">
-        SID 2025 · San Jose, USA
-        <span class="type-tag">Poster</span>
-      </div>
-      <div class="conf-actions">
-        <a class="pill-btn" href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">🔗 Paper</a>
-      </div>
-    </li>
-
-    <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee</span>
-      <div class="conf-title"><span>고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교</span></div>
-      <div class="conf-info">
-        KMID 2025 · Gangneung, Korea
-        <span class="type-tag">Poster</span>
+    <li class="pub-item">
+      <div class="pub-year">2026</div>
+      <div class="pub-content">
+        <span class="pub-authors">Yumin Yun, Junhyeong Park, Sunyeol Bae, Chae-Hwan Park, Dong Hyeon Lee, and Soo-Yeon Lee</span>
+        <div class="pub-title">
+          <a href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">
+            A Neuromorphic Simulation Framework for IGZO Charge-Trap Synaptic Transistors: From Device Modeling to System Simulation
+          </a>
+        </div>
+        <div class="pub-meta">
+          <span class="pub-venue">Advanced Intelligent Systems</span>
+          <span class="status-tag">Accepted</span>
+        </div>
+        <div class="pub-actions">
+          <a class="pill-btn" href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">🔗 Paper</a>
+        </div>
       </div>
     </li>
 
-    <li class="conf-item">
-      <span class="conf-authors">Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, and Soo-Yeon Lee</span>
-      <div class="conf-title">
-        <span>μLED pixel circuit based on Low-Temperature Polysilicon and Oxide Thin Film Transistors for pulse width modulation with extremely short falling time</span>
-      </div>
-      <div class="conf-info">
-        ICEP-ITA 2024 · Tashkent, Uzbekistan
-        <span class="type-tag">Oral</span>
-      </div>
-    </li>
   </ul>
+</div>
+
+  <!-- ================= Conferences ================= -->
+  <div class="pub-block" id="conferences">
+    <div class="pub-subtitle">
+      <h3>Conferences</h3>
+      <span class="pub-count">Conference papers & presentations</span>
+    </div>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <span class="pub-authors">Chae-Hwan Park, Seung Yoon Shin, Seong Eun Kim, Min Kang, and Soo-Yeon Lee</span>
+          <div class="pub-title">
+            <span>A Schmitt-Trigger Comparator-Based Noise-Robust Reconfigurable Leaky Integrate-and-Fire Neuron Circuit for Spiking Neural Networks</span>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">KCS 2026 · Jeongseon, Korea</span>
+            <span class="type-tag">Poster</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-content">
+          <span class="pub-authors">Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee</span>
+          <div class="pub-title">
+            <a href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">
+              Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing Falling Time and Enhancing Gray-Level Expression
+            </a>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">SID 2025 · San Jose, USA</span>
+            <span class="type-tag">Poster</span>
+          </div>
+          <div class="pub-actions">
+            <a class="pill-btn" href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">🔗 Paper</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-content">
+          <span class="pub-authors">Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee</span>
+          <div class="pub-title">
+            <span>고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교</span>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">KMID 2025 · Gangneung, Korea</span>
+            <span class="type-tag">Poster</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2024</div>
+        <div class="pub-content">
+          <span class="pub-authors">Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, and Soo-Yeon Lee</span>
+          <div class="pub-title">
+            <span>μLED Pixel Circuit Based on Low-Temperature Polysilicon and Oxide Thin-Film Transistors for Pulse-Width Modulation with Extremely Short Falling Time</span>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">ICEP-ITA 2024 · Tashkent, Uzbekistan</span>
+            <span class="type-tag">Oral</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
 </div>
 
 <!-- ========================= Research Showcase ========================= -->
@@ -714,7 +962,6 @@ sidebar_main: false
         <span class="keyword-chip">Neuron circuit</span>
       </div>
 
-      <!-- ✅ changed buttons -->
       <div class="hero-cta">
         <button class="btn primary" type="button"
           onclick="showComingSoon('Details', 'The project details page is currently under preparation.')">
@@ -748,10 +995,8 @@ sidebar_main: false
         <span class="keyword-chip">FPGA</span>
         <span class="keyword-chip">MCU/MPU</span>
         <span class="keyword-chip">Sensor</span>
-
       </div>
 
-      <!-- ✅ changed buttons -->
       <div class="hero-cta">
         <button class="btn primary" type="button"
           onclick="showComingSoon('Details', 'The project details page is currently under preparation.')">
@@ -815,7 +1060,6 @@ sidebar_main: false
   <div class="uni-header"><h1>Hanyang University</h1></div>
   <div class="custom-grid">
 
-    <!-- 2023 Academic Town (YouTube) -->
     <a href="https://www.youtube.com/watch?v=OespY0dTNjA" target="_blank" rel="noopener" class="custom-card">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project3.jpg" alt="3D map">
@@ -833,7 +1077,6 @@ sidebar_main: false
       </div>
     </a>
 
-    <!-- Capstone Design II (YouTube) -->
     <a href="https://www.youtube.com/watch?v=2-kjNgfCKaI&t=18s" target="_blank" rel="noopener" class="custom-card">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project2.jpg" alt="robot">
@@ -851,7 +1094,6 @@ sidebar_main: false
       </div>
     </a>
 
-    <!-- Capstone Design I (Body) (Zoom) -->
     <div class="custom-card" onclick="openGallery('/assets/new_images/project1_original.jpg')">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project1.jpg" alt="wearable body">
@@ -869,7 +1111,6 @@ sidebar_main: false
       </div>
     </div>
 
-    <!-- EE Capstone Design (Controller) (Video Modal) -->
     <div class="custom-card" onclick="openVideo('/assets/new_images/research/Final.mp4')">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project0.jpg" alt="controller wearable">
@@ -887,7 +1128,6 @@ sidebar_main: false
       </div>
     </div>
 
-    <!-- 2022 Academic Town (YouTube) -->
     <a href="https://www.youtube.com/watch?v=pfUYDsK3Zlc" target="_blank" rel="noopener" class="custom-card">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project00.jpg" alt="2022 academic town">
@@ -908,7 +1148,7 @@ sidebar_main: false
   </div>
 </div>
 
-<!-- ========================= Lightbox (Zoom) ========================= -->
+<!-- ========================= Lightbox Image Zoom ========================= -->
 <div class="gallery-container" id="galleryContainer" onclick="closeGallery()">
   <span class="close-btn" onclick="event.stopPropagation(); closeGallery()">&times;</span>
   <img class="gallery-image" id="galleryImage" src="" alt="Gallery Image">
@@ -924,70 +1164,6 @@ sidebar_main: false
     </video>
   </div>
 </div>
-
-<style>
-  /* ================= Video Modal Styles ================= */
-  .video-overlay{
-    display:none;
-    position: fixed;
-    inset: 0;
-    z-index: 100000;
-    background: rgba(0,0,0,0.88);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-  }
-
-  .video-modal{
-    width: min(960px, 92vw);
-    border-radius: 18px;
-    background: rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,255,255,0.16);
-    box-shadow: 0 24px 70px rgba(0,0,0,0.40);
-    overflow: hidden;
-    position: relative;
-    transform: translateY(8px);
-    animation: videoPop .18s ease-out forwards;
-  }
-
-  @keyframes videoPop{
-    from { opacity: 0; transform: translateY(10px) scale(0.99); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
-  }
-
-  .video-modal video{
-    width: 100%;
-    height: auto;
-    display: block;
-    background: #000;
-  }
-
-  .video-close{
-    position:absolute;
-    top: 12px;
-    right: 14px;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size: 26px;
-    cursor:pointer;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.16);
-    transition: transform .15s ease, background .2s ease;
-    user-select:none;
-    z-index: 2;
-  }
-  .video-close:hover{
-    transform: rotate(90deg);
-    background: rgba(255,255,255,0.16);
-  }
-</style>
 
 <!-- ========================= Coming Soon Modal ========================= -->
 <div class="comingsoon-overlay" id="comingSoonOverlay" onclick="closeComingSoon()">
@@ -1006,7 +1182,7 @@ sidebar_main: false
 </div>
 
 <script>
-  /* ===== Image Zoom (Lightbox) ===== */
+  /* ===== Image Zoom Lightbox ===== */
   function openGallery(imageSrc) {
     const container = document.getElementById("galleryContainer");
     const img = document.getElementById("galleryImage");
@@ -1033,8 +1209,6 @@ sidebar_main: false
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
-
-
 
   function closeComingSoon(){
     const overlay = document.getElementById('comingSoonOverlay');
@@ -1074,7 +1248,7 @@ sidebar_main: false
     document.body.style.overflow = 'auto';
   }
 
-  /* ===== ESC handling ===== */
+  /* ===== ESC Handling ===== */
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeGallery();

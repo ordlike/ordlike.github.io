@@ -289,6 +289,15 @@ sidebar_main: false
   <div class="gallery-grid">
 
     <div class="gallery-item"
+         data-src="./../assets/new_images/team/secret/2026-03-21.jpg"
+         data-title="2026 Naepo Marathon"
+         data-sub="Half Course Marathon">
+      <img src="./../assets/new_images/team/secret/2026-03-21.jpg" alt="2026 Naepo Marathon">
+      <div class="gallery-overlay"><h3>2026 Naepo Marathon</h3><p>Half Course Marathon</p></div>
+    </div>
+
+
+    <div class="gallery-item"
          data-src="./../assets/new_images/team/secret/2025-12-24.jpg"
          data-title="2025 Christmas eve"
          data-sub="Lab year-end party">

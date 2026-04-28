@@ -115,7 +115,7 @@ sidebar_main: true
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
   }
-  .card-label { font-size: 0.85rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
+  .card-label { font-size: 0.85rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; display: block; }
 
   /* 이미지 프레임 */
   .img-frame {
@@ -157,6 +157,61 @@ sidebar_main: true
   }
   .grade { color: var(--accent-blue); font-weight: 800; }
 
+  /* ===== Coursework Accordion ===== */
+  .course-toggle {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.035);
+  }
+
+  .course-toggle summary {
+    cursor: pointer;
+    padding: 18px 22px;
+    font-size: 1.05rem;
+    font-weight: 850;
+    color: var(--accent-blue);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    transition: 0.25s ease;
+  }
+
+  .course-toggle summary:hover {
+    background: #f1f5f9;
+  }
+
+  .course-toggle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .course-toggle summary::after {
+    content: "＋";
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--accent-blue);
+    margin-left: 20px;
+  }
+
+  .course-toggle[open] summary::after {
+    content: "−";
+  }
+
+  .course-toggle-content {
+    padding: 22px;
+  }
+
+  .course-note {
+    margin: 0 0 18px 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
   /* ✅✅ 핵심: 모바일에서 버튼을 3개 나란히 강제 */
   @media (max-width: 850px) {
     .hero-card { flex-direction: column; text-align: center; padding: 40px; }
@@ -176,6 +231,15 @@ sidebar_main: true
       padding: 10px 0;      /* ✅ 폭이 좁아지니 좌우 패딩 줄임 */
       font-size: 0.9rem;    /* ✅ 폰트 살짝 축소 */
       border-radius: 12px;
+    }
+
+    .course-toggle summary {
+      padding: 16px 18px;
+      font-size: 1rem;
+    }
+
+    .course-toggle-content {
+      padding: 18px;
     }
   }
 </style>
@@ -200,7 +264,6 @@ sidebar_main: true
         <a href="https://www.linkedin.com/in/chae-hwan-park-00977531a" target="_blank" class="link-chip">Linkedin</a>
         <a href="https://blog.naver.com/ordlike" target="_blank" class="link-chip">Blog</a>
         <a href="https://sites.google.com/view/snu-acelab" target="_blank" class="link-chip">Laboratory</a>
-
       </div>
     </div>
   </div>
@@ -218,20 +281,46 @@ sidebar_main: true
         <li><strong>Hanyang University</strong>&nbsp; B.S. in <a href="http://me.hanyang.ac.kr/" style="color: inherit; text-decoration: underline;">Mechanical Engineering</a> & <a href="http://ee.hanyang.ac.kr/" style="color: inherit; text-decoration: underline;">Electronic Engineering</a> <span class="date-tag">Mar 2018 - Feb 2024</span></li>
       </ul>
     </div>
+
     <div class="bento-card full-width">
       <span class="card-label">Relevant Coursework</span>
-      <div class="course-grid">
-        <div class="course-item">Electric Engineering <span class="grade">A+</span></div>
-        <div class="course-item">Electronic Engineering <span class="grade">A+</span></div>
-        <div class="course-item">Circuit Theory 1 <span class="grade">A+</span></div>
-        <div class="course-item">The Physics of Solid-state <span class="grade">A+</span></div>
-        <div class="course-item">Circuit Theory 2 <span class="grade">A+</span></div>
-        <div class="course-item">Semiconductor Devices <span class="grade">A+</span></div>
-        <div class="course-item">Electronic Circuit 1 <span class="grade">A0</span></div>
-        <div class="course-item">Semiconductor Fabrications <span class="grade">A+</span></div>
-        <div class="course-item">Electronic Circuit 2 <span class="grade">A+</span></div>
-        <div class="course-item">VLSI Engineering <span class="grade">A0</span></div>
-      </div>
+
+
+
+      <details class="course-toggle">
+        <summary>Graduate Coursework</summary>
+        <div class="course-toggle-content">
+          <div class="course-grid">
+            <div class="course-item">Topics in Integrated Circuit Design  <span class="grade">A-</span></div>
+            <div class="course-item">Display Engineering <span class="grade">A0</span></div>
+            <div class="course-item">Thin Film Devices <span class="grade">A0</span></div>
+            <div class="course-item">Topics in Electro-physics <span class="grade">A+</span></div>
+            <div class="course-item">AI Semiconductor Device Design <span class="grade">A+</span></div>
+            <div class="course-item">IC Design and Verification Projects <span class="grade">A+</span></div>
+            <div class="course-item">AI Semiconductor Sysyem Design <span class="grade">A+</span></div>
+
+          </div>
+        </div>
+      </details>
+
+        <details class="course-toggle" open>
+        <summary>B.S. Coursework</summary>
+        <div class="course-toggle-content">
+          <div class="course-grid">
+            <div class="course-item">Electric Engineering <span class="grade">A+</span></div>
+            <div class="course-item">Electronic Engineering <span class="grade">A+</span></div>
+            <div class="course-item">Circuit Theory 1 <span class="grade">A+</span></div>
+            <div class="course-item">The Physics of Solid-state <span class="grade">A+</span></div>
+            <div class="course-item">Circuit Theory 2 <span class="grade">A+</span></div>
+            <div class="course-item">Semiconductor Devices <span class="grade">A+</span></div>
+            <div class="course-item">Electronic Circuit 1 <span class="grade">A0</span></div>
+            <div class="course-item">Semiconductor Fabrications <span class="grade">A+</span></div>
+            <div class="course-item">Electronic Circuit 2 <span class="grade">A+</span></div>
+            <div class="course-item">VLSI Engineering <span class="grade">A0</span></div>
+          </div>
+        </div>
+      </details>
+
     </div>
   </div>
 
@@ -243,6 +332,8 @@ sidebar_main: true
     <div class="bento-card full-width">
       <span class="card-label">Honors & Recognition</span>
       <ul class="info-list">
+        <li><strong>The 33rd Korean Conference on Semiconductors (KCS 2026) Excellent Poster Award</strong><span class="date-tag">Feb 2026</span></li>
+        <div class="img-frame" style="max-width: 500px; margin: 15px auto 25px auto;"><img src="/images/about/KCS_awards.png" alt="Award"></div>
         <li><strong>Hanyang Academic Excellence Award</strong><span class="date-tag">Feb 2024</span></li>
         <div class="img-frame" style="max-width: 400px; margin: 15px auto 25px auto;"><img src="/images/about/graduate_award.jpg" alt="Award"></div>
         <li><strong>Hanyang Academic Town Program Award</strong><span class="date-tag">Dec 2023 / Dec 2022</span></li>
@@ -269,10 +360,12 @@ sidebar_main: true
         <div class="img-frame" style="max-width: 950px; margin: 15px auto 25px auto;"><img src="/images/about/dreamclass3.png" alt="Dream Class"></div>
         <li><strong>Athletic Achievements & Land Run</strong></li>
         <p style="padding-left: 28px; color: var(--text-muted); margin-bottom: 5px;">
-          - Chuncheon Marathon 42.195km (Full-course) <span class="date-tag">2025</span><br>
-          - JTBC Seoul Marathon 42.195km (Full-course) <span class="date-tag">2024</span><br>
+          - Naepo Marathon 21.0975 km (Half-course) <span class="date-tag">2026</span><br>
+          - Chuncheon Marathon 42.195 km (Full-course) <span class="date-tag">2025</span><br>
+          - JTBC Seoul Marathon 42.195 km (Full-course) <span class="date-tag">2024</span><br>
           - Busan-Incheon 633km Bicycle Land Run <span class="date-tag">2020</span>
         </p>
+        <div class="img-frame" style="max-width: 400px; margin: 15px auto 25px auto;"><img src="/images/about/2026내포마라톤.jpg" alt="Sports"></div>
         <div class="img-frame" style="max-width: 950px; margin: 15px auto 25px auto;"><img src="/images/about/마라톤2_국토종주.png" alt="Sports"></div>
       </ul>
     </div>
@@ -297,7 +390,7 @@ sidebar_main: true
       <img src="/images/about/bottom.jpg" alt="Bottom Banner" style="width: 100%; max-width: 1000px; border-radius: 20px;">
     </div>
     <footer style="text-align: center; color: var(--text-muted); font-size: 0.95rem; font-family: sans-serif;">
-      Last Update: 2026/01/31
+      Last Update: 2026/04/29
     </footer>
   </div>
 </div>
