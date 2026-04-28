@@ -303,7 +303,7 @@ sidebar_main: true
         </div>
       </details>
 
-        <details class="course-toggle" open>
+        <details class="course-toggle" >
         <summary>B.S. Coursework</summary>
         <div class="course-toggle-content">
           <div class="course-grid">
