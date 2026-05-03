@@ -29,49 +29,56 @@ logo                     : "/images/new_logo4.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 #breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : "ordlike" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "ordlike"
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               :
   facebook:
-    # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    num_posts            :
+    colorscheme          :
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                :
+    issue_term           :
   giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    repo_id              :
+    category_name        :
+    category_id          :
+    discussion_term      :
+    reactions_enabled    :
+    theme                :
   staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    branch               :
+    endpoint             :
+
 reCaptcha:
   siteKey                :
   secret                 :
+
 atom_feed:
-  path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+  path                   :
+  hide                   :
+
+search                   :
+search_full_content      :
+search_provider          :
+
 lunr:
-  search_within_pages    : # true, false (default)
+  search_within_pages    :
+
 algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
+  application_id         :
+  index_name             :
+  search_only_api_key    :
+  powered_by             :
+
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+  search_engine_id       :
+  instant_search         :
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -82,81 +89,92 @@ baidu_site_verification  :
 # Social Sharing
 twitter:
   username               :
+
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+
+og_image                 :
+
 # For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Chae-Hwan Park"
+  links:
+    - "https://orcid.org/0009-0009-4607-7920"
+    - "https://github.com/ordlike"
+    - "https://www.linkedin.com/in/chae-hwan-park-00977531a"
+    - "https://blog.naver.com/ordlike"
+    - "https://instagram.com/chae_wanny?igshid=ZDc4ODBmNjlmNQ=="
 
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag"
   google:
     tracking_id          : "G-VVZCE46RNQ"
-    anonymize_ip         : false # true, false (default)
-
+    anonymize_ip         : false
 
 # Site Author
 author:
   name             : "Chae-Hwan Park"
-  avatar           : "./../assets/new_images/profile.jpg" 
-  bio              : " 3nd year, **SNU Tech M.S.-Ph.D** <br> **Hanyang Tech B.S.** "
-  location         : "South korea"
-  email            : 
+  avatar           : "./../assets/new_images/profile.jpg"
+  bio              : "3rd year, **SNU Tech M.S.-Ph.D** <br> **Hanyang Tech B.S.**"
+  location         : "South Korea"
+  email            :
   links:
     - label: "ordlike@snu.ac.kr"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ordlike@snu.ac.kr"
+
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0009-4607-7920"
+
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/ordlike"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ordlike"
+
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/chae_wanny?igshid=ZDc4ODBmNjlmNQ=="
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/chae-hwan-park-00977531a"
-
 
 # Site Footer
-
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/yourid"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/yourid"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/ordlike"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ordlike"
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/chae-hwan-park-00977531a"
+
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0009-4607-7920"
+
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/chae_wanny?igshid=ZDc4ODBmNjlmNQ=="
-
-
-
 
 # Reading Files
 include:
   - .htaccess
   - _pages
+
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -182,14 +200,15 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - /docs
+  - /test
+
 keep_files:
   - .git
   - .svn
+
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
 
 # Conversion
 markdown: kramdown
@@ -197,7 +216,6 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -210,21 +228,18 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:
 
-
-# Plugins (previously gems:)
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -240,65 +255,11 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-
 # Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      show_date: true
-date_format: "%Y-%m-%d"
-
-# _config.yml
-
-# Build settings
-# ...
-
-# Load CSS files from the `assets/css` directory
-assets:
-  - css/custom.scss

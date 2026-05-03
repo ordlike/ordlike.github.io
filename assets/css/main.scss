@@ -10,5 +10,39 @@ search: false
 
 // Additional CSS to make the avatar square
 .author__avatar {
-    border-radius: 0; /* 네모 모양으로 변경 */
-  }
+  border-radius: 0; /* 네모 모양으로 변경 */
+}
+
+/* Brand icon colors in author sidebar and footer */
+
+/* ORCID */
+.author__urls a[href*="orcid.org"] i,
+.author__urls a[href*="orcid.org"] .fa-orcid,
+.page__footer a[href*="orcid.org"] i,
+.page__footer a[href*="orcid.org"] .fa-orcid {
+  color: #A6CE39 !important;
+}
+
+/* GitHub */
+.author__urls a[href*="github.com"] i,
+.author__urls a[href*="github.com"] .fa-github,
+.page__footer a[href*="github.com"] i,
+.page__footer a[href*="github.com"] .fa-github {
+  color: #181717 !important;
+}
+
+/* LinkedIn */
+.author__urls a[href*="linkedin.com"] i,
+.author__urls a[href*="linkedin.com"] .fa-linkedin,
+.page__footer a[href*="linkedin.com"] i,
+.page__footer a[href*="linkedin.com"] .fa-linkedin {
+  color: #0A66C2 !important;
+}
+
+/* Instagram */
+.author__urls a[href*="instagram.com"] i,
+.author__urls a[href*="instagram.com"] .fa-instagram,
+.page__footer a[href*="instagram.com"] i,
+.page__footer a[href*="instagram.com"] .fa-instagram {
+  color: #E4405F !important;
+}
