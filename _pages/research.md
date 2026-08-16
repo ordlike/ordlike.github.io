@@ -232,26 +232,25 @@ sidebar_main: false
     color: var(--primary);
   }
 
-  .type-tag{
-    font-size: 0.72rem;
-    font-weight: 800;
-    padding: 4px 9px;
-    border-radius: 999px;
-    background: rgba(14,74,132,0.08);
-    border: 1px solid rgba(14,74,132,0.16);
-    color: var(--primary);
-    line-height: 1.2;
-  }
-
+  .type-tag,
   .status-tag{
     font-size: 0.72rem;
     font-weight: 800;
     padding: 4px 9px;
     border-radius: 999px;
+    line-height: 1.2;
+  }
+
+  .type-tag{
+    background: rgba(14,74,132,0.08);
+    border: 1px solid rgba(14,74,132,0.16);
+    color: var(--primary);
+  }
+
+  .status-tag{
     background: rgba(15,15,112,0.06);
     border: 1px solid rgba(15,15,112,0.14);
     color: rgb(15, 15, 112);
-    line-height: 1.2;
   }
 
   .pub-actions{
@@ -427,14 +426,11 @@ sidebar_main: false
     border: 1px solid var(--line);
     text-decoration: none;
     color: inherit;
-
     width: 100%;
     justify-self: stretch;
     align-self: stretch;
-
     display:flex;
     flex-direction: column;
-
     box-shadow: 0 12px 26px rgba(0,0,0,0.06);
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     position: relative;
@@ -474,33 +470,30 @@ sidebar_main: false
     opacity: 0.92;
   }
 
-  .card-corner{
+  .card-corner,
+  .card-hint{
     position:absolute;
-    top: 14px;
-    left: 14px;
     padding: 8px 10px;
     border-radius: 999px;
     color:#fff;
     font-size: 0.78rem;
     font-weight: 700;
-    background: rgba(0,0,0,0.52);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.16);
     z-index: 2;
   }
 
+  .card-corner{
+    top: 14px;
+    left: 14px;
+    background: rgba(0,0,0,0.52);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+
   .card-hint{
-    position:absolute;
     right: 14px;
     top: 14px;
-    padding: 8px 10px;
-    border-radius: 999px;
-    color:#fff;
-    font-size: 0.78rem;
-    font-weight: 700;
     background: linear-gradient(135deg, rgba(14,74,132,0.90), rgba(15,15,112,0.90));
     box-shadow: 0 10px 22px rgba(14,74,132,0.16);
-    z-index: 2;
   }
 
   .card-content{
@@ -555,15 +548,19 @@ sidebar_main: false
   }
 
   /* ================= Lightbox Image Zoom ================= */
-  .gallery-container{
+  .gallery-container,
+  .comingsoon-overlay,
+  .video-overlay{
     display:none;
     position: fixed;
-    z-index: 9999;
-    left:0; top:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.92);
+    inset: 0;
     justify-content:center;
     align-items:center;
+  }
+
+  .gallery-container{
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
     backdrop-filter: blur(7px);
   }
 
@@ -598,34 +595,32 @@ sidebar_main: false
     background: rgba(255,255,255,0.18);
   }
 
-  /* ================= Coming Soon Modal ================= */
   .comingsoon-overlay{
-    display:none;
-    position: fixed;
-    inset: 0;
     z-index: 99999;
     background: rgba(3, 10, 18, 0.62);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    align-items: center;
-    justify-content: center;
     padding: 18px;
+  }
+
+  .comingsoon-modal,
+  .video-modal{
+    border-radius: 18px;
+    overflow: hidden;
+    transform: translateY(8px);
   }
 
   .comingsoon-modal{
     width: min(520px, 92vw);
-    border-radius: 18px;
     background: rgba(255,255,255,0.92);
     border: 1px solid rgba(0,0,0,0.10);
     box-shadow: 0 24px 70px rgba(0,0,0,0.22);
-    overflow: hidden;
-    transform: translateY(8px);
     animation: comingPop .18s ease-out forwards;
   }
 
   @keyframes comingPop{
     from { opacity: 0; transform: translateY(10px) scale(0.99); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
   .comingsoon-top{
@@ -645,6 +640,11 @@ sidebar_main: false
     margin: 0;
   }
 
+  .comingsoon-close,
+  .comingsoon-btn{
+    cursor: pointer;
+  }
+
   .comingsoon-close{
     width: 38px;
     height: 38px;
@@ -653,9 +653,6 @@ sidebar_main: false
     background: rgba(255,255,255,0.12);
     color:#fff;
     font-size: 20px;
-    cursor: pointer;
-    display:grid;
-    place-items:center;
     transition: transform .15s ease, background .2s ease;
   }
 
@@ -685,7 +682,6 @@ sidebar_main: false
     font-weight: 800;
     border-radius: 12px;
     padding: 10px 14px;
-    cursor:pointer;
     transition: transform .15s ease, background .2s ease;
   }
 
@@ -694,35 +690,26 @@ sidebar_main: false
     background: rgba(14,74,132,0.10);
   }
 
-  /* ================= Video Modal ================= */
   .video-overlay{
-    display:none;
-    position: fixed;
-    inset: 0;
     z-index: 100000;
     background: rgba(0,0,0,0.88);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    align-items: center;
-    justify-content: center;
     padding: 18px;
   }
 
   .video-modal{
     width: min(960px, 92vw);
-    border-radius: 18px;
     background: rgba(0,0,0,0.35);
     border: 1px solid rgba(255,255,255,0.16);
     box-shadow: 0 24px 70px rgba(0,0,0,0.40);
-    overflow: hidden;
     position: relative;
-    transform: translateY(8px);
     animation: videoPop .18s ease-out forwards;
   }
 
   @keyframes videoPop{
     from { opacity: 0; transform: translateY(10px) scale(0.99); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
   .video-modal video{
@@ -757,7 +744,6 @@ sidebar_main: false
     background: rgba(255,255,255,0.16);
   }
 
-  /* ================= Responsive ================= */
   @media (max-width: 900px){
     .research-hero{
       grid-template-columns: 1fr;
@@ -785,7 +771,7 @@ sidebar_main: false
       flex: 1 1 0;
       justify-content: center;
       white-space: nowrap;
-      padding: 10px 10px;
+      padding: 10px;
       font-size: 0.84rem;
     }
   }
@@ -820,71 +806,118 @@ sidebar_main: false
 <div class="section-container" id="publications">
   <h2 class="section-title">Publications</h2>
 
-<!-- ================= Journals ================= -->
-<div class="pub-block" id="journals">
-  <div class="pub-subtitle">
-    <h3>Journals</h3>
-    <span class="pub-count">Selected journal papers</span>
+  <!-- ================= Journals ================= -->
+  <div class="pub-block" id="journals">
+    <div class="pub-subtitle">
+      <h3>Journals</h3>
+      <span class="pub-count">Selected journal papers</span>
+    </div>
+
+    <ul class="pub-list">
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <span class="pub-authors">
+            Junhyeong Park, Sunyeol Bae, Yumin Yun,
+            Chae-Hwan Park, Donghyeon Lee, and Soo-Yeon Lee
+          </span>
+          <div class="pub-title">
+            <span>
+              Low-Voltage Operation of IGZO Memtransistors Enabled by Coupling Enhancement through
+              2T Drain-Driven Operation for Neuromorphic Computing
+            </span>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">Advanced Intelligent Systems</span>
+            <span class="status-tag">Accepted</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <span class="pub-authors">
+            Sunyeol Bae, Hyung-Jun Noh, Yumin Yun,
+            Chae-Hwan Park, Junhyeong Park, and Soo-Yeon Lee
+          </span>
+          <div class="pub-title">
+            <span>
+              Floating-Gate IGZO Thin-Film Transistor Employing Split-Gate to Enable
+              Tunable Subthreshold Swing for AMOLED Pixel Circuits
+            </span>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">IEEE Transactions on Electron Devices</span>
+            <span class="status-tag">Accepted</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <span class="pub-authors">
+            Sunyeol Bae, Junhyeong Park, Hyung-Jun Noh, Jaybum Kim, Yumin Yun,
+            Chae-Hwan Park, and Soo-Yeon Lee
+          </span>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">
+              Subthreshold Swing Control in IGZO TFTs Using Floating-Gate Engineering for AMOLED Displays
+            </a>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">Journal of the Society for Information Display</span>
+          </div>
+          <div class="pub-actions">
+            <a class="pill-btn" href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">🔗 Paper</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <span class="pub-authors">
+            Yumin Yun, Junhyeong Park, Sunyeol Bae, Chae-Hwan Park,
+            Dong Hyeon Lee, and Soo-Yeon Lee
+          </span>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">
+              A Neuromorphic Simulation Framework for IGZO Charge-Trap Synaptic Transistors:
+              From Device Modeling to System Simulation
+            </a>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-venue">Advanced Intelligent Systems</span>
+          </div>
+          <div class="pub-actions">
+            <a class="pill-btn" href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">🔗 Paper</a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
-
-  <ul class="pub-list">
-
-    <li class="pub-item">
-      <div class="pub-year">2026</div>
-      <div class="pub-content">
-        <span class="pub-authors">Sunyeol Bae, Junhyeong Park, Hyung-Jun Noh, Jaybum Kim, Yumin Yun, Chae-Hwan Park, and Soo-Yeon Lee</span>
-        <div class="pub-title">
-          <a href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">
-            Subthreshold Swing Control in IGZO TFTs Using Floating-Gate Engineering for AMOLED Displays
-          </a>
-        </div>
-        <div class="pub-meta">
-          <span class="pub-venue">Journal of the Society for Information Display</span>
-          <span class="status-tag">Accepted</span>
-        </div>
-        <div class="pub-actions">
-          <a class="pill-btn" href="https://doi.org/10.1002/jsid.70054" target="_blank" rel="noopener">🔗 Paper</a>
-        </div>
-      </div>
-    </li>
-
-    <li class="pub-item">
-      <div class="pub-year">2026</div>
-      <div class="pub-content">
-        <span class="pub-authors">Yumin Yun, Junhyeong Park, Sunyeol Bae, Chae-Hwan Park, Dong Hyeon Lee, and Soo-Yeon Lee</span>
-        <div class="pub-title">
-          <a href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">
-            A Neuromorphic Simulation Framework for IGZO Charge-Trap Synaptic Transistors: From Device Modeling to System Simulation
-          </a>
-        </div>
-        <div class="pub-meta">
-          <span class="pub-venue">Advanced Intelligent Systems</span>
-          <span class="status-tag">Accepted</span>
-        </div>
-        <div class="pub-actions">
-          <a class="pill-btn" href="https://doi.org/10.1002/aisy.70374" target="_blank" rel="noopener">🔗 Paper</a>
-        </div>
-      </div>
-    </li>
-
-  </ul>
-</div>
 
   <!-- ================= Conferences ================= -->
   <div class="pub-block" id="conferences">
     <div class="pub-subtitle">
       <h3>Conferences</h3>
-      <span class="pub-count">Conference papers & presentations</span>
+      <span class="pub-count">Conference papers &amp; presentations</span>
     </div>
 
     <ul class="pub-list">
-
       <li class="pub-item">
         <div class="pub-year">2026</div>
         <div class="pub-content">
-          <span class="pub-authors">Chae-Hwan Park, Seung Yoon Shin, Seong Eun Kim, Min Kang, and Soo-Yeon Lee</span>
+          <span class="pub-authors">
+            Chae-Hwan Park, Seung Yoon Shin, Seong Eun Kim, Min Kang, and Soo-Yeon Lee
+          </span>
           <div class="pub-title">
-            <span>A Schmitt-Trigger Comparator-Based Noise-Robust Reconfigurable Leaky Integrate-and-Fire Neuron Circuit for Spiking Neural Networks</span>
+            <span>
+              A Schmitt-Trigger Comparator-Based Noise-Robust Reconfigurable Leaky
+              Integrate-and-Fire Neuron Circuit for Spiking Neural Networks
+            </span>
           </div>
           <div class="pub-meta">
             <span class="pub-venue">KCS 2026 · Jeongseon, Korea</span>
@@ -896,10 +929,13 @@ sidebar_main: false
       <li class="pub-item">
         <div class="pub-year">2025</div>
         <div class="pub-content">
-          <span class="pub-authors">Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee</span>
+          <span class="pub-authors">
+            Chae-Hwan Park, Jaybum Kim, Kyeong-Soo Kang, Hyeon-Gu Kang, and Soo-Yeon Lee
+          </span>
           <div class="pub-title">
             <a href="https://sid.onlinelibrary.wiley.com/doi/abs/10.1002/sdtp.18459" target="_blank" rel="noopener">
-              Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing Falling Time and Enhancing Gray-Level Expression
+              Micro-LED Pixel Circuit with A Novel NMOS-Oxide TFT Inverter for Reducing
+              Falling Time and Enhancing Gray-Level Expression
             </a>
           </div>
           <div class="pub-meta">
@@ -915,7 +951,9 @@ sidebar_main: false
       <li class="pub-item">
         <div class="pub-year">2025</div>
         <div class="pub-content">
-          <span class="pub-authors">Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee</span>
+          <span class="pub-authors">
+            Chae-Hwan Park, Soobin An, Seungyoon Shin, Ji-Ho Lee, Hyeonjun Choi, and Soo-Yeon Lee
+          </span>
           <div class="pub-title">
             <span>고성능 디스플레이 화소 회로 설계를 위한 TFT 인버터 특성 비교</span>
           </div>
@@ -929,9 +967,14 @@ sidebar_main: false
       <li class="pub-item">
         <div class="pub-year">2024</div>
         <div class="pub-content">
-          <span class="pub-authors">Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, and Soo-Yeon Lee</span>
+          <span class="pub-authors">
+            Chae-Hwan Park, Kyeong-Soo Kang, Ji-Hwan Park, Chanjin Park, and Soo-Yeon Lee
+          </span>
           <div class="pub-title">
-            <span>μLED Pixel Circuit Based on Low-Temperature Polysilicon and Oxide Thin-Film Transistors for Pulse-Width Modulation with Extremely Short Falling Time</span>
+            <span>
+              μLED Pixel Circuit Based on Low-Temperature Polysilicon and Oxide Thin-Film
+              Transistors for Pulse-Width Modulation with Extremely Short Falling Time
+            </span>
           </div>
           <div class="pub-meta">
             <span class="pub-venue">ICEP-ITA 2024 · Tashkent, Uzbekistan</span>
@@ -939,7 +982,6 @@ sidebar_main: false
           </div>
         </div>
       </li>
-
     </ul>
   </div>
 </div>
@@ -953,8 +995,9 @@ sidebar_main: false
       <h2>CMOS/TFT Circuit Design</h2>
       <p>
         I conduct research on <b>Si-based CMOS</b> and <b>IGZO-based TFT</b> circuit design and verification,
-        focusing on <b>neuromorphic</b> (SNN-based neuron circuit) and <b>display driving circuits</b> (OLED, μLED),
-        with a growing interest in mixed-signal circuit design integrating <b>analog and digital circuits</b>.
+        focusing on <b>neuromorphic</b> (SNN-based neuron circuit) and
+        <b>display driving circuits</b> (OLED, μLED), with a growing interest in mixed-signal circuit design
+        integrating <b>analog and digital circuits</b>.
       </p>
       <div class="keyword-row">
         <span class="keyword-chip">Si-CMOS</span>
@@ -987,8 +1030,8 @@ sidebar_main: false
       <h2>System Architecture Design</h2>
       <p>
         I focus on <b>hardware system design</b> bridging custom devices, CMOS circuits, and PCB-level electronics.
-        My work includes <b>MCU/FPGA-based control</b>, <b>AFE-optimized sensing</b>, and low-power integrated platforms
-        for future sensing, display-integrated, and <b>neuromorphic systems</b>.
+        My work includes <b>MCU/FPGA-based control</b>, <b>AFE-optimized sensing</b>, and low-power integrated
+        platforms for future sensing, display-integrated, and <b>neuromorphic systems</b>.
       </p>
       <div class="keyword-row">
         <span class="keyword-chip">PCB</span>
@@ -1059,7 +1102,6 @@ sidebar_main: false
 
   <div class="uni-header"><h1>Hanyang University</h1></div>
   <div class="custom-grid">
-
     <a href="https://www.youtube.com/watch?v=OespY0dTNjA" target="_blank" rel="noopener" class="custom-card">
       <div class="card-img-wrap">
         <img src="/assets/new_images/project3.jpg" alt="3D map">
@@ -1144,7 +1186,6 @@ sidebar_main: false
         <span style="font-weight:700; color: rgba(31,42,55,0.52); font-size:0.86rem;">2022</span>
       </div>
     </a>
-
   </div>
 </div>
 
@@ -1182,7 +1223,6 @@ sidebar_main: false
 </div>
 
 <script>
-  /* ===== Image Zoom Lightbox ===== */
   function openGallery(imageSrc) {
     const container = document.getElementById("galleryContainer");
     const img = document.getElementById("galleryImage");
@@ -1197,36 +1237,34 @@ sidebar_main: false
     document.body.style.overflow = "auto";
   }
 
-  /* ===== Coming Soon Modal ===== */
   function showComingSoon(title, message){
-    const overlay = document.getElementById('comingSoonOverlay');
-    const t = document.getElementById('comingSoonTitle');
-    const b = document.getElementById('comingSoonBody');
+    const overlay = document.getElementById("comingSoonOverlay");
+    const titleElement = document.getElementById("comingSoonTitle");
+    const bodyElement = document.getElementById("comingSoonBody");
 
-    t.textContent = title || '준비중입니다';
-    b.textContent = message || '현재 기능을 준비 중입니다.';
+    titleElement.textContent = title || "준비중입니다";
+    bodyElement.textContent = message || "현재 기능을 준비 중입니다.";
 
-    overlay.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    overlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
   }
 
   function closeComingSoon(){
-    const overlay = document.getElementById('comingSoonOverlay');
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    const overlay = document.getElementById("comingSoonOverlay");
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 
-  /* ===== Video Modal ===== */
   function openVideo(videoSrc){
-    const overlay = document.getElementById('videoOverlay');
-    const player = document.getElementById('videoPlayer');
-    const source = document.getElementById('videoSource');
+    const overlay = document.getElementById("videoOverlay");
+    const player = document.getElementById("videoPlayer");
+    const source = document.getElementById("videoSource");
 
     source.src = videoSrc;
     player.load();
 
-    overlay.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    overlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
 
     const playPromise = player.play();
     if (playPromise !== undefined) {
@@ -1235,22 +1273,21 @@ sidebar_main: false
   }
 
   function closeVideo(){
-    const overlay = document.getElementById('videoOverlay');
-    const player = document.getElementById('videoPlayer');
-    const source = document.getElementById('videoSource');
+    const overlay = document.getElementById("videoOverlay");
+    const player = document.getElementById("videoPlayer");
+    const source = document.getElementById("videoSource");
 
     player.pause();
     player.currentTime = 0;
     source.src = "";
     player.load();
 
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 
-  /* ===== ESC Handling ===== */
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeGallery();
       closeComingSoon();
       closeVideo();
